@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { AlertIcon, CheckCircleIcon, CloseIcon, FeedbackIcon } from "@/components/icons";
+import { getPageContextLabel } from "@/lib/page-context";
 
 // Feedback is sent to AIVA Work Manager's shared product-feedback inbox, not
 // stored in this app's own Supabase project. source stays "ssc-tutor" (the
@@ -21,6 +22,8 @@ type Status = "idle" | "submitting" | "success" | "error";
 // threading isOpen through here too, and resets message/status for free.
 export function FeedbackModal({ onClose }: { onClose: () => void }) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const pageContext = getPageContextLabel(pathname, searchParams);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -51,7 +54,8 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
         body: JSON.stringify({
           message: message.trim(),
           source: "ssc-tutor",
-          pageUrl: `${window.location.origin}${pathname}`,
+          pageUrl: `${window.location.origin}${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ""}`,
+          pageContext,
           platform: "web",
           submitterEmail: user?.email ?? null,
         }),
@@ -104,6 +108,9 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
             </h2>
             <p className="mt-1 font-body text-sm text-foreground/60">
               Found a bug, or have an idea? Let us know.
+            </p>
+            <p className="mt-2 inline-block rounded-full bg-primary/10 px-3 py-1 font-body text-xs font-semibold text-primary">
+              📍 {pageContext}
             </p>
 
             <textarea
