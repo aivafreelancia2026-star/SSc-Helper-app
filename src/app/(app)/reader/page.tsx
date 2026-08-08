@@ -4,6 +4,7 @@ import class6Science from "@/data/classes/C6-Science.json";
 import { ChapterIndex } from "@/components/chapter-index";
 import { PageBadge } from "@/components/page-badge";
 import { AutoRunController } from "@/components/auto-run-controller";
+import { getPageContent } from "@/lib/reader-content-registry";
 import type { Chapter } from "@/lib/content";
 
 function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
@@ -77,6 +78,10 @@ export default async function ReaderPage({
   const selectedChapter =
     page <= introChapter.pageEnd ? null : findChapterForPage(chapters, page);
 
+  const PageContent = selectedChapter
+    ? getPageContent(classGrade, subject, selectedChapter.id, page - selectedChapter.pageStart + 1)
+    : null;
+
   return (
     <div className="relative flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
       <PageBadge page={page} totalPages={totalPages} />
@@ -103,12 +108,16 @@ export default async function ReaderPage({
         </div>
 
         <div className="rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
-          <div className="text-center py-12">
-            <p className="font-heading font-semibold text-foreground mb-2">Coming soon</p>
-            <p className="font-body text-sm text-foreground/60">
-              Page content will be available soon — check back later.
-            </p>
-          </div>
+          {PageContent ? (
+            <PageContent />
+          ) : (
+            <div className="text-center py-12">
+              <p className="font-heading font-semibold text-foreground mb-2">Coming soon</p>
+              <p className="font-body text-sm text-foreground/60">
+                Page content will be available soon — check back later.
+              </p>
+            </div>
+          )}
         </div>
 
         <a
