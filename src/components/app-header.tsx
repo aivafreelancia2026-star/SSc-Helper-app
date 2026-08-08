@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { LogoMark } from "@/components/logo-mark";
-import { LogoutButton } from "@/components/logout-button";
 import type { Role } from "@/lib/profile";
 
 export function AppHeader({
@@ -36,7 +35,6 @@ export function AppHeader({
             <p className="font-body text-xs text-foreground/50">Class {classGrade}</p>
           )}
         </div>
-        <LogoutButton />
       </div>
     </header>
   );
