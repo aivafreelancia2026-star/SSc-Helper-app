@@ -15,17 +15,24 @@ export function SubjectsGrid({
   role: Role;
 }) {
   const router = useRouter();
-  const showFilename = role === "founder" || role === "developer";
+  const isFounderOrDeveloper = role === "founder" || role === "developer";
 
-  function handleSubjectClick(subjectName: string) {
-    router.push(`/reader?class=${classGrade}&subject=${encodeURIComponent(subjectName)}`);
+  function goToSubject(subjectName: string, page?: number, autorun?: boolean) {
+    const params = new URLSearchParams({ class: String(classGrade), subject: subjectName });
+    if (page) params.set("page", String(page));
+    if (autorun) params.set("autorun", "1");
+    router.push(`/reader?${params.toString()}`);
   }
 
   function SubjectCard({ subject }: { subject: Subject }) {
     return (
-      <button
-        type="button"
-        onClick={() => handleSubjectClick(subject.name)}
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => goToSubject(subject.name)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") goToSubject(subject.name);
+        }}
         className="flex w-full cursor-pointer flex-col items-center gap-2 rounded-[24px] border border-white/60 bg-white/80 p-4 text-center shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)] transition-transform duration-150 ease-out active:scale-95 hover:shadow-[8px_8px_18px_rgba(79,70,229,0.15),-5px_-5px_12px_rgba(255,255,255,0.8)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/25"
       >
         <BookIcon className="h-6 w-6 text-primary" />
@@ -35,12 +42,24 @@ export function SubjectsGrid({
             {subject.subAreas.join(" · ")}
           </span>
         )}
-        {showFilename && (
+        {isFounderOrDeveloper && (
           <span className="font-mono text-[9px] leading-tight text-foreground/35">
             {subject.file}
           </span>
         )}
-      </button>
+        {isFounderOrDeveloper && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              goToSubject(subject.name, 1, true);
+            }}
+            className="mt-1 w-full cursor-pointer rounded-[12px] bg-accent py-1.5 font-heading text-[10px] font-bold text-on-primary transition-opacity hover:opacity-90"
+          >
+            Auto Run
+          </button>
+        )}
+      </div>
     );
   }
 
