@@ -7,11 +7,12 @@ import type { Chapter } from "@/lib/content";
 export default async function ReaderPage({
   searchParams,
 }: {
-  searchParams: { class?: string; subject?: string; chapter?: string };
+  searchParams: Promise<{ class?: string; subject?: string; chapter?: string }>;
 }) {
-  const classGrade = Number(searchParams.class) || 6;
-  const subject = searchParams.subject || "Science";
-  const chapter = searchParams.chapter;
+  const params = await searchParams;
+  const classGrade = Number(params.class) || 6;
+  const subject = params.subject || "Science";
+  const chapter = params.chapter;
 
   if (classGrade !== 6 || subject !== "Science") {
     return (
