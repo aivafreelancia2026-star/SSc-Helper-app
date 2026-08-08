@@ -32,7 +32,9 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         classGrade={profile?.classGrade ?? null}
         role={profile?.role ?? "student"}
       />
-      <NavBar />
+      <Suspense fallback={null}>
+        <NavBar defaultClass={profile?.classGrade ?? null} />
+      </Suspense>
       <Suspense fallback={null}>
         <ClassSelector defaultClass={profile?.classGrade ?? null} />
       </Suspense>

@@ -1,25 +1,12 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
-const CLASSES = [6, 7, 8, 9, 10];
+import { CLASSES, useClassGrade } from "@/lib/use-class-grade";
 
 // Selection lives in the URL (?class=N), not local state, so pages outside
 // this component (e.g. the dashboard, a server component in the same route
 // tree) can read the selected class via their own `searchParams` prop.
 export function ClassSelector({ defaultClass }: { defaultClass: number | null }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const fromUrl = Number(searchParams.get("class"));
-  const selected = CLASSES.includes(fromUrl) ? fromUrl : (defaultClass ?? CLASSES[0]);
-
-  function selectClass(grade: number) {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("class", String(grade));
-    router.push(`${pathname}?${params.toString()}`);
-  }
+  const { selected, setClass: selectClass } = useClassGrade(defaultClass);
 
   return (
     <div className="flex items-center gap-2 overflow-x-auto border-b border-border/60 bg-white/60 px-4 py-3 sm:justify-center sm:px-6">
