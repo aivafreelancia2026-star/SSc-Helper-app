@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-import { AlertIcon, CheckCircleIcon, CloseIcon, FeedbackIcon } from "@/components/icons";
-import { getPageContextLabel } from "@/lib/page-context";
+import { AlertIcon, CheckCircleIcon, CloseIcon, CopyIcon, FeedbackIcon } from "@/components/icons";
+import { getPageContextLabel, getPageId } from "@/lib/page-context";
 
 // Feedback is sent to AIVA Work Manager's shared product-feedback inbox, not
 // stored in this app's own Supabase project. source stays "ssc-tutor" (the
@@ -24,9 +24,24 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const pageContext = getPageContextLabel(pathname, searchParams);
+  const classParam = searchParams.get("class");
+  const subjectParam = searchParams.get("subject");
+  const pageParam = searchParams.get("page");
+  const pageId =
+    pathname === "/reader" && classParam && subjectParam && pageParam
+      ? getPageId(Number(classParam), subjectParam, Number(pageParam))
+      : null;
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [copied, setCopied] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  async function handleCopyPageId() {
+    if (!pageId) return;
+    await navigator.clipboard.writeText(pageId);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  }
 
   useEffect(() => {
     textareaRef.current?.focus();
@@ -109,9 +124,31 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
             <p className="mt-1 font-body text-sm text-foreground/60">
               Found a bug, or have an idea? Let us know.
             </p>
-            <p className="mt-2 inline-block rounded-full bg-primary/10 px-3 py-1 font-body text-xs font-semibold text-primary">
-              📍 {pageContext}
-            </p>
+            <div className="mt-2 flex flex-wrap items-center gap-2">
+              <p className="inline-block rounded-full bg-primary/10 px-3 py-1 font-body text-xs font-semibold text-primary">
+                📍 {pageContext}
+              </p>
+              {pageId && (
+                <button
+                  type="button"
+                  onClick={handleCopyPageId}
+                  aria-label={`Copy page id ${pageId}`}
+                  className="flex cursor-pointer items-center gap-1 rounded-full bg-muted px-2.5 py-1 font-mono text-[11px] font-semibold text-foreground/70 transition-colors hover:bg-border/60"
+                >
+                  {copied ? (
+                    <>
+                      <CheckCircleIcon className="h-3.5 w-3.5 text-primary" />
+                      Copied
+                    </>
+                  ) : (
+                    <>
+                      <CopyIcon className="h-3.5 w-3.5" />
+                      {pageId}
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
 
             <textarea
               ref={textareaRef}
