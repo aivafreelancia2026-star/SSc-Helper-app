@@ -1,0 +1,34 @@
+{
+  "class": 6,
+  "subjects": [
+    {
+      "name": "Telugu",
+      "file": "class-6-telugu.json"
+    },
+    {
+      "name": "Hindi",
+      "file": "class-6-hindi.json"
+    },
+    {
+      "name": "English",
+      "file": "class-6-english.json"
+    },
+    {
+      "name": "Maths",
+      "file": "class-6-maths.json"
+    },
+    {
+      "name": "Science",
+      "file": "class-6-science.json",
+      "subAreas": [
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ]
+    },
+    {
+      "name": "Social",
+      "file": "class-6-social.json"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "class": 7,
+  "subjects": [
+    {
+      "name": "Telugu",
+      "file": "class-7-telugu.json"
+    },
+    {
+      "name": "Hindi",
+      "file": "class-7-hindi.json"
+    },
+    {
+      "name": "English",
+      "file": "class-7-english.json"
+    },
+    {
+      "name": "Maths",
+      "file": "class-7-maths.json"
+    },
+    {
+      "name": "Science",
+      "file": "class-7-science.json",
+      "subAreas": [
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ]
+    },
+    {
+      "name": "Social",
+      "file": "class-7-social.json"
+    }
+  ]
+}
