@@ -1,14 +1,25 @@
 import { FillInTable, type TableCell } from "@/components/reader/fill-in-table";
 import { TipBox } from "@/components/reader/tip-box";
 
-const TABLE3_ROWS: TableCell[][] =
-  "Cooking Oil,Honey,Chips,Turmeric powder,Salt,Dough,Meat,Rice,Eggs,Sugar,Peanuts"
-    .split(",")
-    .map((ingredient) => [
-      { value: ingredient },
-      { value: "", editable: true },
-      { value: "", editable: true },
-    ]);
+const TABLE3_DATA: [string, string[], string[]][] = [
+  ["Cooking Oil", ["Plant", "P"], ["Groundnut", "Sunflower", "Coconut"]],
+  ["Honey", ["Animal", "A"], ["Bee", "Bees"]],
+  ["Chips", ["Plant", "P"], ["Potato"]],
+  ["Turmeric powder", ["Plant", "P"], ["Turmeric"]],
+  ["Salt", ["Others", "O"], ["Sea water", "Sea", "Mineral"]],
+  ["Dough", ["Plant", "P"], ["Wheat"]],
+  ["Meat", ["Animal", "A"], ["Goat", "Chicken", "Sheep"]],
+  ["Rice", ["Plant", "P"], ["Rice plant", "Paddy"]],
+  ["Eggs", ["Animal", "A"], ["Hen"]],
+  ["Sugar", ["Plant", "P"], ["Sugarcane"]],
+  ["Peanuts", ["Plant", "P"], ["Groundnut plant", "Groundnut"]],
+];
+
+const TABLE3_ROWS: TableCell[][] = TABLE3_DATA.map(([ingredient, category, source]) => [
+  { value: ingredient },
+  { value: "", editable: true, correctAnswers: category },
+  { value: "", editable: true, correctAnswers: source },
+]);
 
 export function C6ScienceCh1Page4() {
   return (

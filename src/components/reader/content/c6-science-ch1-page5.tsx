@@ -14,12 +14,18 @@ const CONDIMENT_ITEMS = [
 
 const TABLE4_ROWS: TableCell[][] = [
   [{ value: "Fenugreek (Menthulu)" }, { value: "Leaves, seeds" }],
-  [{ value: "Mustard (Avalu)" }, { value: "", editable: true }],
-  [{ value: "Sugarcane" }, { value: "", editable: true }],
-  [{ value: "Carrot" }, { value: "", editable: true }],
-  [{ value: "Onion" }, { value: "", editable: true }],
-  [{ value: "Cabbage" }, { value: "", editable: true }],
-  [{ value: "Asafoetida (Inguva)" }, { value: "", editable: true }],
+  [
+    { value: "Mustard (Avalu)" },
+    { value: "", editable: true, correctAnswers: ["Seeds", "Leaves", "Leaves, seeds"] },
+  ],
+  [{ value: "Sugarcane" }, { value: "", editable: true, correctAnswers: ["Stem"] }],
+  [{ value: "Carrot" }, { value: "", editable: true, correctAnswers: ["Root"] }],
+  [{ value: "Onion" }, { value: "", editable: true, correctAnswers: ["Bulb", "Stem"] }],
+  [{ value: "Cabbage" }, { value: "", editable: true, correctAnswers: ["Leaves"] }],
+  [
+    { value: "Asafoetida (Inguva)" },
+    { value: "", editable: true, correctAnswers: ["Root", "Resin", "Stem"] },
+  ],
 ];
 
 export function C6ScienceCh1Page5() {
