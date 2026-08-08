@@ -20,9 +20,14 @@ function useBackTarget(): string | null {
     const classParam = searchParams.get("class");
     const subject = searchParams.get("subject");
     const page = searchParams.get("page");
+    const indexPage = searchParams.get("index");
 
-    if (page) {
-      return `/reader?class=${classParam}&subject=${subject}`;
+    // The index page is itself page-turnable (carries ?page= too), so
+    // "page present" alone can't distinguish "on the index" from "on a
+    // real page" anymore — compare against the index's own page number.
+    if (page && indexPage && page !== indexPage) {
+      const total = searchParams.get("total");
+      return `/reader?class=${classParam}&subject=${subject}&page=${indexPage}&total=${total}&index=${indexPage}`;
     }
     return classParam ? `/dashboard?class=${classParam}` : "/dashboard";
   }

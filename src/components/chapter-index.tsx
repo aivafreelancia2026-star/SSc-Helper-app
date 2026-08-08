@@ -35,10 +35,7 @@ export function ChapterIndex({
 
   return (
     <div className="w-full space-y-6 px-4 py-8">
-      <div className="relative text-center">
-        <span className="absolute right-4 top-0 rounded-full bg-primary/10 px-3 py-1.5 font-heading text-sm font-bold text-primary">
-          {indexChapter.pageStart}/{totalPages}
-        </span>
+      <div className="text-center">
         <h1 className="font-heading text-2xl font-bold text-foreground">Index</h1>
         <p className="mt-2 font-body text-sm text-foreground/60">Grade 6 Science - 185 pages</p>
       </div>
@@ -63,7 +60,7 @@ export function ChapterIndex({
                   {unitData.map((item) => (
                     <a
                       key={`${item.unit}-${item.chapterNo}`}
-                      href={`/reader?class=${classGrade}&subject=${subject}&page=${item.pageNo}&total=${totalPages}`}
+                      href={`/reader?class=${classGrade}&subject=${subject}&page=${item.pageNo}&total=${totalPages}&index=${indexChapter.pageStart}`}
                       className="block px-6 py-3 hover:bg-primary/5 transition-colors"
                     >
                       <div className="flex items-start justify-between gap-4">
