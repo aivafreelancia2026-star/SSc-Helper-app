@@ -1,6 +1,34 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import { LogoMark } from "@/components/logo-mark";
+import { ChevronLeftIcon } from "@/components/icons";
 import type { Role } from "@/lib/profile";
+
+// Drives the back arrow: reader has a real drill-down hierarchy (subject
+// selection -> chapter index -> chapter), everything else (Admin, Profile)
+// is a sibling destination reached from the dashboard, so "back" from there
+// just returns to it. Dashboard itself is the root — no back target.
+function useBackTarget(): string | null {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  if (pathname === "/dashboard") return null;
+
+  if (pathname === "/reader") {
+    const classParam = searchParams.get("class");
+    const subject = searchParams.get("subject");
+    const chapter = searchParams.get("chapter");
+
+    if (chapter) {
+      return `/reader?class=${classParam}&subject=${subject}`;
+    }
+    return classParam ? `/dashboard?class=${classParam}` : "/dashboard";
+  }
+
+  return "/dashboard";
+}
 
 export function AppHeader({
   name,
@@ -11,8 +39,22 @@ export function AppHeader({
   classGrade: number | null;
   role: Role;
 }) {
+  const backTarget = useBackTarget();
+
   return (
-    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-border/60 bg-white/90 px-4 py-2.5 backdrop-blur-sm sm:px-6">
+    <header className="sticky top-0 z-20 grid grid-cols-[1fr_auto_1fr] items-center border-b border-border/60 bg-white/90 px-4 py-2.5 backdrop-blur-sm sm:px-6">
+      <div className="flex items-center">
+        {backTarget && (
+          <Link
+            href={backTarget}
+            aria-label="Back"
+            className="flex cursor-pointer items-center justify-center rounded-full p-1.5 text-foreground/70 transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+          >
+            <ChevronLeftIcon className="h-6 w-6" />
+          </Link>
+        )}
+      </div>
+
       <Link href="/dashboard" className="flex cursor-pointer items-center gap-2">
         <LogoMark size="sm" />
         <span className="hidden font-heading text-lg font-bold text-foreground sm:inline">
@@ -20,7 +62,7 @@ export function AppHeader({
         </span>
       </Link>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center justify-end gap-3">
         {role === "founder" && (
           <Link
             href="/admin"

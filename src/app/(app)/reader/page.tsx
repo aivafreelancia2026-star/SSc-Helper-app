@@ -28,6 +28,7 @@ export default async function ReaderPage({
   }
 
   const chapters = (class6Science as any).chapters as Chapter[];
+  const totalPages = (class6Science as any).totalPages as number;
 
   if (chapter) {
     const selectedChapter = chapters.find((c) => c.id === chapter);
@@ -36,16 +37,21 @@ export default async function ReaderPage({
     return (
       <div className="flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
         <div className="w-full max-w-2xl space-y-4">
-          <div className="space-y-2">
-            <p className="text-sm font-semibold text-primary">Unit {selectedChapter.unit}</p>
-            <h1 className="font-heading text-2xl font-bold text-foreground">
-              Chapter {selectedChapter.number}: {selectedChapter.title}
-            </h1>
-            <div className="flex flex-wrap gap-3 text-sm text-foreground/60">
-              <span>Pages {selectedChapter.pageStart}–{selectedChapter.pageEnd}</span>
-              {selectedChapter.periods && <span>{selectedChapter.periods} periods</span>}
-              {selectedChapter.subArea && <span>{selectedChapter.subArea}</span>}
+          <div className="flex items-start justify-between gap-3">
+            <div className="space-y-2">
+              <p className="text-sm font-semibold text-primary">Unit {selectedChapter.unit}</p>
+              <h1 className="font-heading text-2xl font-bold text-foreground">
+                Chapter {selectedChapter.number}: {selectedChapter.title}
+              </h1>
+              <div className="flex flex-wrap gap-3 text-sm text-foreground/60">
+                <span>Pages {selectedChapter.pageStart}–{selectedChapter.pageEnd}</span>
+                {selectedChapter.periods && <span>{selectedChapter.periods} periods</span>}
+                {selectedChapter.subArea && <span>{selectedChapter.subArea}</span>}
+              </div>
             </div>
+            <span className="shrink-0 rounded-full bg-primary/10 px-3 py-1.5 font-heading text-sm font-bold text-primary">
+              {selectedChapter.pageStart}/{totalPages}
+            </span>
           </div>
 
           <div className="rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
@@ -83,7 +89,7 @@ export default async function ReaderPage({
           <div className="text-center text-foreground/60">Loading index</div>
         }
       >
-        <ChapterIndex chapters={chapters} />
+        <ChapterIndex chapters={chapters} totalPages={totalPages} />
       </Suspense>
     </div>
   );

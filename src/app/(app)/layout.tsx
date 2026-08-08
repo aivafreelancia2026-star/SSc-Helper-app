@@ -27,11 +27,13 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="flex flex-1 flex-col">
-      <AppHeader
-        name={profile?.fullName ?? null}
-        classGrade={profile?.classGrade ?? null}
-        role={profile?.role ?? "student"}
-      />
+      <Suspense fallback={null}>
+        <AppHeader
+          name={profile?.fullName ?? null}
+          classGrade={profile?.classGrade ?? null}
+          role={profile?.role ?? "student"}
+        />
+      </Suspense>
       <Suspense fallback={null}>
         <NavBar defaultClass={profile?.classGrade ?? null} />
       </Suspense>

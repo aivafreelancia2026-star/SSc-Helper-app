@@ -3,7 +3,13 @@
 import { useState } from "react";
 import type { Chapter } from "@/lib/content";
 
-export function ChapterIndex({ chapters }: { chapters: Chapter[] }) {
+export function ChapterIndex({
+  chapters,
+  totalPages,
+}: {
+  chapters: Chapter[];
+  totalPages: number;
+}) {
   const [selectedUnit, setSelectedUnit] = useState<string | null>(null);
 
   const indexChapter = chapters.find((c) => c.id === "index");
@@ -25,7 +31,10 @@ export function ChapterIndex({ chapters }: { chapters: Chapter[] }) {
 
   return (
     <div className="w-full space-y-6 px-4 py-8">
-      <div className="text-center">
+      <div className="relative text-center">
+        <span className="absolute right-4 top-0 rounded-full bg-primary/10 px-3 py-1.5 font-heading text-sm font-bold text-primary">
+          {indexChapter.pageStart}/{totalPages}
+        </span>
         <h1 className="font-heading text-2xl font-bold text-foreground">Index</h1>
         <p className="mt-2 font-body text-sm text-foreground/60">Grade 6 Science - 185 pages</p>
       </div>
