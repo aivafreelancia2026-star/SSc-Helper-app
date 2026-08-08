@@ -31,6 +31,11 @@ export const PAGES = {
     route: "/admin",
     description: "Founder-only: list users, change roles",
   },
+  reader: {
+    id: "reader",
+    route: "/reader",
+    description: "Chapter index and reader for subjects",
+  },
 } as const;
 
 export type PageKey = keyof typeof PAGES;

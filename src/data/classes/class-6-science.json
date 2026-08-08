@@ -6,5 +6,354 @@
     "Chemistry",
     "Biology"
   ],
-  "chapters": []
+  "totalPages": 185,
+  "chapters": [
+    {
+      "id": "intro",
+      "unit": "Intro",
+      "number": 0,
+      "title": "Introduction",
+      "pageStart": 1,
+      "pageEnd": 8,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "index",
+      "unit": "Index",
+      "number": 0,
+      "title": "Index",
+      "pageStart": 9,
+      "pageEnd": 9,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "indexData": [
+        {
+          "unit": "I",
+          "chapterNo": 1,
+          "title": "Our food",
+          "pageNo": 1,
+          "periods": 10,
+          "subArea": "Biology"
+        },
+        {
+          "unit": "I",
+          "chapterNo": 2,
+          "title": "Playing with magnets",
+          "pageNo": 11,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "I",
+          "chapterNo": 3,
+          "title": "Rains; where does it come from",
+          "pageNo": 21,
+          "periods": 10,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "I",
+          "chapterNo": 4,
+          "title": "What do animals eat",
+          "pageNo": 28,
+          "periods": 12,
+          "subArea": "Biology"
+        },
+        {
+          "unit": "I",
+          "chapterNo": 5,
+          "title": "Materials - Objects",
+          "pageNo": 41,
+          "periods": 12,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "I",
+          "chapterNo": 6,
+          "title": "Habitat",
+          "pageNo": 50,
+          "periods": 12,
+          "subArea": "Biology"
+        },
+        {
+          "unit": "I",
+          "chapterNo": 7,
+          "title": "Separation of Substances",
+          "pageNo": 59,
+          "periods": 12,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "II",
+          "chapterNo": 8,
+          "title": "Fibre to Fabric",
+          "pageNo": 70,
+          "periods": 11,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "II",
+          "chapterNo": 9,
+          "title": "Plastic parts and functions",
+          "pageNo": 79,
+          "periods": 10,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "II",
+          "chapterNo": 10,
+          "title": "Clothes around us",
+          "pageNo": 88,
+          "periods": 11,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "II",
+          "chapterNo": 11,
+          "title": "Water in our life",
+          "pageNo": 101,
+          "periods": 11,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "II",
+          "chapterNo": 12,
+          "title": "Simple electric circuits",
+          "pageNo": 109,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "III",
+          "chapterNo": 13,
+          "title": "Learning how to measure",
+          "pageNo": 121,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "III",
+          "chapterNo": 14,
+          "title": "Movements in animals",
+          "pageNo": 133,
+          "periods": 12,
+          "subArea": "Biology"
+        },
+        {
+          "unit": "III",
+          "chapterNo": 15,
+          "title": "Light, Shadows and Images",
+          "pageNo": 147,
+          "periods": 11,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "III",
+          "chapterNo": 16,
+          "title": "Living and non-living",
+          "pageNo": 160,
+          "periods": 12,
+          "subArea": "Biology"
+        },
+        {
+          "unit": "IV",
+          "chapterNo": 17,
+          "title": "Revision",
+          "pageNo": 173,
+          "periods": null,
+          "subArea": null
+        }
+      ]
+    },
+    {
+      "id": "ch1",
+      "unit": "I",
+      "number": 1,
+      "title": "Our food",
+      "pageStart": 1,
+      "pageEnd": 10,
+      "status": "coming-soon",
+      "periods": 10,
+      "subArea": "Biology"
+    },
+    {
+      "id": "ch2",
+      "unit": "I",
+      "number": 2,
+      "title": "Playing with magnets",
+      "pageStart": 11,
+      "pageEnd": 20,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch3",
+      "unit": "I",
+      "number": 3,
+      "title": "Rains; where does it come from",
+      "pageStart": 21,
+      "pageEnd": 27,
+      "status": "coming-soon",
+      "periods": 10,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch4",
+      "unit": "I",
+      "number": 4,
+      "title": "What do animals eat",
+      "pageStart": 28,
+      "pageEnd": 40,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Biology"
+    },
+    {
+      "id": "ch5",
+      "unit": "I",
+      "number": 5,
+      "title": "Materials - Objects",
+      "pageStart": 41,
+      "pageEnd": 49,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch6",
+      "unit": "I",
+      "number": 6,
+      "title": "Habitat",
+      "pageStart": 50,
+      "pageEnd": 58,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Biology"
+    },
+    {
+      "id": "ch7",
+      "unit": "I",
+      "number": 7,
+      "title": "Separation of Substances",
+      "pageStart": 59,
+      "pageEnd": 69,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch8",
+      "unit": "II",
+      "number": 8,
+      "title": "Fibre to Fabric",
+      "pageStart": 70,
+      "pageEnd": 78,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch9",
+      "unit": "II",
+      "number": 9,
+      "title": "Plastic parts and functions",
+      "pageStart": 79,
+      "pageEnd": 87,
+      "status": "coming-soon",
+      "periods": 10,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch10",
+      "unit": "II",
+      "number": 10,
+      "title": "Clothes around us",
+      "pageStart": 88,
+      "pageEnd": 100,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch11",
+      "unit": "II",
+      "number": 11,
+      "title": "Water in our life",
+      "pageStart": 101,
+      "pageEnd": 108,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch12",
+      "unit": "II",
+      "number": 12,
+      "title": "Simple electric circuits",
+      "pageStart": 109,
+      "pageEnd": 120,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch13",
+      "unit": "III",
+      "number": 13,
+      "title": "Learning how to measure",
+      "pageStart": 121,
+      "pageEnd": 132,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch14",
+      "unit": "III",
+      "number": 14,
+      "title": "Movements in animals",
+      "pageStart": 133,
+      "pageEnd": 146,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Biology"
+    },
+    {
+      "id": "ch15",
+      "unit": "III",
+      "number": 15,
+      "title": "Light, Shadows and Images",
+      "pageStart": 147,
+      "pageEnd": 159,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch16",
+      "unit": "III",
+      "number": 16,
+      "title": "Living and non-living",
+      "pageStart": 160,
+      "pageEnd": 172,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Biology"
+    },
+    {
+      "id": "ch17",
+      "unit": "IV",
+      "number": 17,
+      "title": "Revision",
+      "pageStart": 173,
+      "pageEnd": 185,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    }
+  ]
 }
