@@ -23,3 +23,10 @@ export function getPageContextLabel(pathname: string, searchParams: URLSearchPar
   const entry = Object.values(PAGES).find((p) => p.route === pathname);
   return entry?.description ?? pathname;
 }
+
+// Compact, copyable id for one specific reader page — matches the
+// C6-Science.json naming convention already used for the data files, so
+// it's recognizable to whoever's looking at both.
+export function getPageId(classGrade: number, subject: string, page: number): string {
+  return `C${classGrade}-${subject}-P${page}`;
+}
