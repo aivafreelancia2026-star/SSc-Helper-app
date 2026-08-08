@@ -1,6 +1,5 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
 import { CLASSES, useClassGrade } from "@/lib/use-class-grade";
 
 // Selection lives in the URL (?class=N), not local state, so pages outside
@@ -8,12 +7,6 @@ import { CLASSES, useClassGrade } from "@/lib/use-class-grade";
 // tree) can read the selected class via their own `searchParams` prop.
 export function ClassSelector({ defaultClass }: { defaultClass: number | null }) {
   const { selected, setClass: selectClass } = useClassGrade(defaultClass);
-
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const inBook = pathname === "/reader" && searchParams.has("page");
-  const page = searchParams.get("page");
-  const total = searchParams.get("total");
 
   return (
     <div className="flex items-center gap-2 overflow-x-auto border-b border-border/60 bg-white/60 px-4 py-3 sm:justify-center sm:px-6">
@@ -32,12 +25,6 @@ export function ClassSelector({ defaultClass }: { defaultClass: number | null })
           Class {grade}
         </button>
       ))}
-
-      {inBook && page && total && (
-        <span className="ml-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-center font-heading text-[10px] font-bold leading-tight text-on-primary">
-          {page}/{total}
-        </span>
-      )}
     </div>
   );
 }
