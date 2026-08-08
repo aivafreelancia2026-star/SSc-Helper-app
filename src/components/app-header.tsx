@@ -19,9 +19,9 @@ function useBackTarget(): string | null {
   if (pathname === "/reader") {
     const classParam = searchParams.get("class");
     const subject = searchParams.get("subject");
-    const chapter = searchParams.get("chapter");
+    const page = searchParams.get("page");
 
-    if (chapter) {
+    if (page) {
       return `/reader?class=${classParam}&subject=${subject}`;
     }
     return classParam ? `/dashboard?class=${classParam}` : "/dashboard";

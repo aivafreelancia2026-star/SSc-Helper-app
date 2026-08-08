@@ -50,8 +50,8 @@ src/
       middleware.ts               Session refresh logic, used by proxy.ts
   proxy.ts                    Next.js middleware entry point (session refresh)
   data/classes/                33 subject JSON files + 5 per-class hub JSON files
-    class-6.json … class-10.json          Hub: lists subjects + which file each is in
-    class-6-maths.json, etc.               Per-subject chapter content
+    C6.json … C10.json                    Hub: lists subjects + which file each is in
+    C6-Maths.json, etc.                    Per-subject chapter content
 ```
 
 ## Auth & session flow
@@ -131,11 +131,19 @@ structure per class:
 - **Class 8–10**: Telugu, Hindi, English, Maths, Biology (standalone),
   Science (subAreas: Physics, Chemistry only), Social — 7 subjects
 
-Each class has one **hub file** (`class-N.json`) listing its subjects and
-which file each lives in, and one **subject file** per subject
-(`class-N-<subject>.json`). `src/lib/subjects.ts` imports the hub files
-directly (Next.js supports JSON imports natively) — they're the source of
-truth for `getSubjectsForClass()`, not hardcoded TS data.
+Each class has one **hub file** (`CN.json`) listing its subjects and which
+file each lives in, and one **subject file** per subject (`CN-<Subject>.json`,
+subject name capitalized — e.g. `C6-Maths.json`). `src/lib/subjects.ts`
+imports the hub files directly (Next.js supports JSON imports natively) —
+they're the source of truth for `getSubjectsForClass()`, not hardcoded TS
+data. Each hub's `subjects[].file` field is the exact filename to import for
+that subject — don't reconstruct it manually, since it's the one place that
+tracks a rename.
+
+**Founder/Developer only**: `SubjectsGrid` shows each subject's backing
+filename (e.g. `C6-Maths.json`) below its name on the dashboard cards, for
+these two roles only — a quick reference while building out content, not
+meant for Teacher/Student.
 
 ### Chapter content shape (currently only Class 6 Science has real data)
 
@@ -155,7 +163,7 @@ Each subject file has a `chapters: []` array. A chapter looks like:
 }
 ```
 
-Class 6 Science (`class-6-science.json`) also has a `totalPages: 185` field
+Class 6 Science (`C6-Science.json`) also has a `totalPages: 185` field
 and a special `id: "index"` chapter carrying an `indexData` array — the raw
 textbook index table (unit/chapter/title/page/periods/subArea), rendered by
 `src/components/chapter-index.tsx` as a clickable, expandable-by-unit list.

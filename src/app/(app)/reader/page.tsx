@@ -1,18 +1,24 @@
 import { Suspense } from "react";
-import { redirect } from "next/navigation";
-import class6Science from "@/data/classes/class-6-science.json";
+import class6Science from "@/data/classes/C6-Science.json";
 import { ChapterIndex } from "@/components/chapter-index";
 import type { Chapter } from "@/lib/content";
+
+function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
+  return (
+    chapters.find(
+      (c) => c.id !== "index" && c.id !== "intro" && page >= c.pageStart && page <= c.pageEnd,
+    ) ?? null
+  );
+}
 
 export default async function ReaderPage({
   searchParams,
 }: {
-  searchParams: Promise<{ class?: string; subject?: string; chapter?: string }>;
+  searchParams: Promise<{ class?: string; subject?: string; page?: string }>;
 }) {
   const params = await searchParams;
   const classGrade = Number(params.class) || 6;
   const subject = params.subject || "Science";
-  const chapter = params.chapter;
 
   if (classGrade !== 6 || subject !== "Science") {
     return (
@@ -30,45 +36,50 @@ export default async function ReaderPage({
   const chapters = (class6Science as any).chapters as Chapter[];
   const totalPages = (class6Science as any).totalPages as number;
 
-  if (chapter) {
-    const selectedChapter = chapters.find((c) => c.id === chapter);
-    if (!selectedChapter) redirect("/reader");
+  const requestedPage = Number(params.page);
+  const page =
+    Number.isInteger(requestedPage) && requestedPage >= 1
+      ? Math.min(requestedPage, totalPages)
+      : null;
+
+  if (page) {
+    const selectedChapter = findChapterForPage(chapters, page);
 
     return (
       <div className="flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
         <div className="w-full max-w-2xl space-y-4">
           <div className="flex items-start justify-between gap-3">
             <div className="space-y-2">
-              <p className="text-sm font-semibold text-primary">Unit {selectedChapter.unit}</p>
-              <h1 className="font-heading text-2xl font-bold text-foreground">
-                Chapter {selectedChapter.number}: {selectedChapter.title}
-              </h1>
-              <div className="flex flex-wrap gap-3 text-sm text-foreground/60">
-                <span>Pages {selectedChapter.pageStart}–{selectedChapter.pageEnd}</span>
-                {selectedChapter.periods && <span>{selectedChapter.periods} periods</span>}
-                {selectedChapter.subArea && <span>{selectedChapter.subArea}</span>}
-              </div>
+              {selectedChapter ? (
+                <>
+                  <p className="text-sm font-semibold text-primary">Unit {selectedChapter.unit}</p>
+                  <h1 className="font-heading text-2xl font-bold text-foreground">
+                    Chapter {selectedChapter.number}: {selectedChapter.title}
+                  </h1>
+                  <div className="flex flex-wrap gap-3 text-sm text-foreground/60">
+                    <span>
+                      Pages {selectedChapter.pageStart}–{selectedChapter.pageEnd}
+                    </span>
+                    {selectedChapter.periods && <span>{selectedChapter.periods} periods</span>}
+                    {selectedChapter.subArea && <span>{selectedChapter.subArea}</span>}
+                  </div>
+                </>
+              ) : (
+                <h1 className="font-heading text-2xl font-bold text-foreground">Front matter</h1>
+              )}
             </div>
             <span className="shrink-0 rounded-full bg-primary/10 px-3 py-1.5 font-heading text-sm font-bold text-primary">
-              {selectedChapter.pageStart}/{totalPages}
+              {page}/{totalPages}
             </span>
           </div>
 
           <div className="rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
-            {selectedChapter.status === "coming-soon" ? (
-              <div className="text-center py-12">
-                <p className="font-heading font-semibold text-foreground mb-2">Coming soon</p>
-                <p className="font-body text-sm text-foreground/60">
-                  Chapter content will be available soon Check back later
-                </p>
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="font-body text-sm text-foreground/60">
-                  Chapter reader coming soon
-                </p>
-              </div>
-            )}
+            <div className="text-center py-12">
+              <p className="font-heading font-semibold text-foreground mb-2">Coming soon</p>
+              <p className="font-body text-sm text-foreground/60">
+                Page content will be available soon — check back later.
+              </p>
+            </div>
           </div>
 
           <a
@@ -89,7 +100,7 @@ export default async function ReaderPage({
           <div className="text-center text-foreground/60">Loading index</div>
         }
       >
-        <ChapterIndex chapters={chapters} totalPages={totalPages} />
+        <ChapterIndex chapters={chapters} totalPages={totalPages} classGrade={classGrade} subject={subject} />
       </Suspense>
     </div>
   );

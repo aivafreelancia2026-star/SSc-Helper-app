@@ -6,9 +6,13 @@ import type { Chapter } from "@/lib/content";
 export function ChapterIndex({
   chapters,
   totalPages,
+  classGrade,
+  subject,
 }: {
   chapters: Chapter[];
   totalPages: number;
+  classGrade: number;
+  subject: string;
 }) {
   const [selectedUnit, setSelectedUnit] = useState<string | null>(null);
 
@@ -59,7 +63,7 @@ export function ChapterIndex({
                   {unitData.map((item) => (
                     <a
                       key={`${item.unit}-${item.chapterNo}`}
-                      href={`#chapter-${item.chapterNo}`}
+                      href={`/reader?class=${classGrade}&subject=${subject}&page=${item.pageNo}&total=${totalPages}`}
                       className="block px-6 py-3 hover:bg-primary/5 transition-colors"
                     >
                       <div className="flex items-start justify-between gap-4">

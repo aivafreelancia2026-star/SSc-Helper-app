@@ -1,11 +1,12 @@
-import class6 from "@/data/classes/class-6.json";
-import class7 from "@/data/classes/class-7.json";
-import class8 from "@/data/classes/class-8.json";
-import class9 from "@/data/classes/class-9.json";
-import class10 from "@/data/classes/class-10.json";
+import class6 from "@/data/classes/C6.json";
+import class7 from "@/data/classes/C7.json";
+import class8 from "@/data/classes/C8.json";
+import class9 from "@/data/classes/C9.json";
+import class10 from "@/data/classes/C10.json";
 
 export type Subject = {
   name: string;
+  file: string;
   subAreas?: string[];
 };
 
@@ -30,5 +31,5 @@ const HUBS: Partial<Record<number, ClassHub>> = {
 export function getSubjectsForClass(classGrade: number): Subject[] | null {
   const hub = HUBS[classGrade];
   if (!hub) return null;
-  return hub.subjects.map(({ name, subAreas }) => ({ name, subAreas }));
+  return hub.subjects.map(({ name, file, subAreas }) => ({ name, file, subAreas }));
 }

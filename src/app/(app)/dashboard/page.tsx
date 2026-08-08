@@ -52,7 +52,11 @@ export default async function DashboardPage({
           Class {selectedClass} subjects
         </h2>
         {subjects ? (
-          <SubjectsGrid subjects={subjects} classGrade={selectedClass} />
+          <SubjectsGrid
+            subjects={subjects}
+            classGrade={selectedClass}
+            role={profile?.role ?? "student"}
+          />
         ) : (
           <p className="font-body text-sm text-foreground/60">
             Class {selectedClass} content is coming soon.

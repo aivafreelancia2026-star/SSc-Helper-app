@@ -3,27 +3,27 @@
   "subjects": [
     {
       "name": "Telugu",
-      "file": "class-9-telugu.json"
+      "file": "C9-Telugu.json"
     },
     {
       "name": "Hindi",
-      "file": "class-9-hindi.json"
+      "file": "C9-Hindi.json"
     },
     {
       "name": "English",
-      "file": "class-9-english.json"
+      "file": "C9-English.json"
     },
     {
       "name": "Maths",
-      "file": "class-9-maths.json"
+      "file": "C9-Maths.json"
     },
     {
       "name": "Biology",
-      "file": "class-9-biology.json"
+      "file": "C9-Biology.json"
     },
     {
       "name": "Science",
-      "file": "class-9-science.json",
+      "file": "C9-Science.json",
       "subAreas": [
         "Physics",
         "Chemistry"
@@ -31,7 +31,7 @@
     },
     {
       "name": "Social",
-      "file": "class-9-social.json"
+      "file": "C9-Social.json"
     }
   ]
 }

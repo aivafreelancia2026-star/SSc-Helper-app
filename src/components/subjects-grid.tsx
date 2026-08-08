@@ -3,9 +3,19 @@
 import { useRouter } from "next/navigation";
 import { BookIcon } from "@/components/icons";
 import type { Subject } from "@/lib/subjects";
+import type { Role } from "@/lib/profile";
 
-export function SubjectsGrid({ subjects, classGrade }: { subjects: Subject[]; classGrade: number }) {
+export function SubjectsGrid({
+  subjects,
+  classGrade,
+  role,
+}: {
+  subjects: Subject[];
+  classGrade: number;
+  role: Role;
+}) {
   const router = useRouter();
+  const showFilename = role === "founder" || role === "developer";
 
   function handleSubjectClick(subjectName: string) {
     router.push(`/reader?class=${classGrade}&subject=${encodeURIComponent(subjectName)}`);
@@ -23,6 +33,11 @@ export function SubjectsGrid({ subjects, classGrade }: { subjects: Subject[]; cl
         {subject.subAreas && (
           <span className="font-body text-[10px] leading-tight text-foreground/40">
             {subject.subAreas.join(" · ")}
+          </span>
+        )}
+        {showFilename && (
+          <span className="font-mono text-[9px] leading-tight text-foreground/35">
+            {subject.file}
           </span>
         )}
       </button>
