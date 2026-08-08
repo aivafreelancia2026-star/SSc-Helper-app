@@ -6,7 +6,7 @@ import { InfoModal } from "@/components/info-modal";
 import { LogoutButton } from "@/components/logout-button";
 import { HomeIcon, MoreIcon, TrophyIcon, UserIcon } from "@/components/icons";
 
-type ActiveModal = "leaderboard" | "profile" | "more" | null;
+type ActiveModal = "leaderboard" | "more" | null;
 
 const itemClass =
   "flex cursor-pointer flex-col items-center gap-1 py-2.5 font-heading text-[11px] font-semibold text-foreground/80 transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40";
@@ -29,10 +29,10 @@ export function BottomNav() {
           <TrophyIcon className="h-5 w-5" />
           Leaderboard
         </button>
-        <button type="button" onClick={() => setActiveModal("profile")} className={itemClass}>
+        <Link href="/profile" className={itemClass}>
           <UserIcon className="h-5 w-5" />
           My profile
-        </button>
+        </Link>
         <button type="button" onClick={() => setActiveModal("more")} className={itemClass}>
           <MoreIcon className="h-5 w-5" />
           More
@@ -43,14 +43,6 @@ export function BottomNav() {
         <InfoModal
           title="Leaderboard"
           message="Leaderboards aren't available yet — check back soon."
-          onClose={close}
-        />
-      )}
-
-      {activeModal === "profile" && (
-        <InfoModal
-          title="My profile"
-          message="A dedicated profile page is coming soon."
           onClose={close}
         />
       )}
