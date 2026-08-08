@@ -20,7 +20,7 @@ type ActiveModal = "feedback" | "reset" | "more" | "upgrade" | null;
 const NAV_ITEMS = [
   { key: "feedback" as const, label: "Feedback", icon: FeedbackIcon },
   { key: "reset" as const, label: "Reset", icon: ResetIcon },
-  { key: "more" as const, label: "More", icon: MoreIcon },
+  { key: "more" as const, label: "Others", icon: MoreIcon },
   { key: "upgrade" as const, label: "Upgrade", icon: SparklesIcon },
 ];
 
@@ -118,7 +118,7 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
 
       {activeModal === "more" && (
         <InfoModal
-          title="More"
+          title="Others"
           message="More options are coming soon."
           onClose={close}
         />
