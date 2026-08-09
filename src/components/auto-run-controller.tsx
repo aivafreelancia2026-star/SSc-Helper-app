@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const AUTO_RUN_INTERVAL_MS = 2000;
+const AUTO_RUN_INTERVAL_MS = 1000;
 
 // Founder/Developer QA tool: walks through every page of a book one by one
 // on a timer, so a reviewer can watch content render without manually
