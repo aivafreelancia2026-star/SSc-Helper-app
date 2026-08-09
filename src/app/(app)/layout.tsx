@@ -42,7 +42,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         <ClassSelector defaultClass={profile?.classGrade ?? null} />
       </Suspense>
       <Suspense fallback={null}>
-        <BookStatusBar />
+        <BookStatusBar role={profile?.role ?? "student"} />
       </Suspense>
       <main className="flex flex-1 flex-col pb-20">{children}</main>
       <BottomNav />

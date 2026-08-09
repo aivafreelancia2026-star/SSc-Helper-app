@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export type TableCell = {
   value: string;
@@ -37,6 +38,8 @@ export function FillInTable({
 }) {
   const [values, setValues] = useState<string[][]>(() => rows.map((row) => row.map((c) => c.value)));
   const [checked, setChecked] = useState(false);
+  const searchParams = useSearchParams();
+  const isRevealed = searchParams.get("reveal") === "1";
 
   const isGradable = rows.some((row) => row.some((cell) => cell.correctAnswers));
 
@@ -87,22 +90,29 @@ export function FillInTable({
                       className="border-t border-border/40 px-3 py-2 font-body text-sm text-foreground"
                     >
                       {cell.editable ? (
-                        <div className="flex items-center gap-1.5">
-                          <input
-                            type="text"
-                            value={typedValue}
-                            onChange={(e) => handleChange(rowIdx, colIdx, e.target.value)}
-                            placeholder="Type here…"
-                            className={`w-full rounded-[8px] border bg-white/70 px-2 py-1 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none ${
-                              correct === true
-                                ? "border-green-500 bg-green-50"
-                                : correct === false
-                                  ? "border-destructive bg-destructive/5"
-                                  : "border-border/60 focus:border-primary"
-                            }`}
-                          />
-                          {correct === true && <span className="text-green-600">✓</span>}
-                          {correct === false && <span className="text-destructive">✗</span>}
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-1.5">
+                            <input
+                              type="text"
+                              value={typedValue}
+                              onChange={(e) => handleChange(rowIdx, colIdx, e.target.value)}
+                              placeholder="Type here…"
+                              className={`w-full rounded-[8px] border bg-white/70 px-2 py-1 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none ${
+                                correct === true
+                                  ? "border-green-500 bg-green-50"
+                                  : correct === false
+                                    ? "border-destructive bg-destructive/5"
+                                    : "border-border/60 focus:border-primary"
+                              }`}
+                            />
+                            {correct === true && <span className="text-green-600">✓</span>}
+                            {correct === false && <span className="text-destructive">✗</span>}
+                          </div>
+                          {isRevealed && cell.correctAnswers && (
+                            <p className="font-mono text-[10px] font-semibold text-primary">
+                              Answer: {cell.correctAnswers[0]}
+                            </p>
+                          )}
                         </div>
                       ) : (
                         cell.value
