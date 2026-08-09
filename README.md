@@ -1,22 +1,32 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started1
+## Getting Started
 
-First, run the development server:
+1. Install dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   npm install
+   ```
+
+2. Create your local env file:
+
+   ```bash
+   cp .env.local.example .env.local
+   ```
+
+   `.env.local` is gitignored on purpose (it holds real secrets) — cloning the
+   repo does **not** give you one. Ask a project owner for the real values
+   (Supabase URL/anon key, feedback API URL, role invite codes) and fill them
+   in. Without this step the app will run but Supabase-backed features
+   (auth, profiles, scoring) will silently fail.
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
