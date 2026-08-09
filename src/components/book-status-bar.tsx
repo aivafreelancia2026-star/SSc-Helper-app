@@ -35,7 +35,7 @@ export function BookStatusBar({ role }: { role: Role }) {
 
   return (
     <div className="flex items-center justify-between gap-3 border-b border-border/60 bg-white/60 px-4 py-2 sm:px-6">
-      <span className="font-heading text-xs font-semibold text-foreground/70">
+      <span className="rounded-full bg-gradient-to-br from-primary to-primary/80 px-3 py-1 font-heading text-xs font-bold text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)]">
         Page {page}
         {total ? `/${total}` : ""}
       </span>

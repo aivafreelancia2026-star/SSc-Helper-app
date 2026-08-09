@@ -2,7 +2,6 @@ import { redirect } from "next/navigation";
 import { Suspense } from "react";
 import class6Science from "@/data/classes/C6-Science.json";
 import { ChapterIndex } from "@/components/chapter-index";
-import { PageBadge } from "@/components/page-badge";
 import { AutoRunController } from "@/components/auto-run-controller";
 import { getPageContent } from "@/lib/reader-content-registry";
 import type { Chapter } from "@/lib/content";
@@ -61,7 +60,6 @@ export default async function ReaderPage({
   if (page === indexChapter.pageStart) {
     return (
       <div className="relative flex flex-1 flex-col items-center overflow-hidden py-8">
-        <PageBadge classGrade={classGrade} subject={subject} page={page} totalPages={totalPages} />
         <AutoRunController totalPages={totalPages} />
         <Suspense fallback={<div className="text-center text-foreground/60">Loading index</div>}>
           <ChapterIndex
@@ -84,7 +82,6 @@ export default async function ReaderPage({
 
   return (
     <div className="relative flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
-      <PageBadge classGrade={classGrade} subject={subject} page={page} totalPages={totalPages} />
       <AutoRunController totalPages={totalPages} />
       <div className="w-full max-w-2xl space-y-4">
         <div className="space-y-2">
