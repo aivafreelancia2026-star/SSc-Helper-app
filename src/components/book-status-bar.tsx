@@ -36,7 +36,7 @@ export function BookStatusBar({ role }: { role: Role }) {
   }
 
   return (
-    <div className="flex items-center justify-between gap-3 border-b border-border/60 bg-white/60 px-4 py-2 sm:px-6">
+    <div className="sticky top-14 z-10 flex items-center justify-between gap-3 border-b border-border/60 bg-white/90 px-4 py-2 backdrop-blur-sm sm:px-6">
       <div className="flex items-center gap-2">
         <span className="rounded-full bg-gradient-to-br from-primary to-primary/80 px-3 py-1 font-heading text-xs font-bold text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)]">
           Page {page}
@@ -52,13 +52,15 @@ export function BookStatusBar({ role }: { role: Role }) {
           type="button"
           onClick={toggleReveal}
           aria-pressed={isRevealed}
-          className={`cursor-pointer rounded-full border-2 px-3 py-1 font-heading text-[11px] font-bold transition-colors ${
+          aria-label={isRevealed ? "Hide answers" : "Reveal answers"}
+          title={isRevealed ? "Hide answers" : "Reveal answers"}
+          className={`flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full border-2 text-base transition-colors ${
             isRevealed
-              ? "border-primary bg-primary text-on-primary"
-              : "border-primary bg-transparent text-primary hover:bg-primary/10"
+              ? "border-primary bg-primary"
+              : "border-primary bg-transparent hover:bg-primary/10"
           }`}
         >
-          {isRevealed ? "Hide answers" : "Reveal answers"}
+          {isRevealed ? "🙈" : "👁️"}
         </button>
       )}
     </div>
