@@ -4,11 +4,21 @@ import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { AlertIcon } from "@/components/icons";
+import { redeemRoleCode } from "@/lib/actions/redeem-role-code";
 
 const inputBase =
   "w-full rounded-[20px] border-2 border-border bg-white/70 px-4 py-3 font-body text-base text-foreground placeholder:text-foreground/40 shadow-[inset_3px_3px_6px_rgba(79,70,229,0.08),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] transition-colors focus:border-primary focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/25";
 
 const CLASS_OPTIONS = [6, 7, 8, 9, 10];
+
+// Founder is deliberately left off this list — it's not something anyone
+// self-selects at onboarding, only ever granted by redeeming a founder code.
+type SelfReportedRole = "student" | "teacher" | "developer";
+const ROLE_OPTIONS: { value: SelfReportedRole; label: string }[] = [
+  { value: "student", label: "Student" },
+  { value: "teacher", label: "Teacher" },
+  { value: "developer", label: "Developer" },
+];
 
 export function OnboardingForm({
   userId,
@@ -23,8 +33,19 @@ export function OnboardingForm({
   const [fullName, setFullName] = useState(defaultName);
   const [schoolName, setSchoolName] = useState("");
   const [classGrade, setClassGrade] = useState("");
+  // Self-reported only — picking Teacher/Developer here doesn't grant that
+  // role by itself, it just reveals the access-code field below. The role
+  // that actually gets saved always comes from redeemRoleCode.
+  const [claimedRole, setClaimedRole] = useState<SelfReportedRole>("student");
+  const [accessCode, setAccessCode] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  function handleCancelCode() {
+    setClaimedRole("student");
+    setAccessCode("");
+    setError(null);
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -52,11 +73,24 @@ export function OnboardingForm({
         })
       : attempt;
 
-    setIsSubmitting(false);
     if (error) {
+      setIsSubmitting(false);
       setError(error.message);
       return;
     }
+
+    // No code entered — proceed as Student, the existing default. Only a
+    // valid code actually changes the stored role.
+    if (accessCode.trim()) {
+      const codeResult = await redeemRoleCode(accessCode.trim());
+      if (!codeResult.success) {
+        setIsSubmitting(false);
+        setError(codeResult.error);
+        return;
+      }
+    }
+
+    setIsSubmitting(false);
     router.push("/dashboard");
     router.refresh();
   }
@@ -130,6 +164,62 @@ export function OnboardingForm({
             ))}
           </select>
         </div>
+
+        <div>
+          <label
+            htmlFor="claimedRole"
+            className="mb-1.5 block font-heading text-sm font-semibold text-foreground"
+          >
+            I am a...
+          </label>
+          <select
+            id="claimedRole"
+            name="claimedRole"
+            value={claimedRole}
+            onChange={(e) => setClaimedRole(e.target.value as SelfReportedRole)}
+            className={`${inputBase} cursor-pointer appearance-none`}
+          >
+            {ROLE_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {claimedRole !== "student" && (
+          <div className="rounded-[20px] border-2 border-dashed border-primary/40 bg-primary/5 p-4">
+            <label
+              htmlFor="accessCode"
+              className="mb-1.5 block font-heading text-sm font-semibold text-foreground"
+            >
+              What&apos;s your code?
+            </label>
+            <p className="mb-2 font-body text-xs text-foreground/60">
+              {ROLE_OPTIONS.find((o) => o.value === claimedRole)?.label} access needs a code from
+              the SSC Helper team. Don&apos;t have one? Cancel and continue as a Student.
+            </p>
+            <input
+              id="accessCode"
+              name="accessCode"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]{4}"
+              maxLength={4}
+              value={accessCode}
+              onChange={(e) => setAccessCode(e.target.value.replace(/[^0-9]/g, ""))}
+              placeholder="4-digit code"
+              className={`${inputBase} mb-3 text-center tracking-[0.3em]`}
+            />
+            <button
+              type="button"
+              onClick={handleCancelCode}
+              className="w-full cursor-pointer rounded-[16px] border-2 border-border bg-white py-2.5 font-heading text-sm font-bold text-foreground transition-colors hover:bg-muted"
+            >
+              Cancel — continue as Student
+            </button>
+          </div>
+        )}
 
         {error && (
           <div
