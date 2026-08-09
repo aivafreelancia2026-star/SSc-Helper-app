@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useScore } from "@/components/score-provider";
+import { AnswerFeedback } from "@/components/reader/answer-feedback";
 
 export type TableCell = {
   value: string;
@@ -44,6 +45,7 @@ export function FillInTable({
   const { addPoints } = useScore();
   const [values, setValues] = useState<string[][]>(() => rows.map((row) => row.map((c) => c.value)));
   const [scored, setScored] = useState<ScoredEntry[][]>(() => rows.map((row) => row.map(() => null)));
+  const [feedback, setFeedback] = useState<boolean | null>(null);
   const searchParams = useSearchParams();
   const isRevealed = searchParams.get("reveal") === "1";
 
@@ -92,6 +94,7 @@ export function FillInTable({
 
     const correct = isCorrect(cell, typedValue);
     addPoints(correct ? 1 : -1);
+    setFeedback(correct);
 
     const next = scored.map((row) => [...row]);
     next[rowIdx][colIdx] = { value: typedValue, correct };
@@ -101,6 +104,9 @@ export function FillInTable({
 
   return (
     <div className="w-full space-y-2">
+      {feedback !== null && (
+        <AnswerFeedback correct={feedback} onDone={() => setFeedback(null)} />
+      )}
       <p className="text-center font-heading text-sm font-bold text-primary">{title}</p>
       <div className="overflow-x-auto rounded-[12px] border border-border/60">
         <table className="w-full border-collapse text-left">
