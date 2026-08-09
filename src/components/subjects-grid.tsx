@@ -43,7 +43,7 @@ export function SubjectsGrid({
           </span>
         )}
         {isFounderOrDeveloper && (
-          <span className="font-mono text-[9px] leading-tight text-foreground/35">
+          <span className="rounded-full bg-foreground/10 px-2 py-0.5 font-mono text-[10px] font-bold leading-tight text-foreground/80">
             {subject.file}
           </span>
         )}
