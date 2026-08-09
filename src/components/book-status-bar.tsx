@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Role } from "@/lib/profile";
 import { useScore } from "@/components/score-provider";
+import { EyeIcon, EyeSlashIcon } from "@/components/icons";
 
 // A bar that only appears while inside a book (reader with a page open) —
 // same "in book" detection as the top nav bar's arrow/swipe repurposing and
@@ -62,13 +63,13 @@ export function BookStatusBar({ role }: { role: Role }) {
           aria-pressed={isRevealed}
           aria-label={isRevealed ? "Hide answers" : "Reveal answers"}
           title={isRevealed ? "Hide answers" : "Reveal answers"}
-          className={`flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full border-2 text-base transition-colors ${
-            isRevealed
-              ? "border-primary bg-primary"
-              : "border-primary bg-transparent hover:bg-primary/10"
-          }`}
+          className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_2px_6px_rgba(79,70,229,0.35)] transition-opacity hover:opacity-90"
         >
-          {isRevealed ? "🙈" : "👁️"}
+          {isRevealed ? (
+            <EyeSlashIcon className="h-4 w-4" />
+          ) : (
+            <EyeIcon className="h-4 w-4" />
+          )}
         </button>
       )}
     </div>

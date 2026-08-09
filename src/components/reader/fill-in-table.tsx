@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useScore } from "@/components/score-provider";
 import { AnswerFeedback } from "@/components/reader/answer-feedback";
@@ -46,12 +46,17 @@ export function FillInTable({
   const { addPoints } = useScore();
   const [values, setValues] = useState<string[][]>(() => rows.map((row) => row.map((c) => c.value)));
   const [scored, setScored] = useState<ScoredEntry[][]>(() => rows.map((row) => row.map(() => null)));
-  const [feedback, setFeedback] = useState<boolean | null>(null);
+  // `id` forces AnswerFeedback to remount (and its CSS animation to replay)
+  // when a second answer is scored while the previous overlay is still
+  // playing — without it the component just updates in place and the
+  // animation appears to freeze instead of restarting.
+  const [feedback, setFeedback] = useState<{ correct: boolean; id: number } | null>(null);
   const searchParams = useSearchParams();
   const isRevealed = searchParams.get("reveal") === "1";
 
   const valuesKey = `${storageKey}-values`;
   const scoredKey = `${storageKey}-scored`;
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const savedValues = localStorage.getItem(valuesKey);
@@ -82,6 +87,10 @@ export function FillInTable({
       // points aren't touched. Retyping the exact same (already-scored)
       // answer won't double-award; typing something different (right or
       // wrong) scores fresh, since that's a genuine new attempt.
+      if (saveTimer.current) {
+        clearTimeout(saveTimer.current);
+        saveTimer.current = null;
+      }
       const blank = rows.map((row) => row.map((c) => c.value));
       setValues(blank);
       localStorage.setItem(valuesKey, JSON.stringify(blank));
@@ -90,14 +99,30 @@ export function FillInTable({
     return () => window.removeEventListener(RESET_PAGE_ANSWERS_EVENT, handleReset);
   }, [rows, valuesKey]);
 
+  // Typing updates React state (and thus the input) synchronously, but the
+  // localStorage write is debounced — stringifying and persisting the whole
+  // grid on every keystroke is what caused visible input lag on longer
+  // tables, especially on lower-end devices.
   function handleChange(rowIdx: number, colIdx: number, newValue: string) {
     const next = values.map((row) => [...row]);
     next[rowIdx][colIdx] = newValue;
     setValues(next);
-    localStorage.setItem(valuesKey, JSON.stringify(next));
+
+    if (saveTimer.current) clearTimeout(saveTimer.current);
+    saveTimer.current = setTimeout(() => {
+      localStorage.setItem(valuesKey, JSON.stringify(next));
+    }, 400);
   }
 
   function handleBlur(rowIdx: number, colIdx: number) {
+    // Leaving the field is a natural pause point — flush immediately so
+    // grading and the persisted value never disagree.
+    if (saveTimer.current) {
+      clearTimeout(saveTimer.current);
+      saveTimer.current = null;
+      localStorage.setItem(valuesKey, JSON.stringify(values));
+    }
+
     const cell = rows[rowIdx][colIdx];
     if (!cell.editable || !cell.correctAnswers) return;
 
@@ -109,7 +134,7 @@ export function FillInTable({
 
     const correct = isCorrect(cell, typedValue);
     addPoints(correct ? 1 : -1);
-    setFeedback(correct);
+    setFeedback({ correct, id: Date.now() });
 
     const next = scored.map((row) => [...row]);
     next[rowIdx][colIdx] = { value: typedValue, correct };
@@ -120,7 +145,7 @@ export function FillInTable({
   return (
     <div className="w-full space-y-2">
       {feedback !== null && (
-        <AnswerFeedback correct={feedback} onDone={() => setFeedback(null)} />
+        <AnswerFeedback key={feedback.id} correct={feedback.correct} onDone={() => setFeedback(null)} />
       )}
       <p className="text-center font-heading text-sm font-bold text-primary">{title}</p>
       <div className="overflow-x-auto rounded-[12px] border border-border/60">
