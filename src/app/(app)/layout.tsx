@@ -5,6 +5,7 @@ import { getProfile, isProfileComplete } from "@/lib/profile";
 import { AppHeader } from "@/components/app-header";
 import { NavBar } from "@/components/nav-bar";
 import { ClassSelector } from "@/components/class-selector";
+import { BookStatusBar } from "@/components/book-status-bar";
 import { BottomNav } from "@/components/bottom-nav";
 
 // Shared shell for every page behind login (dashboard and beyond). Enforces
@@ -39,6 +40,9 @@ export default async function AppLayout({ children }: { children: React.ReactNod
       </Suspense>
       <Suspense fallback={null}>
         <ClassSelector defaultClass={profile?.classGrade ?? null} />
+      </Suspense>
+      <Suspense fallback={null}>
+        <BookStatusBar />
       </Suspense>
       <main className="flex flex-1 flex-col pb-20">{children}</main>
       <BottomNav />
