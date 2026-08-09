@@ -42,8 +42,16 @@ export function BookStatusBar({ role }: { role: Role }) {
           Page {page}
           {total ? `/${total}` : ""}
         </span>
-        <span className="rounded-full bg-accent/15 px-3 py-1 font-heading text-xs font-bold text-accent">
-          ⭐ {score}
+        <span
+          className={`rounded-full px-3 py-1 font-heading text-xs font-bold ${
+            score < 0
+              ? "bg-destructive/15 text-destructive"
+              : score > 0
+                ? "bg-green-100 text-green-700"
+                : "bg-accent/15 text-accent"
+          }`}
+        >
+          ⭐ {Math.abs(score)}
         </span>
       </div>
 

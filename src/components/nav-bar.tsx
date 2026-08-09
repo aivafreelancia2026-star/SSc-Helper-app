@@ -14,6 +14,7 @@ import {
 } from "@/components/icons";
 import { useClassGrade } from "@/lib/use-class-grade";
 import { usePageTurn } from "@/lib/use-page-turn";
+import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 type ActiveModal = "feedback" | "reset" | "more" | "upgrade" | null;
 
@@ -65,6 +66,11 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
     }
   }
 
+  function handleConfirmReset() {
+    window.dispatchEvent(new Event(RESET_PAGE_ANSWERS_EVENT));
+    close();
+  }
+
   return (
     <>
       <nav
@@ -108,13 +114,52 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
 
       {activeModal === "feedback" && <FeedbackModal onClose={close} />}
 
-      {activeModal === "reset" && (
-        <InfoModal
-          title="Reset progress"
-          message="You don't have any progress saved yet — once you start working through chapters and quizzes, this is where you'll be able to clear it and start fresh."
-          onClose={close}
-        />
-      )}
+      {activeModal === "reset" &&
+        (inBook ? (
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reset-heading"
+            className="fixed inset-0 z-30 flex items-end justify-center px-4 pb-6 sm:items-center sm:pb-4"
+          >
+            <div
+              className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
+              onClick={close}
+              aria-hidden="true"
+            />
+            <div className="relative w-full max-w-sm rounded-[32px] border border-white/60 bg-white/95 p-6 text-center shadow-[12px_12px_28px_rgba(79,70,229,0.18),-8px_-8px_20px_rgba(255,255,255,0.8)] sm:p-8">
+              <h2 id="reset-heading" className="font-heading text-lg font-bold text-foreground">
+                Reset this page?
+              </h2>
+              <p className="mt-2 font-body text-sm text-foreground/60">
+                This clears every answer you&apos;ve typed on this page so you can try again.
+                Points you&apos;ve already earned stay — this doesn&apos;t touch your score.
+              </p>
+              <div className="mt-6 flex flex-col gap-3">
+                <button
+                  type="button"
+                  onClick={handleConfirmReset}
+                  className="w-full cursor-pointer rounded-[20px] bg-accent py-3 font-heading text-base font-bold text-on-primary shadow-[0_6px_0_#c2410c,0_10px_18px_rgba(234,88,12,0.35)] transition-all duration-150 ease-out hover:brightness-105 active:translate-y-1 active:shadow-[0_2px_0_#c2410c,0_4px_10px_rgba(234,88,12,0.35)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/30"
+                >
+                  Reset answers
+                </button>
+                <button
+                  type="button"
+                  onClick={close}
+                  className="w-full cursor-pointer rounded-[20px] border-2 border-border bg-white py-3 font-heading text-base font-bold text-foreground transition-colors hover:bg-muted"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <InfoModal
+            title="Reset progress"
+            message="Open a chapter page first — this resets whatever page you're currently reading."
+            onClose={close}
+          />
+        ))}
 
       {activeModal === "more" && (
         <InfoModal

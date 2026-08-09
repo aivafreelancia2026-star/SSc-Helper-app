@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useScore } from "@/components/score-provider";
 import { AnswerFeedback } from "@/components/reader/answer-feedback";
+import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 export type TableCell = {
   value: string;
@@ -74,6 +75,20 @@ export function FillInTable({
     // account when they were first scored) — must not call addPoints here.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [valuesKey, scoredKey]);
+
+  useEffect(() => {
+    function handleReset() {
+      // Clears typed answers only, not the scored history — already-earned
+      // points aren't touched. Retyping the exact same (already-scored)
+      // answer won't double-award; typing something different (right or
+      // wrong) scores fresh, since that's a genuine new attempt.
+      const blank = rows.map((row) => row.map((c) => c.value));
+      setValues(blank);
+      localStorage.setItem(valuesKey, JSON.stringify(blank));
+    }
+    window.addEventListener(RESET_PAGE_ANSWERS_EVENT, handleReset);
+    return () => window.removeEventListener(RESET_PAGE_ANSWERS_EVENT, handleReset);
+  }, [rows, valuesKey]);
 
   function handleChange(rowIdx: number, colIdx: number, newValue: string) {
     const next = values.map((row) => [...row]);
