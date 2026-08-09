@@ -10,6 +10,7 @@ export type Profile = {
   classGrade: number | null;
   role: Role;
   email: string | null;
+  score: number;
 };
 
 const BASE_COLUMNS = "id, full_name, school_name, class_grade";
@@ -23,15 +24,15 @@ export const getProfile = cache(async function getProfile(
 ): Promise<Profile | null> {
   const full = await supabase
     .from("profiles")
-    .select(`${BASE_COLUMNS}, role, email`)
+    .select(`${BASE_COLUMNS}, role, email, score`)
     .eq("id", userId)
     .maybeSingle();
 
-  // role/email were added after profiles already existed in production —
-  // if that migration hasn't run yet on this environment, fall back to the
-  // original columns rather than blocking onboarding/login entirely. Once
-  // the migration is confirmed applied everywhere, this fallback is dead
-  // code and can be removed.
+  // role/email/score were added after profiles already existed in
+  // production — if that migration hasn't run yet on this environment,
+  // fall back to the original columns rather than blocking
+  // onboarding/login entirely. Once every migration is confirmed applied
+  // everywhere, this fallback is dead code and can be removed.
   const { data } = full.error
     ? await supabase.from("profiles").select(BASE_COLUMNS).eq("id", userId).maybeSingle()
     : full;
@@ -44,6 +45,7 @@ export const getProfile = cache(async function getProfile(
     classGrade: data.class_grade,
     role: ("role" in data && (data.role as Role)) || "student",
     email: ("email" in data && (data.email as string | null)) || null,
+    score: ("score" in data && (data.score as number)) || 0,
   };
 });
 

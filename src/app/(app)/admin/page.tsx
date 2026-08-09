@@ -31,10 +31,19 @@ export default async function AdminPage() {
     );
   }
 
-  const { data } = await supabase
+  const full = await supabase
     .from("profiles")
-    .select("id, full_name, school_name, class_grade, role, email")
+    .select("id, full_name, school_name, class_grade, role, email, score")
     .order("created_at", { ascending: false });
+
+  // score was added after role/email — if that migration hasn't run yet,
+  // fall back to the columns that do exist rather than breaking this page.
+  const { data } = full.error
+    ? await supabase
+        .from("profiles")
+        .select("id, full_name, school_name, class_grade, role, email")
+        .order("created_at", { ascending: false })
+    : full;
 
   const users: Profile[] = (data ?? []).map((row) => ({
     id: row.id,
@@ -43,6 +52,7 @@ export default async function AdminPage() {
     classGrade: row.class_grade,
     role: row.role,
     email: row.email,
+    score: ("score" in row && (row.score as number)) || 0,
   }));
 
   return (

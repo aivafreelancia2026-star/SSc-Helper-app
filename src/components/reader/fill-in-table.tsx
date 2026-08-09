@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useScore } from "@/components/score-provider";
 
 export type TableCell = {
   value: string;
@@ -11,6 +12,8 @@ export type TableCell = {
   // (e.g. "what did YOU eat" is personal, not gradable).
   correctAnswers?: string[];
 };
+
+type ScoredEntry = { value: string; correct: boolean } | null;
 
 function isCorrect(cell: TableCell, typedValue: string): boolean {
   const normalized = typedValue.trim().toLowerCase();
@@ -22,9 +25,11 @@ function isCorrect(cell: TableCell, typedValue: string): boolean {
 // are blank for the student to fill in themselves — student input persists
 // locally per-table so it survives a reload while reading. `storageKey`
 // must be unique per table (e.g. "c6-science-ch1-table1"). Cells that carry
-// `correctAnswers` get a "Check answers" button and a right/wrong badge;
-// tables with no gradable cells (nothing has correctAnswers) skip that UI
-// entirely, since not every table has a single right answer.
+// `correctAnswers` are graded the moment the student leaves the field
+// (onBlur) — no separate "check" step — awarding +1/-1 to the account
+// score. Re-blurring an unchanged answer doesn't re-score it (can't farm
+// points by tabbing in and out); changing the answer and blurring again
+// does re-score, since that's a genuine new attempt.
 export function FillInTable({
   title,
   columns,
@@ -36,30 +41,62 @@ export function FillInTable({
   rows: TableCell[][];
   storageKey: string;
 }) {
+  const { addPoints } = useScore();
   const [values, setValues] = useState<string[][]>(() => rows.map((row) => row.map((c) => c.value)));
-  const [checked, setChecked] = useState(false);
+  const [scored, setScored] = useState<ScoredEntry[][]>(() => rows.map((row) => row.map(() => null)));
   const searchParams = useSearchParams();
   const isRevealed = searchParams.get("reveal") === "1";
 
-  const isGradable = rows.some((row) => row.some((cell) => cell.correctAnswers));
+  const valuesKey = `${storageKey}-values`;
+  const scoredKey = `${storageKey}-scored`;
 
   useEffect(() => {
-    const saved = localStorage.getItem(storageKey);
-    if (saved) {
+    const savedValues = localStorage.getItem(valuesKey);
+    if (savedValues) {
       try {
-        setValues(JSON.parse(saved));
+        setValues(JSON.parse(savedValues));
       } catch {
         // ignore malformed saved data
       }
     }
-  }, [storageKey]);
+    const savedScored = localStorage.getItem(scoredKey);
+    if (savedScored) {
+      try {
+        setScored(JSON.parse(savedScored));
+      } catch {
+        // ignore malformed saved data
+      }
+    }
+    // Restoring a previous session's scored state on mount is a pure
+    // display concern (already-earned points were already persisted to the
+    // account when they were first scored) — must not call addPoints here.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [valuesKey, scoredKey]);
 
   function handleChange(rowIdx: number, colIdx: number, newValue: string) {
     const next = values.map((row) => [...row]);
     next[rowIdx][colIdx] = newValue;
     setValues(next);
-    localStorage.setItem(storageKey, JSON.stringify(next));
-    if (checked) setChecked(false);
+    localStorage.setItem(valuesKey, JSON.stringify(next));
+  }
+
+  function handleBlur(rowIdx: number, colIdx: number) {
+    const cell = rows[rowIdx][colIdx];
+    if (!cell.editable || !cell.correctAnswers) return;
+
+    const typedValue = (values[rowIdx]?.[colIdx] ?? "").trim();
+    if (!typedValue) return;
+
+    const previous = scored[rowIdx]?.[colIdx];
+    if (previous && previous.value === typedValue) return; // already scored this exact answer
+
+    const correct = isCorrect(cell, typedValue);
+    addPoints(correct ? 1 : -1);
+
+    const next = scored.map((row) => [...row]);
+    next[rowIdx][colIdx] = { value: typedValue, correct };
+    setScored(next);
+    localStorage.setItem(scoredKey, JSON.stringify(next));
   }
 
   return (
@@ -81,8 +118,9 @@ export function FillInTable({
               <tr key={rowIdx} className={rowIdx % 2 === 0 ? "bg-muted/40" : "bg-white"}>
                 {row.map((cell, colIdx) => {
                   const typedValue = values[rowIdx]?.[colIdx] ?? "";
-                  const showResult = checked && cell.editable && cell.correctAnswers;
-                  const correct = showResult ? isCorrect(cell, typedValue) : null;
+                  const scoredEntry = scored[rowIdx]?.[colIdx];
+                  const correct =
+                    scoredEntry && scoredEntry.value === typedValue.trim() ? scoredEntry.correct : null;
 
                   return (
                     <td
@@ -96,6 +134,7 @@ export function FillInTable({
                               type="text"
                               value={typedValue}
                               onChange={(e) => handleChange(rowIdx, colIdx, e.target.value)}
+                              onBlur={() => handleBlur(rowIdx, colIdx)}
                               placeholder="Type here…"
                               className={`w-full rounded-[8px] border bg-white/70 px-2 py-1 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none ${
                                 correct === true
@@ -125,16 +164,6 @@ export function FillInTable({
           </tbody>
         </table>
       </div>
-
-      {isGradable && (
-        <button
-          type="button"
-          onClick={() => setChecked(true)}
-          className="mx-auto block cursor-pointer rounded-[12px] bg-primary px-4 py-1.5 font-heading text-xs font-bold text-on-primary transition-opacity hover:opacity-90"
-        >
-          Check answers
-        </button>
-      )}
     </div>
   );
 }
