@@ -128,7 +128,7 @@ export default function SignupPage() {
                 <span className="h-px flex-1 bg-border" />
               </div>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} method="post">
                 <div className="space-y-5">
                   <div>
                     <label
