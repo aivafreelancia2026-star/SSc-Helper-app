@@ -74,7 +74,7 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
   return (
     <>
       <nav
-        className="grid grid-cols-6 border-b border-black/5"
+        className="mx-3 my-2.5 grid grid-cols-6 items-center overflow-hidden rounded-[28px]"
         style={{ background: "#EDC9BD" }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -84,9 +84,9 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
           onClick={goPrev}
           disabled={isFirst}
           aria-label={inBook ? "Previous page" : "Previous class"}
-          className="flex cursor-pointer flex-col items-center justify-center py-3 text-foreground/80 transition-colors hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
+          className="flex cursor-pointer flex-col items-center justify-center py-4 text-foreground/80 transition-colors hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
         >
-          <ChevronLeftIcon className="h-5 w-5" />
+          <ChevronLeftIcon className="h-6 w-6" />
         </button>
 
         {NAV_ITEMS.map(({ key, label, icon: Icon }) => (
@@ -94,9 +94,9 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
             key={key}
             type="button"
             onClick={() => setActiveModal(key)}
-            className="flex cursor-pointer flex-col items-center gap-1 py-3 font-heading text-xs font-semibold text-foreground/80 transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
+            className="flex cursor-pointer flex-col items-center gap-1.5 py-4 font-heading text-sm font-semibold text-foreground/80 transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
           >
-            <Icon className="h-5 w-5" />
+            <Icon className="h-7 w-7" />
             {label}
           </button>
         ))}
@@ -106,9 +106,9 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
           onClick={goNext}
           disabled={isLast}
           aria-label={inBook ? "Next page" : "Next class"}
-          className="flex cursor-pointer flex-col items-center justify-center py-3 text-foreground/80 transition-colors hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
+          className="flex cursor-pointer flex-col items-center justify-center py-4 text-foreground/80 transition-colors hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
         >
-          <ChevronRightIcon className="h-5 w-5" />
+          <ChevronRightIcon className="h-6 w-6" />
         </button>
       </nav>
 

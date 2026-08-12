@@ -31,20 +31,16 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     <ScoreProvider initialScore={profile?.score ?? 0}>
       <div className="flex flex-1 flex-col">
         <Suspense fallback={null}>
-          <AppHeader
-            name={profile?.fullName ?? null}
-            classGrade={profile?.classGrade ?? null}
-            role={profile?.role ?? "student"}
-          />
+          <AppHeader />
         </Suspense>
         <Suspense fallback={null}>
           <NavBar defaultClass={profile?.classGrade ?? null} />
         </Suspense>
         <Suspense fallback={null}>
-          <ClassSelector defaultClass={profile?.classGrade ?? null} />
+          <BookStatusBar role={profile?.role ?? "student"} />
         </Suspense>
         <Suspense fallback={null}>
-          <BookStatusBar role={profile?.role ?? "student"} />
+          <ClassSelector defaultClass={profile?.classGrade ?? null} />
         </Suspense>
         <main className="flex flex-1 flex-col pb-20">{children}</main>
         <BottomNav />

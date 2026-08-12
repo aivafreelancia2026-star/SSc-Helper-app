@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { getProfile } from "@/lib/profile";
 import { BackgroundBlobs } from "@/components/logo-mark";
@@ -39,6 +40,15 @@ export default async function ProfilePage() {
         <span className="mt-4 inline-block rounded-full bg-primary/10 px-3 py-1 font-heading text-xs font-semibold text-primary">
           {ROLE_LABEL[profile?.role ?? "student"]}
         </span>
+
+        {profile?.role === "founder" && (
+          <Link
+            href="/admin"
+            className="mt-4 block w-full cursor-pointer rounded-[16px] bg-primary/10 py-2.5 font-heading text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
+          >
+            Admin
+          </Link>
+        )}
       </div>
 
       <div className="relative z-10 flex w-full flex-col items-center">

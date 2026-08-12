@@ -44,17 +44,20 @@ export function BookStatusBar({ role }: { role: Role }) {
   }
 
   return (
-    <div className="sticky top-14 z-10 flex items-center justify-between gap-3 border-b border-border/60 bg-white/90 px-4 py-2 backdrop-blur-sm sm:px-6">
+    <div className="sticky top-[52px] z-10 mx-3 my-2.5 flex items-center justify-between gap-3 rounded-[28px] bg-primary/5 px-4 py-3 sm:px-6">
       <div className="flex items-center gap-2">
         <button
           type="button"
           onClick={openPageBrowser}
           aria-label="Browse and search all pages"
           title="Browse and search all pages"
-          className="cursor-pointer rounded-full bg-gradient-to-br from-primary to-primary/80 px-3 py-1 font-heading text-xs font-bold text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)] transition-opacity hover:opacity-90"
+          className="flex w-20 shrink-0 cursor-pointer flex-col items-center justify-center gap-0.5 rounded-2xl bg-gradient-to-br from-primary to-primary/80 py-2 font-heading text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)] transition-opacity hover:opacity-90"
         >
-          Page {page}
-          {total ? `/${total}` : ""}
+          <span className="text-[10px] font-semibold opacity-90">Page:</span>
+          <span className="text-sm font-bold">
+            {page}
+            {total ? `/${total}` : ""}
+          </span>
         </button>
         <span
           className={`rounded-full px-3 py-1 font-heading text-xs font-bold ${
