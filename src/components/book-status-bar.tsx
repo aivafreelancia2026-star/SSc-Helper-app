@@ -36,13 +36,25 @@ export function BookStatusBar({ role }: { role: Role }) {
     router.push(`${pathname}?${params.toString()}`);
   }
 
+  function openPageBrowser() {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("browse", "1");
+    router.push(`${pathname}?${params.toString()}`);
+  }
+
   return (
     <div className="sticky top-14 z-10 flex items-center justify-between gap-3 border-b border-border/60 bg-white/90 px-4 py-2 backdrop-blur-sm sm:px-6">
       <div className="flex items-center gap-2">
-        <span className="rounded-full bg-gradient-to-br from-primary to-primary/80 px-3 py-1 font-heading text-xs font-bold text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)]">
+        <button
+          type="button"
+          onClick={openPageBrowser}
+          aria-label="Browse and search all pages"
+          title="Browse and search all pages"
+          className="cursor-pointer rounded-full bg-gradient-to-br from-primary to-primary/80 px-3 py-1 font-heading text-xs font-bold text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)] transition-opacity hover:opacity-90"
+        >
           Page {page}
           {total ? `/${total}` : ""}
-        </span>
+        </button>
         <span
           className={`rounded-full px-3 py-1 font-heading text-xs font-bold ${
             score < 0

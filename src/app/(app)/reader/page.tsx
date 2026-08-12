@@ -5,6 +5,7 @@ import { ChapterIndex } from "@/components/chapter-index";
 import { AutoRunController } from "@/components/auto-run-controller";
 import { getPageContent } from "@/lib/reader-content-registry";
 import { PageTurnTransition } from "@/components/reader/page-turn-transition";
+import { PageBrowser } from "@/components/reader/page-browser";
 import type { Chapter } from "@/lib/content";
 
 function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
@@ -18,7 +19,7 @@ function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
 export default async function ReaderPage({
   searchParams,
 }: {
-  searchParams: Promise<{ class?: string; subject?: string; page?: string }>;
+  searchParams: Promise<{ class?: string; subject?: string; page?: string; browse?: string }>;
 }) {
   const params = await searchParams;
   const classGrade = Number(params.class) || 6;
@@ -41,6 +42,22 @@ export default async function ReaderPage({
   const totalPages = (class6Science as any).totalPages as number;
   const introChapter = chapters.find((c) => c.id === "intro")!;
   const indexChapter = chapters.find((c) => c.id === "index")!;
+
+  // Browsing all pages doesn't need a specific page selected, so this check
+  // happens before the "page is required" redirect below.
+  if (params.browse === "1") {
+    return (
+      <div className="relative flex flex-1 flex-col items-center overflow-hidden py-8">
+        <PageBrowser
+          chapters={chapters}
+          totalPages={totalPages}
+          classGrade={classGrade}
+          subject={subject}
+          indexPageStart={indexChapter.pageStart}
+        />
+      </div>
+    );
+  }
 
   // Every /reader visit for a real subject always carries a page number —
   // the index (page 9) is page-turnable too, not a separate mode, so the
