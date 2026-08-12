@@ -6,6 +6,7 @@ import { AutoRunController } from "@/components/auto-run-controller";
 import { getPageContent } from "@/lib/reader-content-registry";
 import { PageTurnTransition } from "@/components/reader/page-turn-transition";
 import { PageBrowser } from "@/components/reader/page-browser";
+import { ComingSoonCard } from "@/components/coming-soon-card";
 import type { Chapter } from "@/lib/content";
 
 function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
@@ -35,12 +36,7 @@ export default async function ReaderPage({
   if (classGrade !== 6 || subject !== "Science") {
     return (
       <div className="flex flex-1 items-center justify-center px-4 py-12">
-        <div className="text-center">
-          <h1 className="font-heading text-xl font-bold text-foreground">Coming soon</h1>
-          <p className="mt-2 font-body text-sm text-foreground/60">
-            Content for Class {classGrade} {subject} will be available soon
-          </p>
-        </div>
+        <ComingSoonCard message={`Content for Class ${classGrade} ${subject} will be available soon.`} />
       </div>
     );
   }
@@ -146,18 +142,13 @@ export default async function ReaderPage({
             )}
           </div>
 
-          <div className="rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
-            {PageContent ? (
+          {PageContent ? (
+            <div className="rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
               <PageContent />
-            ) : (
-              <div className="text-center py-12">
-                <p className="font-heading font-semibold text-foreground mb-2">Coming soon</p>
-                <p className="font-body text-sm text-foreground/60">
-                  Page content will be available soon — check back later.
-                </p>
-              </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            <ComingSoonCard message="Page content will be available soon — check back later." />
+          )}
 
           <a
             href={`/reader?class=${classGrade}&subject=${subject}&page=${indexChapter.pageStart}&total=${totalPages}&index=${indexChapter.pageStart}`}
