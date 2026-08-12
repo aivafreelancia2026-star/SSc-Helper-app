@@ -36,6 +36,20 @@ const KEYWORDS: Record<string, Record<number, string>> = {
     6: "north east monsoon water cycle streams rivers deforestation global warming floods droughts keywords",
     7: "improve your learning water cycle diagram rainbow plastic bags dangerous pollution",
   },
+  "6-Science-ch4": {
+    1: "kartik dog sniffing food intake activity animals eat",
+    2: "table 1 animal bird what they eat how they find food herbivores carnivores omnivores",
+    3: "table 2 food habits eats only plants animals both herbivores carnivores omnivores search for food tracking down",
+    4: "collecting food pond skaters bodyparts mouthparts hands feet cow butterfly frog hummingbird squirrel lion",
+    5: "activity table 3 bodypart used in collecting food hen cow dog frog snake lizard vulture lion man humming bird",
+    6: "bird beaks eagle sparrow duck cock wood pecker pigeon crow food habit",
+    7: "table 4 similarities dissimilarities hen crow picking food with beak woodpecker parrot eagle claws scavengers",
+    8: "frog tongue cow rumination how much how little elephant crane fly dog gets food",
+    9: "dog teeth lion tiger rabbit squirrel using the tongue frog cow dog duck filter getting food without hunting",
+    10: "leeches suckers modes of collecting food lizard spider hen butterfly nocturnal food chain crane fish frog",
+    11: "food chains food web grain cat rat grass dog wolf cat deer tiger man lion fox hen worms ants aphids honeydew",
+    12: "leafcutter ants keywords what we have learnt improve your learning carnivores herbivores omnivores food chain",
+  },
 };
 
 export function getPageKeywords(chapterId: string, pageInChapter: number): string {

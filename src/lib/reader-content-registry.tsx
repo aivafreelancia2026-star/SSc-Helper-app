@@ -97,6 +97,44 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/c6-science-ch3-page7").then((m) => m.C6ScienceCh3Page7),
     ),
   },
+  "6-Science-ch4": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page1").then((m) => m.C6ScienceCh4Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page2").then((m) => m.C6ScienceCh4Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page3").then((m) => m.C6ScienceCh4Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page4").then((m) => m.C6ScienceCh4Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page5").then((m) => m.C6ScienceCh4Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page6").then((m) => m.C6ScienceCh4Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page7").then((m) => m.C6ScienceCh4Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page8").then((m) => m.C6ScienceCh4Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page9").then((m) => m.C6ScienceCh4Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page10").then((m) => m.C6ScienceCh4Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page11").then((m) => m.C6ScienceCh4Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch4-page12").then((m) => m.C6ScienceCh4Page12),
+    ),
+  },
 };
 
 export function getPageContent(
