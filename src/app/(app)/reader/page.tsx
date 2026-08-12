@@ -19,7 +19,14 @@ function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
 export default async function ReaderPage({
   searchParams,
 }: {
-  searchParams: Promise<{ class?: string; subject?: string; page?: string; browse?: string }>;
+  searchParams: Promise<{
+    class?: string;
+    subject?: string;
+    page?: string;
+    total?: string;
+    browse?: string;
+    [key: string]: string | undefined;
+  }>;
 }) {
   const params = await searchParams;
   const classGrade = Number(params.class) || 6;
@@ -73,6 +80,20 @@ export default async function ReaderPage({
     redirect(
       `/reader?class=${classGrade}&subject=${subject}&page=${indexChapter.pageStart}&total=${totalPages}&index=${indexChapter.pageStart}`,
     );
+  }
+
+  // A link carrying a stale `total` (e.g. bookmarked, or opened before a
+  // chapter-length fix like this one) would otherwise keep showing the old
+  // total forever, since it's never recomputed once it's in the URL.
+  // Preserve every other param (e.g. ?reveal=1) exactly as-is.
+  if (params.total !== String(totalPages)) {
+    const rest = new URLSearchParams(
+      Object.entries(params).filter((entry): entry is [string, string] => entry[1] !== undefined),
+    );
+    rest.set("page", String(page));
+    rest.set("total", String(totalPages));
+    rest.set("index", String(indexChapter.pageStart));
+    redirect(`/reader?${rest.toString()}`);
   }
 
   if (page === indexChapter.pageStart) {

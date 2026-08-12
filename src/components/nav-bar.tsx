@@ -1,12 +1,14 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FeedbackModal } from "@/components/feedback-widget";
 import { InfoModal } from "@/components/info-modal";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
+  EyeIcon,
+  EyeSlashIcon,
   FeedbackIcon,
   MoreIcon,
   ResetIcon,
@@ -15,6 +17,7 @@ import {
 import { useClassGrade } from "@/lib/use-class-grade";
 import { usePageTurn } from "@/lib/use-page-turn";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
+import type { Role } from "@/lib/profile";
 
 type ActiveModal = "feedback" | "reset" | "more" | "upgrade" | null;
 
@@ -29,7 +32,7 @@ const NAV_ITEMS = [
 // horizontal, before it's treated as a change rather than a scroll.
 const SWIPE_THRESHOLD_PX = 50;
 
-export function NavBar({ defaultClass }: { defaultClass: number | null }) {
+export function NavBar({ defaultClass, role }: { defaultClass: number | null; role: Role }) {
   const [activeModal, setActiveModal] = useState<ActiveModal>(null);
   const close = () => setActiveModal(null);
 
@@ -37,12 +40,25 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
   // pages instead of switching grades — same controls, context-dependent
   // meaning, since only one of these makes sense at a time.
   const pathname = usePathname();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const inBook = pathname === "/reader" && searchParams.has("page");
+  const canReveal = inBook && (role === "founder" || role === "developer" || role === "teacher");
+  const isRevealed = searchParams.get("reveal") === "1";
 
   const classGrade = useClassGrade(defaultClass);
   const pageTurn = usePageTurn();
   const { goPrev, goNext, isFirst, isLast } = inBook ? pageTurn : classGrade;
+
+  function toggleReveal() {
+    const params = new URLSearchParams(searchParams.toString());
+    if (isRevealed) {
+      params.delete("reveal");
+    } else {
+      params.set("reveal", "1");
+    }
+    router.push(`${pathname}?${params.toString()}`);
+  }
 
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -74,7 +90,7 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
   return (
     <>
       <nav
-        className="grid grid-cols-6 border-b border-black/5"
+        className={`grid border-b border-black/5 ${canReveal ? "grid-cols-7" : "grid-cols-6"}`}
         style={{ background: "#EDC9BD" }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -100,6 +116,18 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
             {label}
           </button>
         ))}
+
+        {canReveal && (
+          <button
+            type="button"
+            onClick={toggleReveal}
+            aria-pressed={isRevealed}
+            className="flex cursor-pointer flex-col items-center gap-1 py-3 font-heading text-xs font-semibold text-foreground/80 transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
+          >
+            {isRevealed ? <EyeSlashIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
+            {isRevealed ? "Hide" : "Reveal"}
+          </button>
+        )}
 
         <button
           type="button"
