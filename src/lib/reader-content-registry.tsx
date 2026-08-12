@@ -74,6 +74,29 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/c6-science-ch2-page10").then((m) => m.C6ScienceCh2Page10),
     ),
   },
+  "6-Science-ch3": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page1").then((m) => m.C6ScienceCh3Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page2").then((m) => m.C6ScienceCh3Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page3").then((m) => m.C6ScienceCh3Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page4").then((m) => m.C6ScienceCh3Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page5").then((m) => m.C6ScienceCh3Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page6").then((m) => m.C6ScienceCh3Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/c6-science-ch3-page7").then((m) => m.C6ScienceCh3Page7),
+    ),
+  },
 };
 
 export function getPageContent(

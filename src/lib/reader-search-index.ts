@@ -27,6 +27,15 @@ const KEYWORDS: Record<string, Record<number, string>> = {
     9: "magnetic induction keywords what we have learnt improve your learning magnetic non magnetic materials",
     10: "improve your learning exercises compass directions earth magnet toy magnets saleem ali",
   },
+  "6-Science-ch3": {
+    1: "rain umbrella forms of water solid liquid gaseous ice clouds ramya sowmya",
+    2: "liquid form gaseous form water vapour ice water evaporation clothes drying sunlight",
+    3: "evaporation clouds condensation winter breath dew grass",
+    4: "activity condensation glass ice water droplets water cycle clouds kitchen stove",
+    5: "rain clouds hailstones snow monsoons south west monsoon",
+    6: "north east monsoon water cycle streams rivers deforestation global warming floods droughts keywords",
+    7: "improve your learning water cycle diagram rainbow plastic bags dangerous pollution",
+  },
 };
 
 export function getPageKeywords(chapterId: string, pageInChapter: number): string {
