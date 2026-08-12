@@ -15,6 +15,18 @@ const KEYWORDS: Record<string, Record<number, string>> = {
     9: "vegetable carving keywords ingredients preservatives fragrant materials dry fruits what we have learnt improve your learning",
     10: "improve your learning exercises kichidi payasam biryani milk giving egg giving meat giving venn diagram vada dosa preserve fish mango lemons",
   },
+  "6-Science-ch2": {
+    1: "pin holder magnet magnets iron nails jump clips activity finding objects attracted",
+    2: "story of magnet magnus lodestone bar magnet horse shoe ring disc magnet shapes",
+    3: "activity magnetic materials non magnetic materials table iron filings soil archimedes",
+    4: "poles of a bar magnet iron filings north south activity finding directions compass",
+    5: "north pole south pole magnetic compass directional property attraction repulsion between two magnets",
+    6: "like poles repel unlike poles attract earth as a magnet suspended bar magnet",
+    7: "activity finding out whether object is a magnet table 2 make your own magnet magnetize nail",
+    8: "magnetize nail magnetic compass cork water magnetic induction safety pin alpin",
+    9: "magnetic induction keywords what we have learnt improve your learning magnetic non magnetic materials",
+    10: "improve your learning exercises compass directions earth magnet toy magnets saleem ali",
+  },
 };
 
 export function getPageKeywords(chapterId: string, pageInChapter: number): string {
