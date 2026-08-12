@@ -106,25 +106,17 @@ body {
 }
 
 /* Reader page-turn transitions — a page swinging open like a book, hinged
-   at the edge you're turning toward. "Forward" (next page) hinges at the
-   right edge like turning a leaf left-to-right; "backward" (previous page)
-   hinges at the left edge, mirrored. The parent needs `perspective` for the
-   3D rotation to read as a turn rather than a flat skew. */
+   at the edge you're turning toward. "Forward" (pressing Right / next page)
+   enters from the right edge and moves toward the left, like a leaf turning
+   right-to-left; "backward" (pressing Left / previous page) is the exact
+   mirror — enters from the left, moves right. The parent needs
+   `perspective` for the 3D rotation to read as a turn rather than a flat
+   skew. */
 .page-turn-viewport {
   perspective: 1600px;
 }
 
 @keyframes page-turn-forward {
-  0% {
-    transform: rotateY(-32deg) translateX(-6%);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateY(0deg) translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes page-turn-backward {
   0% {
     transform: rotateY(32deg) translateX(6%);
     opacity: 0;
@@ -134,14 +126,24 @@ body {
     opacity: 1;
   }
 }
+@keyframes page-turn-backward {
+  0% {
+    transform: rotateY(-32deg) translateX(-6%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) translateX(0);
+    opacity: 1;
+  }
+}
 .animate-page-turn-forward {
   animation: page-turn-forward 0.45s var(--ease-clay);
-  transform-origin: left center;
+  transform-origin: right center;
   will-change: transform, opacity;
 }
 .animate-page-turn-backward {
   animation: page-turn-backward 0.45s var(--ease-clay);
-  transform-origin: right center;
+  transform-origin: left center;
   will-change: transform, opacity;
 }
 
