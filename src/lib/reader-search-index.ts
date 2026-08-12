@@ -51,6 +51,17 @@ const KEYWORDS: Record<string, Record<number, string>> = {
     12: "leafcutter ants keywords what we have learnt improve your learning carnivores herbivores omnivores food chain",
     13: "improve your learning exercises earthworms bodypart used to collect food beak tongue teeth sucker claws carnivores forest food chain parrot lion play anteater identify the animal",
   },
+  "6-Science-ch5": {
+    1: "mary kitchen cat materials objects table broken objects activity finding materials",
+    2: "table 2 object material door towel cycle knife mirror shoes water bottle pot chairs",
+    3: "table 3 material objects metal plastic glass wood cotton leather ceramic rocks discuss classify",
+    4: "properties of materials transparency transparent opaque table 4 plastic glass jar steel plate mirror wooden door polythene bag paper",
+    5: "translucent oily paper torch state of the materials solid liquid gas candle",
+    6: "candle wick smoke states of materials solids liquids gases table 5 stone milk smoke classification",
+    7: "dilemma with sugar solid liquid sinking floating water table 6 table 7 predictions",
+    8: "iron objects float soluble insoluble water table 8 sugar salt sand saw dust chalk powder keywords what we have learnt",
+    9: "improve your learning exercises glass metal plastic wood ship egg salt water kitchen table sink float soluble insoluble",
+  },
 };
 
 export function getPageKeywords(chapterId: string, pageInChapter: number): string {
