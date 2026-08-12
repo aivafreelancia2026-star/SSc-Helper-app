@@ -15,7 +15,7 @@ export function PageTurnTransition({ page, children }: { page: number; children:
   prevPageRef.current = page;
 
   return (
-    <div className="page-turn-viewport w-full">
+    <div className="page-turn-viewport flex w-full justify-center">
       <div
         key={page}
         className={direction === "forward" ? "animate-page-turn-forward" : "animate-page-turn-backward"}
