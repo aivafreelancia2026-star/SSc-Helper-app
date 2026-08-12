@@ -6,7 +6,7 @@
     "Chemistry",
     "Biology"
   ],
-  "totalPages": 185,
+  "totalPages": 180,
   "chapters": [
     {
       "id": "intro",
@@ -34,7 +34,7 @@
           "unit": "I",
           "chapterNo": 1,
           "title": "Our food",
-          "pageNo": 1,
+          "pageNo": 10,
           "periods": 10,
           "subArea": "Biology"
         },
@@ -42,129 +42,121 @@
           "unit": "I",
           "chapterNo": 2,
           "title": "Playing with magnets",
-          "pageNo": 11,
+          "pageNo": 20,
           "periods": 12,
           "subArea": "Physics"
         },
         {
           "unit": "I",
           "chapterNo": 3,
-          "title": "Rains; where does it come from",
-          "pageNo": 21,
+          "title": "Rain: where does it come from?",
+          "pageNo": 30,
           "periods": 10,
           "subArea": "Physics"
         },
         {
-          "unit": "I",
+          "unit": "II",
           "chapterNo": 4,
           "title": "What do animals eat",
-          "pageNo": 28,
+          "pageNo": 37,
           "periods": 12,
           "subArea": "Biology"
         },
         {
-          "unit": "I",
+          "unit": "II",
           "chapterNo": 5,
           "title": "Materials - Objects",
-          "pageNo": 41,
-          "periods": 12,
-          "subArea": "Chemistry"
-        },
-        {
-          "unit": "I",
-          "chapterNo": 6,
-          "title": "Habitat",
           "pageNo": 50,
           "periods": 12,
-          "subArea": "Biology"
+          "subArea": "Chemistry"
         },
         {
-          "unit": "I",
-          "chapterNo": 7,
-          "title": "Separation of Substances",
+          "unit": "II",
+          "chapterNo": 6,
+          "title": "Habitat",
           "pageNo": 59,
           "periods": 12,
-          "subArea": "Chemistry"
+          "subArea": "Biology"
         },
         {
           "unit": "II",
+          "chapterNo": 7,
+          "title": "Separation of Substances",
+          "pageNo": 70,
+          "periods": 12,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "III",
           "chapterNo": 8,
           "title": "Fibre to Fabric",
-          "pageNo": 70,
-          "periods": 11,
-          "subArea": "Chemistry"
-        },
-        {
-          "unit": "II",
-          "chapterNo": 9,
-          "title": "Plastic parts and functions",
           "pageNo": 79,
-          "periods": 10,
+          "periods": 11,
           "subArea": "Chemistry"
         },
         {
-          "unit": "II",
-          "chapterNo": 10,
-          "title": "Clothes around us",
+          "unit": "III",
+          "chapterNo": 9,
+          "title": "Plants: parts and functions",
           "pageNo": 88,
-          "periods": 11,
-          "subArea": "Chemistry"
-        },
-        {
-          "unit": "II",
-          "chapterNo": 11,
-          "title": "Water in our life",
-          "pageNo": 101,
-          "periods": 11,
-          "subArea": "Chemistry"
-        },
-        {
-          "unit": "II",
-          "chapterNo": 12,
-          "title": "Simple electric circuits",
-          "pageNo": 109,
-          "periods": 12,
-          "subArea": "Physics"
-        },
-        {
-          "unit": "III",
-          "chapterNo": 13,
-          "title": "Learning how to measure",
-          "pageNo": 121,
-          "periods": 12,
-          "subArea": "Physics"
-        },
-        {
-          "unit": "III",
-          "chapterNo": 14,
-          "title": "Movements in animals",
-          "pageNo": 133,
-          "periods": 12,
+          "periods": 10,
           "subArea": "Biology"
         },
         {
           "unit": "III",
-          "chapterNo": 15,
-          "title": "Light, Shadows and Images",
-          "pageNo": 147,
+          "chapterNo": 10,
+          "title": "Changes around us",
+          "pageNo": 98,
+          "periods": 11,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "III",
+          "chapterNo": 11,
+          "title": "Water in our life",
+          "pageNo": 110,
+          "periods": 11,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "III",
+          "chapterNo": 12,
+          "title": "Simple electric circuits",
+          "pageNo": 118,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "IV",
+          "chapterNo": 13,
+          "title": "Learning how to measure",
+          "pageNo": 127,
           "periods": 11,
           "subArea": "Physics"
         },
         {
-          "unit": "III",
-          "chapterNo": 16,
-          "title": "Living and non-living",
-          "pageNo": 160,
+          "unit": "IV",
+          "chapterNo": 14,
+          "title": "Movements in animals",
+          "pageNo": 142,
           "periods": 12,
           "subArea": "Biology"
         },
         {
           "unit": "IV",
-          "chapterNo": 17,
-          "title": "Revision",
-          "pageNo": 173,
-          "periods": null,
-          "subArea": null
+          "chapterNo": 15,
+          "title": "Light, Shadows and Images",
+          "pageNo": 156,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "IV",
+          "chapterNo": 16,
+          "title": "Living and non living",
+          "pageNo": 168,
+          "periods": 10,
+          "subArea": "Biology"
         }
       ]
     },
@@ -194,7 +186,7 @@
       "id": "ch3",
       "unit": "I",
       "number": 3,
-      "title": "Rains; where does it come from",
+      "title": "Rain: where does it come from?",
       "pageStart": 30,
       "pageEnd": 36,
       "status": "coming-soon",
@@ -203,157 +195,146 @@
     },
     {
       "id": "ch4",
-      "unit": "I",
+      "unit": "II",
       "number": 4,
       "title": "What do animals eat",
       "pageStart": 37,
-      "pageEnd": 48,
+      "pageEnd": 49,
       "status": "coming-soon",
       "periods": 12,
       "subArea": "Biology"
     },
     {
       "id": "ch5",
-      "unit": "I",
+      "unit": "II",
       "number": 5,
       "title": "Materials - Objects",
-      "pageStart": 49,
-      "pageEnd": 57,
+      "pageStart": 50,
+      "pageEnd": 58,
       "status": "coming-soon",
       "periods": 12,
       "subArea": "Chemistry"
     },
     {
       "id": "ch6",
-      "unit": "I",
+      "unit": "II",
       "number": 6,
       "title": "Habitat",
-      "pageStart": 58,
-      "pageEnd": 66,
+      "pageStart": 59,
+      "pageEnd": 69,
       "status": "coming-soon",
       "periods": 12,
       "subArea": "Biology"
     },
     {
       "id": "ch7",
-      "unit": "I",
+      "unit": "II",
       "number": 7,
       "title": "Separation of Substances",
-      "pageStart": 67,
-      "pageEnd": 76,
+      "pageStart": 70,
+      "pageEnd": 78,
       "status": "coming-soon",
       "periods": 12,
       "subArea": "Chemistry"
     },
     {
       "id": "ch8",
-      "unit": "II",
+      "unit": "III",
       "number": 8,
       "title": "Fibre to Fabric",
-      "pageStart": 77,
-      "pageEnd": 85,
+      "pageStart": 79,
+      "pageEnd": 87,
       "status": "coming-soon",
       "periods": 11,
       "subArea": "Chemistry"
     },
     {
       "id": "ch9",
-      "unit": "II",
+      "unit": "III",
       "number": 9,
-      "title": "Plastic parts and functions",
-      "pageStart": 86,
-      "pageEnd": 94,
+      "title": "Plants: parts and functions",
+      "pageStart": 88,
+      "pageEnd": 97,
       "status": "coming-soon",
       "periods": 10,
-      "subArea": "Chemistry"
+      "subArea": "Biology"
     },
     {
       "id": "ch10",
-      "unit": "II",
+      "unit": "III",
       "number": 10,
-      "title": "Clothes around us",
-      "pageStart": 95,
-      "pageEnd": 106,
+      "title": "Changes around us",
+      "pageStart": 98,
+      "pageEnd": 109,
       "status": "coming-soon",
       "periods": 11,
       "subArea": "Chemistry"
     },
     {
       "id": "ch11",
-      "unit": "II",
+      "unit": "III",
       "number": 11,
       "title": "Water in our life",
-      "pageStart": 107,
-      "pageEnd": 114,
+      "pageStart": 110,
+      "pageEnd": 117,
       "status": "coming-soon",
       "periods": 11,
       "subArea": "Chemistry"
     },
     {
       "id": "ch12",
-      "unit": "II",
+      "unit": "III",
       "number": 12,
       "title": "Simple electric circuits",
-      "pageStart": 115,
-      "pageEnd": 125,
+      "pageStart": 118,
+      "pageEnd": 126,
       "status": "coming-soon",
       "periods": 12,
       "subArea": "Physics"
     },
     {
       "id": "ch13",
-      "unit": "III",
+      "unit": "IV",
       "number": 13,
       "title": "Learning how to measure",
-      "pageStart": 126,
-      "pageEnd": 136,
+      "pageStart": 127,
+      "pageEnd": 141,
       "status": "coming-soon",
-      "periods": 12,
+      "periods": 11,
       "subArea": "Physics"
     },
     {
       "id": "ch14",
-      "unit": "III",
+      "unit": "IV",
       "number": 14,
       "title": "Movements in animals",
-      "pageStart": 137,
-      "pageEnd": 149,
+      "pageStart": 142,
+      "pageEnd": 155,
       "status": "coming-soon",
       "periods": 12,
       "subArea": "Biology"
     },
     {
       "id": "ch15",
-      "unit": "III",
+      "unit": "IV",
       "number": 15,
       "title": "Light, Shadows and Images",
-      "pageStart": 150,
-      "pageEnd": 161,
+      "pageStart": 156,
+      "pageEnd": 167,
       "status": "coming-soon",
-      "periods": 11,
+      "periods": 12,
       "subArea": "Physics"
     },
     {
       "id": "ch16",
-      "unit": "III",
-      "number": 16,
-      "title": "Living and non-living",
-      "pageStart": 162,
-      "pageEnd": 173,
-      "status": "coming-soon",
-      "periods": 12,
-      "subArea": "Biology"
-    },
-    {
-      "id": "ch17",
       "unit": "IV",
-      "number": 17,
-      "title": "Revision",
-      "pageStart": 174,
-      "pageEnd": 185,
+      "number": 16,
+      "title": "Living and non living",
+      "pageStart": 168,
+      "pageEnd": 180,
       "status": "coming-soon",
-      "periods": null,
-      "subArea": null
+      "periods": 10,
+      "subArea": "Biology"
     }
   ]
 }

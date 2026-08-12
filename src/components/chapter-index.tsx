@@ -37,7 +37,7 @@ export function ChapterIndex({
     <div className="w-full space-y-6 px-4 py-8">
       <div className="text-center">
         <h1 className="font-heading text-2xl font-bold text-foreground">Index</h1>
-        <p className="mt-2 font-body text-sm text-foreground/60">Grade 6 Science - 185 pages</p>
+        <p className="mt-2 font-body text-sm text-foreground/60">Grade {classGrade} {subject} - {totalPages} pages</p>
       </div>
 
       <div className="space-y-4">

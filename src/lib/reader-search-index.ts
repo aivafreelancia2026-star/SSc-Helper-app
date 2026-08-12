@@ -49,6 +49,7 @@ const KEYWORDS: Record<string, Record<number, string>> = {
     10: "leeches suckers modes of collecting food lizard spider hen butterfly nocturnal food chain crane fish frog",
     11: "food chains food web grain cat rat grass dog wolf cat deer tiger man lion fox hen worms ants aphids honeydew",
     12: "leafcutter ants keywords what we have learnt improve your learning carnivores herbivores omnivores food chain",
+    13: "improve your learning exercises earthworms bodypart used to collect food beak tongue teeth sucker claws carnivores forest food chain parrot lion play anteater identify the animal",
   },
 };
 
