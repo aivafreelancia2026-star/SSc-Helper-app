@@ -7,11 +7,13 @@ import { AlertIcon, CheckCircleIcon, CloseIcon, CopyIcon, FeedbackIcon } from "@
 import { getPageContextLabel, getPageId } from "@/lib/page-context";
 
 // Feedback is sent to AIVA Work Manager's shared product-feedback inbox, not
-// stored in this app's own Supabase project. source stays "ssc-tutor" (the
-// app's old name) rather than following the "SSC Helper" rename below —
-// Work Manager's FEEDBACK_PRODUCT_TABS still keys off "ssc-tutor", so
-// changing this value would silently stop matching that tab and orphan new
-// submissions. Only change it together with that registration.
+// stored in this app's own Supabase project. source must be exactly
+// "ssc-helper" — that's the key Work Manager's FEEDBACK_PRODUCT_TABS uses to
+// route items to the "SSC Helper" tab and to gate the Founder-only Approve
+// workflow (SSC_HELPER_SOURCE in server.js). Any other value still submits
+// successfully but silently lands only under "All", with Approve unavailable
+// for it — which is exactly what "source: ssc-tutor" (this app's old name)
+// was doing until this fix.
 const FEEDBACK_API_URL = `${process.env.NEXT_PUBLIC_FEEDBACK_API_URL}/api/feedback`;
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -68,7 +70,7 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: message.trim(),
-          source: "ssc-tutor",
+          source: "ssc-helper",
           pageUrl: `${window.location.origin}${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ""}`,
           pageContext,
           platform: "web",
