@@ -37,6 +37,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# pulled Founder-approved feedback (may contain PII / user content)
+/.feedback-sync/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
