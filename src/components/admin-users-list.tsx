@@ -10,6 +10,14 @@ export function AdminUsersList({ users: initialUsers }: { users: Profile[] }) {
   const [users, setUsers] = useState(initialUsers);
   const [savingId, setSavingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [query, setQuery] = useState("");
+
+  const normalizedQuery = query.trim().toLowerCase();
+  const visibleUsers = normalizedQuery
+    ? users.filter((user) =>
+        `${user.fullName ?? ""} ${user.email ?? ""}`.toLowerCase().includes(normalizedQuery),
+      )
+    : users;
 
   async function handleRoleChange(userId: string, role: Role) {
     setError(null);
@@ -37,13 +45,27 @@ export function AdminUsersList({ users: initialUsers }: { users: Profile[] }) {
         </div>
       )}
 
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search by name or email…"
+        className="mb-4 w-full rounded-[16px] border-2 border-border bg-white/70 px-4 py-2.5 font-body text-sm text-foreground placeholder:text-foreground/40 focus:border-primary focus:outline-none"
+      />
+
+      {visibleUsers.length === 0 && (
+        <p className="mb-4 text-center font-body text-sm text-foreground/50">
+          No users match &quot;{query}&quot;.
+        </p>
+      )}
+
       {/* Mobile: stacked cards — a wide table with 4 columns doesn't fit a
           phone screen, and relying on the user to discover a horizontal
           scroll gesture to find the Role column proved unreliable in
           practice. Every field (including Role) is visible without
           scrolling here. */}
       <div className="flex flex-col gap-3 sm:hidden">
-        {users.map((user) => (
+        {visibleUsers.map((user) => (
           <div
             key={user.id}
             className="rounded-[20px] border border-white/60 bg-white/80 p-4 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]"
@@ -81,7 +103,7 @@ export function AdminUsersList({ users: initialUsers }: { users: Profile[] }) {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
+            {visibleUsers.map((user) => (
               <tr key={user.id} className="border-b border-border/40 last:border-0">
                 <td className="px-4 py-3 font-body text-sm text-foreground">
                   {user.fullName ?? "—"}
