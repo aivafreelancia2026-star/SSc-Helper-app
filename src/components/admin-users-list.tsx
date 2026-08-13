@@ -38,7 +38,7 @@ export function AdminUsersList({ users: initialUsers }: { users: Profile[] }) {
       )}
 
       <div className="overflow-hidden rounded-[24px] border border-white/60 bg-white/80 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
-        <table className="w-full text-left">
+        <table className="w-full min-w-[560px] text-left">
           <thead>
             <tr className="border-b border-border/60 text-xs font-heading font-semibold uppercase tracking-wide text-foreground/50">
               <th className="px-4 py-3">Name</th>
