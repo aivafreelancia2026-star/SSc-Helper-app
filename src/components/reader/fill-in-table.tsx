@@ -58,6 +58,12 @@ export function FillInTable({
   const scoredKey = `${storageKey}-scored`;
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Most tables in this app are intentionally open-ended (predictions,
+  // personal lists, "add your own examples") with no single right answer —
+  // Reveal has nothing to show on those, which without this note looks like
+  // the button silently doing nothing rather than working as designed.
+  const hasAnyGradedCell = rows.some((row) => row.some((cell) => cell.correctAnswers));
+
   useEffect(() => {
     const savedValues = localStorage.getItem(valuesKey);
     if (savedValues) {
@@ -154,6 +160,11 @@ export function FillInTable({
         <AnswerFeedback key={feedback.id} correct={feedback.correct} onDone={() => setFeedback(null)} />
       )}
       <p className="text-center font-heading text-sm font-bold text-primary">{title}</p>
+      {isRevealed && !hasAnyGradedCell && (
+        <p className="text-center font-body text-xs italic text-foreground/50">
+          This table is open-ended — there&apos;s no fixed answer to reveal.
+        </p>
+      )}
       <div className="overflow-x-auto rounded-[12px] border border-border/60">
         <table className="w-full border-collapse text-left">
           <thead>

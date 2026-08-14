@@ -1,12 +1,30 @@
 import { FillInTable, type TableCell } from "@/components/reader/fill-in-table";
 import { TipBox } from "@/components/reader/tip-box";
 
+// The activity text names a fixed 14-item list to test (nail, jump-clip,
+// plastic scale, glass, brass key, paper, iron bolt, pen, blade, pencil,
+// knife, stainless steel spoon, chalk, wood) — two are already given as
+// examples, so these remaining rows use more items from that same list
+// rather than an open student choice, which makes Material/Attracted
+// gradable instead of free text.
 const TABLE1_ROWS: TableCell[][] = [
   [{ value: "Jump Clip" }, { value: "Iron" }, { value: "Yes" }],
   [{ value: "Scale" }, { value: "Plastic" }, { value: "No" }],
-  [{ value: "", editable: true }, { value: "", editable: true }, { value: "", editable: true }],
-  [{ value: "", editable: true }, { value: "", editable: true }, { value: "", editable: true }],
-  [{ value: "", editable: true }, { value: "", editable: true }, { value: "", editable: true }],
+  [
+    { value: "Iron bolt" },
+    { value: "", editable: true, correctAnswers: ["Iron"] },
+    { value: "", editable: true, correctAnswers: ["Yes"] },
+  ],
+  [
+    { value: "Piece of glass" },
+    { value: "", editable: true, correctAnswers: ["Glass"] },
+    { value: "", editable: true, correctAnswers: ["No"] },
+  ],
+  [
+    { value: "Wood" },
+    { value: "", editable: true, correctAnswers: ["Wood"] },
+    { value: "", editable: true, correctAnswers: ["No"] },
+  ],
 ];
 
 export function C6ScienceCh2Page3() {
