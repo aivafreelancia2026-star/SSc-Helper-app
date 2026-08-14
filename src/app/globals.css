@@ -137,12 +137,12 @@ body {
   }
 }
 .animate-page-turn-forward {
-  animation: page-turn-forward 0.5s var(--ease-clay);
+  animation: page-turn-forward 0.28s var(--ease-clay);
   transform-origin: right center;
   will-change: transform, opacity;
 }
 .animate-page-turn-backward {
-  animation: page-turn-backward 0.5s var(--ease-clay);
+  animation: page-turn-backward 0.28s var(--ease-clay);
   transform-origin: left center;
   will-change: transform, opacity;
 }
