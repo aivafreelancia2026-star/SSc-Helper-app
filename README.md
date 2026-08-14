@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Branch workflow
+
+Day-to-day work happens on `Dev` (auto-deploys to its own Vercel Preview
+URL, separate from production). `master` is the production branch — merge
+`Dev` into it only when a batch of work is ready to go live.
+
 ## Getting Started
 
 1. Install dependencies:
