@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { Role } from "@/lib/profile";
 import { useScore } from "@/components/score-provider";
 import { EyeIcon, EyeSlashIcon } from "@/components/icons";
+import { AnswerFeedback } from "@/components/reader/answer-feedback";
 
 // A bar that only appears while inside a book (reader with a page open) —
 // same "in book" detection as the top nav bar's arrow/swipe repurposing and
@@ -21,6 +23,9 @@ export function BookStatusBar({ role }: { role: Role }) {
   const { score, addPoints } = useScore();
   const inBook = pathname === "/reader" && searchParams.has("page");
   const canReveal = role === "founder" || role === "developer" || role === "teacher";
+  // `id` remounts AnswerFeedback (replaying its animation) the same way
+  // FillInTable does for per-cell feedback — see fill-in-table.tsx.
+  const [celebration, setCelebration] = useState<{ id: number } | null>(null);
 
   if (!inBook) return null;
 
@@ -48,52 +53,63 @@ export function BookStatusBar({ role }: { role: Role }) {
       if (page && !localStorage.getItem(awardedKey)) {
         addPoints(1);
         localStorage.setItem(awardedKey, "1");
+        setCelebration({ id: Date.now() });
       }
     }
     router.push(`${pathname}?${params.toString()}`);
   }
 
   return (
-    <div className="sticky top-[52px] z-10 mx-3 my-2.5 flex items-center justify-between gap-3 rounded-[28px] bg-primary/5 px-4 py-3 sm:px-6">
-      <div className="flex items-center gap-2">
-        <button
-          type="button"
-          onClick={openPageBrowser}
-          aria-label="Browse and search all pages"
-          title="Browse and search all pages"
-          className="flex w-20 shrink-0 cursor-pointer flex-col items-center justify-center gap-0.5 rounded-2xl bg-gradient-to-br from-primary to-primary/80 py-2 font-heading text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)] transition-opacity hover:opacity-90"
-        >
-          <span className="text-[10px] font-semibold opacity-90">Page:</span>
-          <span className="text-sm font-bold">
-            {page}
-            {total ? `/${total}` : ""}
-          </span>
-        </button>
-        <span
-          className={`rounded-full px-3 py-1 font-heading text-xs font-bold ${
-            score < 0
-              ? "bg-destructive/15 text-destructive"
-              : score > 0
-                ? "bg-green-100 text-green-700"
-                : "bg-accent/15 text-accent"
-          }`}
-        >
-          ⭐ {Math.abs(score)}
-        </span>
-      </div>
-
-      {canReveal && (
-        <button
-          type="button"
-          onClick={toggleReveal}
-          aria-pressed={isRevealed}
-          aria-label={isRevealed ? "Hide answers" : "Reveal answers"}
-          title={isRevealed ? "Hide answers" : "Reveal answers"}
-          className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_2px_6px_rgba(79,70,229,0.35)] transition-opacity hover:opacity-90"
-        >
-          {isRevealed ? <EyeSlashIcon className="h-4 w-4" /> : <EyeIcon className="h-4 w-4" />}
-        </button>
+    <>
+      {celebration !== null && (
+        <AnswerFeedback
+          key={celebration.id}
+          correct
+          label="Revealed! +1"
+          onDone={() => setCelebration(null)}
+        />
       )}
-    </div>
+      <div className="sticky top-[52px] z-10 mx-3 my-2.5 flex items-center justify-between gap-3 rounded-[28px] bg-primary/5 px-4 py-3 sm:px-6">
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={openPageBrowser}
+            aria-label="Browse and search all pages"
+            title="Browse and search all pages"
+            className="flex w-20 shrink-0 cursor-pointer flex-col items-center justify-center gap-0.5 rounded-2xl bg-gradient-to-br from-primary to-primary/80 py-2 font-heading text-on-primary shadow-[0_2px_8px_rgba(79,70,229,0.3)] transition-opacity hover:opacity-90"
+          >
+            <span className="text-[10px] font-semibold opacity-90">Page:</span>
+            <span className="text-sm font-bold">
+              {page}
+              {total ? `/${total}` : ""}
+            </span>
+          </button>
+          <span
+            className={`rounded-full px-3 py-1 font-heading text-xs font-bold ${
+              score < 0
+                ? "bg-destructive/15 text-destructive"
+                : score > 0
+                  ? "bg-green-100 text-green-700"
+                  : "bg-accent/15 text-accent"
+            }`}
+          >
+            ⭐ {Math.abs(score)}
+          </span>
+        </div>
+
+        {canReveal && (
+          <button
+            type="button"
+            onClick={toggleReveal}
+            aria-pressed={isRevealed}
+            aria-label={isRevealed ? "Hide answers" : "Reveal answers"}
+            title={isRevealed ? "Hide answers" : "Reveal answers"}
+            className="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_2px_6px_rgba(79,70,229,0.35)] transition-opacity hover:opacity-90"
+          >
+            {isRevealed ? <EyeSlashIcon className="h-4 w-4" /> : <EyeIcon className="h-4 w-4" />}
+          </button>
+        )}
+      </div>
+    </>
   );
 }

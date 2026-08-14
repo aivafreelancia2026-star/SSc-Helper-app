@@ -11,9 +11,14 @@ const CONFETTI = ["🎉", "🎊", "✨", "⭐", "🎈", "💥"];
 export function AnswerFeedback({
   correct,
   onDone,
+  label = "Correct! +1",
 }: {
   correct: boolean;
   onDone: () => void;
+  // Overridable for reactions other than "you typed the right answer" —
+  // e.g. book-status-bar.tsx reuses this same confetti burst for the flat
+  // point awarded when reveal is used.
+  label?: string;
 }) {
   useEffect(() => {
     const timer = setTimeout(onDone, 1400);
@@ -43,7 +48,7 @@ export function AnswerFeedback({
           })}
           <div className="animate-pop-in rounded-[24px] bg-white px-6 py-4 text-center shadow-[0_10px_30px_rgba(79,70,229,0.35)]">
             <p className="text-3xl">🎉</p>
-            <p className="mt-1 font-heading text-base font-bold text-primary">Correct! +1</p>
+            <p className="mt-1 font-heading text-base font-bold text-primary">{label}</p>
           </div>
         </div>
       ) : (
