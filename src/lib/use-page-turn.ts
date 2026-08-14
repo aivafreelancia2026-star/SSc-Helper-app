@@ -19,6 +19,10 @@ export function usePageTurn() {
     const clamped = total ? Math.min(Math.max(1, next), total) : Math.max(1, next);
     const params = new URLSearchParams(searchParams.toString());
     params.set("page", String(clamped));
+    // Reveal is per-page (see book-status-bar.tsx) — carrying it forward
+    // into a different page would show that new page's answers without the
+    // student ever pressing the button there.
+    params.delete("reveal");
     router.push(`${pathname}?${params.toString()}`);
   }
 
