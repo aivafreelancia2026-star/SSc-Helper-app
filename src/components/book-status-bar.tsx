@@ -11,13 +11,14 @@ import { EyeIcon, EyeSlashIcon } from "@/components/icons";
 // page browser/search) and the student's running score, plus a "Reveal
 // answers" toggle for Founder/Developer/Teacher (not Student) on the far
 // right that flips ?reveal=1 in the URL — FillInTable reads that same flag
-// to show each gradable cell's correct answer alongside whatever's typed,
-// without overwriting it.
+// to show each gradable cell's correct answer inside its own input, without
+// overwriting whatever's typed, and stops its own per-cell grading. Turning
+// reveal on instead awards a flat, one-time point for the whole page.
 export function BookStatusBar({ role }: { role: Role }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const { score } = useScore();
+  const { score, addPoints } = useScore();
   const inBook = pathname === "/reader" && searchParams.has("page");
   const canReveal = role === "founder" || role === "developer" || role === "teacher";
 
@@ -39,6 +40,15 @@ export function BookStatusBar({ role }: { role: Role }) {
       params.delete("reveal");
     } else {
       params.set("reveal", "1");
+      // Using reveal caps this page's whole activity at 1 point instead of
+      // the usual per-cell scoring (see FillInTable, which skips its own
+      // +1/-1 grading while revealed) — awarded once per page, not once per
+      // toggle, so switching reveal off and back on doesn't farm more points.
+      const awardedKey = `reveal-award-page-${page}`;
+      if (page && !localStorage.getItem(awardedKey)) {
+        addPoints(1);
+        localStorage.setItem(awardedKey, "1");
+      }
     }
     router.push(`${pathname}?${params.toString()}`);
   }

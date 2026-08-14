@@ -123,6 +123,12 @@ export function FillInTable({
       localStorage.setItem(valuesKey, JSON.stringify(values));
     }
 
+    // While answers are revealed, the student already has the answer in
+    // front of them — per-cell +1/-1 grading is replaced by the flat,
+    // one-time point the reveal button itself awards (see book-status-bar.tsx),
+    // so typing/blurring here must not add more.
+    if (isRevealed) return;
+
     const cell = rows[rowIdx][colIdx];
     if (!cell.editable || !cell.correctAnswers) return;
 
@@ -174,8 +180,8 @@ export function FillInTable({
                       className="border-t border-border/40 px-3 py-2 font-body text-sm text-foreground"
                     >
                       {cell.editable ? (
-                        <div className="space-y-1">
-                          <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5">
+                          <div className="relative flex-1">
                             <input
                               type="text"
                               value={typedValue}
@@ -183,6 +189,8 @@ export function FillInTable({
                               onBlur={() => handleBlur(rowIdx, colIdx)}
                               placeholder="Type here…"
                               className={`w-full rounded-[8px] border bg-white/70 px-2 py-1 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none ${
+                                isRevealed && cell.correctAnswers ? "pr-16" : ""
+                              } ${
                                 correct === true
                                   ? "border-green-500 bg-green-50"
                                   : correct === false
@@ -190,14 +198,14 @@ export function FillInTable({
                                     : "border-border/60 focus:border-primary"
                               }`}
                             />
-                            {correct === true && <span className="text-green-600">✓</span>}
-                            {correct === false && <span className="text-destructive">✗</span>}
+                            {isRevealed && cell.correctAnswers && (
+                              <span className="pointer-events-none absolute inset-y-0 right-2 flex items-center font-mono text-[10px] font-semibold text-primary/70">
+                                {cell.correctAnswers[0]}
+                              </span>
+                            )}
                           </div>
-                          {isRevealed && cell.correctAnswers && (
-                            <p className="font-mono text-[10px] font-semibold text-primary">
-                              Answer: {cell.correctAnswers[0]}
-                            </p>
-                          )}
+                          {correct === true && <span className="text-green-600">✓</span>}
+                          {correct === false && <span className="text-destructive">✗</span>}
                         </div>
                       ) : (
                         cell.value
