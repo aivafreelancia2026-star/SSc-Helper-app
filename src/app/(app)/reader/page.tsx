@@ -1,12 +1,13 @@
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
+import class6Science from "@/data/classes/C6-Science.json";
 import { ChapterIndex } from "@/components/chapter-index";
 import { AutoRunController } from "@/components/auto-run-controller";
 import { getPageContent } from "@/lib/reader-content-registry";
 import { PageTurnTransition } from "@/components/reader/page-turn-transition";
 import { PageBrowser } from "@/components/reader/page-browser";
 import { ComingSoonCard } from "@/components/coming-soon-card";
-import { loadClassContent, type Chapter } from "@/lib/content";
+import type { Chapter } from "@/lib/content";
 
 function findChapterForPage(chapters: Chapter[], page: number): Chapter | null {
   return (
@@ -32,9 +33,7 @@ export default async function ReaderPage({
   const classGrade = Number(params.class) || 6;
   const subject = params.subject || "Science";
 
-  const classContent = loadClassContent(classGrade, subject);
-
-  if (!classContent) {
+  if (classGrade !== 6 || subject !== "Science") {
     return (
       <div className="flex flex-1 items-center justify-center px-4 py-12">
         <ComingSoonCard message={`Content for Class ${classGrade} ${subject} will be available soon.`} />
@@ -42,8 +41,8 @@ export default async function ReaderPage({
     );
   }
 
-  const chapters = classContent.chapters;
-  const totalPages = classContent.totalPages;
+  const chapters = (class6Science as any).chapters as Chapter[];
+  const totalPages = (class6Science as any).totalPages as number;
   const introChapter = chapters.find((c) => c.id === "intro")!;
   const indexChapter = chapters.find((c) => c.id === "index")!;
 
@@ -112,7 +111,11 @@ export default async function ReaderPage({
   }
 
   const selectedChapter =
-    page <= introChapter.pageEnd ? null : findChapterForPage(chapters, page);
+    page === indexChapter.pageStart
+      ? null
+      : page <= introChapter.pageEnd
+        ? introChapter
+        : findChapterForPage(chapters, page);
 
   const PageContent = selectedChapter
     ? getPageContent(classGrade, subject, selectedChapter.id, page - selectedChapter.pageStart + 1)
@@ -136,8 +139,6 @@ export default async function ReaderPage({
                   </span>
                   {selectedChapter.periods && <span>{selectedChapter.periods} periods</span>}
                   {selectedChapter.subArea && <span>{selectedChapter.subArea}</span>}
-                  {selectedChapter.author && <span>{selectedChapter.author}</span>}
-                  {selectedChapter.genre && <span>{selectedChapter.genre}</span>}
                 </div>
               </>
             ) : (

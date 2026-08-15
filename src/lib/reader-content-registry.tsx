@@ -10,161 +10,166 @@ import type { ComponentType } from "react";
 // page doesn't bundle every other hand-built page's JS along with it — this
 // matters more as more chapters get real content and the registry grows.
 const REGISTRY: Record<string, Record<number, ComponentType>> = {
+  "6-Science-intro": {
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-intro-page8").then((m) => m.C6ScienceIntroPage8),
+    ),
+  },
   "6-Science-ch1": {
     1: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page1").then((m) => m.C6ScienceCh1Page1),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page1").then((m) => m.C6ScienceCh1Page1),
     ),
     2: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page2").then((m) => m.C6ScienceCh1Page2),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page2").then((m) => m.C6ScienceCh1Page2),
     ),
     3: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page3").then((m) => m.C6ScienceCh1Page3),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page3").then((m) => m.C6ScienceCh1Page3),
     ),
     4: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page4").then((m) => m.C6ScienceCh1Page4),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page4").then((m) => m.C6ScienceCh1Page4),
     ),
     5: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page5").then((m) => m.C6ScienceCh1Page5),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page5").then((m) => m.C6ScienceCh1Page5),
     ),
     6: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page6").then((m) => m.C6ScienceCh1Page6),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page6").then((m) => m.C6ScienceCh1Page6),
     ),
     7: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page7").then((m) => m.C6ScienceCh1Page7),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page7").then((m) => m.C6ScienceCh1Page7),
     ),
     8: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page8").then((m) => m.C6ScienceCh1Page8),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page8").then((m) => m.C6ScienceCh1Page8),
     ),
     9: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page9").then((m) => m.C6ScienceCh1Page9),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page9").then((m) => m.C6ScienceCh1Page9),
     ),
     10: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch1-page10").then((m) => m.C6ScienceCh1Page10),
+      import("@/components/reader/content/C6-science/c6-science-ch1-page10").then((m) => m.C6ScienceCh1Page10),
     ),
   },
   "6-Science-ch2": {
     1: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page1").then((m) => m.C6ScienceCh2Page1),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page1").then((m) => m.C6ScienceCh2Page1),
     ),
     2: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page2").then((m) => m.C6ScienceCh2Page2),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page2").then((m) => m.C6ScienceCh2Page2),
     ),
     3: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page3").then((m) => m.C6ScienceCh2Page3),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page3").then((m) => m.C6ScienceCh2Page3),
     ),
     4: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page4").then((m) => m.C6ScienceCh2Page4),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page4").then((m) => m.C6ScienceCh2Page4),
     ),
     5: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page5").then((m) => m.C6ScienceCh2Page5),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page5").then((m) => m.C6ScienceCh2Page5),
     ),
     6: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page6").then((m) => m.C6ScienceCh2Page6),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page6").then((m) => m.C6ScienceCh2Page6),
     ),
     7: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page7").then((m) => m.C6ScienceCh2Page7),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page7").then((m) => m.C6ScienceCh2Page7),
     ),
     8: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page8").then((m) => m.C6ScienceCh2Page8),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page8").then((m) => m.C6ScienceCh2Page8),
     ),
     9: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page9").then((m) => m.C6ScienceCh2Page9),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page9").then((m) => m.C6ScienceCh2Page9),
     ),
     10: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch2-page10").then((m) => m.C6ScienceCh2Page10),
+      import("@/components/reader/content/C6-science/c6-science-ch2-page10").then((m) => m.C6ScienceCh2Page10),
     ),
   },
   "6-Science-ch3": {
     1: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page1").then((m) => m.C6ScienceCh3Page1),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page1").then((m) => m.C6ScienceCh3Page1),
     ),
     2: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page2").then((m) => m.C6ScienceCh3Page2),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page2").then((m) => m.C6ScienceCh3Page2),
     ),
     3: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page3").then((m) => m.C6ScienceCh3Page3),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page3").then((m) => m.C6ScienceCh3Page3),
     ),
     4: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page4").then((m) => m.C6ScienceCh3Page4),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page4").then((m) => m.C6ScienceCh3Page4),
     ),
     5: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page5").then((m) => m.C6ScienceCh3Page5),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page5").then((m) => m.C6ScienceCh3Page5),
     ),
     6: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page6").then((m) => m.C6ScienceCh3Page6),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page6").then((m) => m.C6ScienceCh3Page6),
     ),
     7: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch3-page7").then((m) => m.C6ScienceCh3Page7),
+      import("@/components/reader/content/C6-science/c6-science-ch3-page7").then((m) => m.C6ScienceCh3Page7),
     ),
   },
   "6-Science-ch4": {
     1: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page1").then((m) => m.C6ScienceCh4Page1),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page1").then((m) => m.C6ScienceCh4Page1),
     ),
     2: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page2").then((m) => m.C6ScienceCh4Page2),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page2").then((m) => m.C6ScienceCh4Page2),
     ),
     3: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page3").then((m) => m.C6ScienceCh4Page3),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page3").then((m) => m.C6ScienceCh4Page3),
     ),
     4: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page4").then((m) => m.C6ScienceCh4Page4),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page4").then((m) => m.C6ScienceCh4Page4),
     ),
     5: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page5").then((m) => m.C6ScienceCh4Page5),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page5").then((m) => m.C6ScienceCh4Page5),
     ),
     6: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page6").then((m) => m.C6ScienceCh4Page6),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page6").then((m) => m.C6ScienceCh4Page6),
     ),
     7: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page7").then((m) => m.C6ScienceCh4Page7),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page7").then((m) => m.C6ScienceCh4Page7),
     ),
     8: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page8").then((m) => m.C6ScienceCh4Page8),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page8").then((m) => m.C6ScienceCh4Page8),
     ),
     9: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page9").then((m) => m.C6ScienceCh4Page9),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page9").then((m) => m.C6ScienceCh4Page9),
     ),
     10: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page10").then((m) => m.C6ScienceCh4Page10),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page10").then((m) => m.C6ScienceCh4Page10),
     ),
     11: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page11").then((m) => m.C6ScienceCh4Page11),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page11").then((m) => m.C6ScienceCh4Page11),
     ),
     12: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page12").then((m) => m.C6ScienceCh4Page12),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page12").then((m) => m.C6ScienceCh4Page12),
     ),
     13: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch4-page13").then((m) => m.C6ScienceCh4Page13),
+      import("@/components/reader/content/C6-science/c6-science-ch4-page13").then((m) => m.C6ScienceCh4Page13),
     ),
   },
   "6-Science-ch5": {
     1: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page1").then((m) => m.C6ScienceCh5Page1),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page1").then((m) => m.C6ScienceCh5Page1),
     ),
     2: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page2").then((m) => m.C6ScienceCh5Page2),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page2").then((m) => m.C6ScienceCh5Page2),
     ),
     3: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page3").then((m) => m.C6ScienceCh5Page3),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page3").then((m) => m.C6ScienceCh5Page3),
     ),
     4: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page4").then((m) => m.C6ScienceCh5Page4),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page4").then((m) => m.C6ScienceCh5Page4),
     ),
     5: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page5").then((m) => m.C6ScienceCh5Page5),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page5").then((m) => m.C6ScienceCh5Page5),
     ),
     6: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page6").then((m) => m.C6ScienceCh5Page6),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page6").then((m) => m.C6ScienceCh5Page6),
     ),
     7: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page7").then((m) => m.C6ScienceCh5Page7),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page7").then((m) => m.C6ScienceCh5Page7),
     ),
     8: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page8").then((m) => m.C6ScienceCh5Page8),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page8").then((m) => m.C6ScienceCh5Page8),
     ),
     9: dynamic(() =>
-      import("@/components/reader/content/c6-science-ch5-page9").then((m) => m.C6ScienceCh5Page9),
+      import("@/components/reader/content/C6-science/c6-science-ch5-page9").then((m) => m.C6ScienceCh5Page9),
     ),
   },
 };

@@ -41,13 +41,13 @@ export function C6ScienceCh1Page2() {
     if (savedAnswers) {
       try {
         setAnswers(JSON.parse(savedAnswers));
-      } catch { }
+      } catch {}
     }
     const savedGraded = localStorage.getItem(gradedKey);
     if (savedGraded) {
       try {
         setGraded(JSON.parse(savedGraded));
-      } catch { }
+      } catch {}
     }
   }, []);
 
@@ -120,9 +120,10 @@ export function C6ScienceCh1Page2() {
                 onChange={(e) => handleChange(i, e.target.value)}
                 onBlur={() => handleBlur(i)}
                 placeholder="Type your reflection answer here..."
-                className={`w-full rounded-[10px] border px-3 py-1.5 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none transition-all ${isRevealed ? "border-primary bg-primary/5" :
-                    graded[i] ? "border-green-500 bg-green-50/30" : "border-border/60 focus:border-primary"
-                  }`}
+                className={`w-full rounded-[10px] border px-3 py-1.5 text-sm text-foreground placeholder:text-foreground/30 focus:outline-none transition-all ${
+                  isRevealed ? "border-primary bg-primary/5" :
+                  graded[i] ? "border-green-500 bg-green-50/30" : "border-border/60 focus:border-primary"
+                }`}
               />
               {graded[i] && !isRevealed && (
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-green-600 font-bold text-xs">✓ Done (+1)</span>
