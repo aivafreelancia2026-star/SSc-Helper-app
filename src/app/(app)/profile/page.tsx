@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getProfile } from "@/lib/profile";
 import { BackgroundBlobs } from "@/components/logo-mark";
 import { RoleCodeForm } from "@/components/role-code-form";
+import { LanguageInputPreference } from "@/components/language-input-preference";
 import { PAGES } from "@/lib/pages";
 
 const ROLE_LABEL: Record<string, string> = {
@@ -54,6 +55,8 @@ export default async function ProfilePage() {
       <div className="relative z-10 flex w-full flex-col items-center">
         <RoleCodeForm />
       </div>
+
+      <LanguageInputPreference />
     </div>
   );
 }

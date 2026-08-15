@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "extract-pages": "python scripts/extract-textbook-pages.py",
     "pull-feedback": "node scripts/pull-approved-feedback.mjs"
   },
   "dependencies": {

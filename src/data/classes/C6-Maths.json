@@ -1,6 +1,7 @@
 {
   "class": 6,
   "subject": "Maths",
+  "subAreas": [],
   "totalPages": 193,
   "chapters": [
     {
@@ -9,7 +10,7 @@
       "number": 0,
       "title": "Introduction",
       "pageStart": 1,
-      "pageEnd": 8,
+      "pageEnd": 7,
       "status": "coming-soon",
       "periods": null,
       "subArea": null
@@ -19,8 +20,8 @@
       "unit": "Index",
       "number": 0,
       "title": "Index",
-      "pageStart": 9,
-      "pageEnd": 9,
+      "pageStart": 8,
+      "pageEnd": 8,
       "status": "available",
       "periods": null,
       "subArea": null,

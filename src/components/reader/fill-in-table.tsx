@@ -169,8 +169,8 @@ export function FillInTable({
         <table className="w-full border-collapse text-left">
           <thead>
             <tr className="bg-primary/80">
-              {columns.map((col) => (
-                <th key={col} className="px-3 py-2 font-heading text-xs font-semibold text-on-primary">
+              {columns.map((col, colIdx) => (
+                <th key={`column-${colIdx}`} className="px-3 py-2 font-heading text-xs font-semibold text-on-primary">
                   {col}
                 </th>
               ))}
