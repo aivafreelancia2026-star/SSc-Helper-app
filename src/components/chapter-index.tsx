@@ -32,6 +32,7 @@ export function ChapterIndex({
 
   const units = [...new Set(indexData.map((item) => item.unit))];
   const getUnitsData = (unit: string) => indexData.filter((item) => item.unit === unit);
+  const hasSubAreas = indexData.some((item) => item.subArea);
 
   return (
     <div className="w-full space-y-6 px-4 py-8">
@@ -90,29 +91,31 @@ export function ChapterIndex({
         })}
       </div>
 
-      <div className="mt-8 rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
-        <h3 className="font-heading font-semibold text-foreground mb-3">Legend</h3>
-        <div className="space-y-2 text-sm font-body text-foreground/70">
-          <p>
-            <span className="inline-block rounded-full bg-blue-100 text-blue-700 px-2 py-0.5 text-xs font-semibold mr-2">
-              Physics
-            </span>
-            Physical phenomena and energy
-          </p>
-          <p>
-            <span className="inline-block rounded-full bg-green-100 text-green-700 px-2 py-0.5 text-xs font-semibold mr-2">
-              Chemistry
-            </span>
-            Materials and substances
-          </p>
-          <p>
-            <span className="inline-block rounded-full bg-purple-100 text-purple-700 px-2 py-0.5 text-xs font-semibold mr-2">
-              Biology
-            </span>
-            Living organisms and life
-          </p>
+      {hasSubAreas && (
+        <div className="mt-8 rounded-[24px] border border-white/60 bg-white/80 p-6 shadow-[6px_6px_14px_rgba(79,70,229,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)]">
+          <h3 className="font-heading font-semibold text-foreground mb-3">Legend</h3>
+          <div className="space-y-2 text-sm font-body text-foreground/70">
+            <p>
+              <span className="inline-block rounded-full bg-blue-100 text-blue-700 px-2 py-0.5 text-xs font-semibold mr-2">
+                Physics
+              </span>
+              Physical phenomena and energy
+            </p>
+            <p>
+              <span className="inline-block rounded-full bg-green-100 text-green-700 px-2 py-0.5 text-xs font-semibold mr-2">
+                Chemistry
+              </span>
+              Materials and substances
+            </p>
+            <p>
+              <span className="inline-block rounded-full bg-purple-100 text-purple-700 px-2 py-0.5 text-xs font-semibold mr-2">
+                Biology
+              </span>
+              Living organisms and life
+            </p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
