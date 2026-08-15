@@ -1,5 +1,297 @@
 {
   "class": 6,
   "subject": "Maths",
-  "chapters": []
+  "totalPages": 193,
+  "chapters": [
+    {
+      "id": "intro",
+      "unit": "Intro",
+      "number": 0,
+      "title": "Introduction",
+      "pageStart": 1,
+      "pageEnd": 8,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "index",
+      "unit": "Index",
+      "number": 0,
+      "title": "Index",
+      "pageStart": 9,
+      "pageEnd": 9,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "indexData": [
+        {
+          "unit": "June",
+          "chapterNo": 1,
+          "title": "Knowing Our Numbers",
+          "pageNo": 9,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "July",
+          "chapterNo": 2,
+          "title": "Whole Numbers",
+          "pageNo": 24,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "July",
+          "chapterNo": 3,
+          "title": "Playing with Numbers",
+          "pageNo": 37,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "August",
+          "chapterNo": 4,
+          "title": "Basic Geometrical Ideas",
+          "pageNo": 57,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "August",
+          "chapterNo": 5,
+          "title": "Measures of Lines and Angles",
+          "pageNo": 69,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "September",
+          "chapterNo": 6,
+          "title": "Integers",
+          "pageNo": 81,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "September, October",
+          "chapterNo": 7,
+          "title": "Fractions and Decimals",
+          "pageNo": 93,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "October",
+          "chapterNo": 8,
+          "title": "Data Handling",
+          "pageNo": 115,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "November",
+          "chapterNo": 9,
+          "title": "Introduction to Algebra",
+          "pageNo": 127,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "November, December",
+          "chapterNo": 10,
+          "title": "Perimeter and Area",
+          "pageNo": 139,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "December",
+          "chapterNo": 11,
+          "title": "Ratio and Proportion",
+          "pageNo": 153,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "January",
+          "chapterNo": 12,
+          "title": "Symmetry",
+          "pageNo": 166,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "February",
+          "chapterNo": 13,
+          "title": "Practical Geometry",
+          "pageNo": 176,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "February",
+          "chapterNo": 14,
+          "title": "Understanding 3D and 2D Shapes",
+          "pageNo": 186,
+          "periods": null,
+          "subArea": null
+        }
+      ]
+    },
+    {
+      "id": "ch1",
+      "unit": "June",
+      "number": 1,
+      "title": "Knowing Our Numbers",
+      "pageStart": 9,
+      "pageEnd": 23,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch2",
+      "unit": "July",
+      "number": 2,
+      "title": "Whole Numbers",
+      "pageStart": 24,
+      "pageEnd": 36,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch3",
+      "unit": "July",
+      "number": 3,
+      "title": "Playing with Numbers",
+      "pageStart": 37,
+      "pageEnd": 56,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch4",
+      "unit": "August",
+      "number": 4,
+      "title": "Basic Geometrical Ideas",
+      "pageStart": 57,
+      "pageEnd": 68,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch5",
+      "unit": "August",
+      "number": 5,
+      "title": "Measures of Lines and Angles",
+      "pageStart": 69,
+      "pageEnd": 80,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch6",
+      "unit": "September",
+      "number": 6,
+      "title": "Integers",
+      "pageStart": 81,
+      "pageEnd": 92,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch7",
+      "unit": "September, October",
+      "number": 7,
+      "title": "Fractions and Decimals",
+      "pageStart": 93,
+      "pageEnd": 114,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch8",
+      "unit": "October",
+      "number": 8,
+      "title": "Data Handling",
+      "pageStart": 115,
+      "pageEnd": 126,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch9",
+      "unit": "November",
+      "number": 9,
+      "title": "Introduction to Algebra",
+      "pageStart": 127,
+      "pageEnd": 138,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch10",
+      "unit": "November, December",
+      "number": 10,
+      "title": "Perimeter and Area",
+      "pageStart": 139,
+      "pageEnd": 152,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch11",
+      "unit": "December",
+      "number": 11,
+      "title": "Ratio and Proportion",
+      "pageStart": 153,
+      "pageEnd": 165,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch12",
+      "unit": "January",
+      "number": 12,
+      "title": "Symmetry",
+      "pageStart": 166,
+      "pageEnd": 175,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch13",
+      "unit": "February",
+      "number": 13,
+      "title": "Practical Geometry",
+      "pageStart": 176,
+      "pageEnd": 185,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch14",
+      "unit": "February",
+      "number": 14,
+      "title": "Understanding 3D and 2D Shapes",
+      "pageStart": 186,
+      "pageEnd": 193,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null
+    }
+  ]
 }
