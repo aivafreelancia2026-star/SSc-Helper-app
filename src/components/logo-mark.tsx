@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const SIZES = {
-  sm: "h-9 w-9 text-base",
-  md: "h-12 w-12 text-xl",
-  lg: "h-16 w-16 text-2xl",
+  sm: "h-9 w-9",
+  md: "h-12 w-12",
+  lg: "h-16 w-16",
 };
 
 export function LogoMark({ size = "md" }: { size?: keyof typeof SIZES }) {
@@ -9,14 +11,17 @@ export function LogoMark({ size = "md" }: { size?: keyof typeof SIZES }) {
 
   return (
     <div
-      className={`${dimension} mx-auto flex items-center justify-center rounded-[28%] font-heading font-bold text-on-primary`}
-      style={{
-        background: "linear-gradient(155deg, var(--color-primary), var(--color-secondary))",
-        boxShadow:
-          "6px 6px 14px rgba(79,70,229,0.35), -4px -4px 10px rgba(255,255,255,0.6), inset 1px 1px 2px rgba(255,255,255,0.4)",
-      }}
+      className={`${dimension} mx-auto overflow-hidden rounded-[28%] bg-[#020817] shadow-[6px_6px_14px_rgba(79,70,229,0.25),-4px_-4px_10px_rgba(255,255,255,0.55)]`}
+      aria-label="SSC Helper"
     >
-      S
+      <Image
+        src="/assets/brand/ssc-helper-icon.png"
+        alt=""
+        width={1024}
+        height={1024}
+        priority={size === "lg"}
+        className="h-full w-full object-cover"
+      />
     </div>
   );
 }

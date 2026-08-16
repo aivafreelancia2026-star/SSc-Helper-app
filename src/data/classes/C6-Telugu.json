@@ -26,24 +26,150 @@
       "periods": null,
       "subArea": null,
       "indexData": [
-        { "unit": "జూన్", "chapterNo": 1, "title": "అభినందన", "pageNo": 11, "periods": null, "subArea": null },
-        { "unit": "జూలై", "chapterNo": 2, "title": "స్నేహబంధం", "pageNo": 19, "periods": null, "subArea": null },
-        { "unit": "జూలై", "chapterNo": 3, "title": "వర్షం", "pageNo": 29, "periods": null, "subArea": null },
-        { "unit": "ఆగష్టు", "chapterNo": 4, "title": "లేఖ", "pageNo": 39, "periods": null, "subArea": null },
-        { "unit": "ఆగష్టు", "chapterNo": 5, "title": "శతకసుధ", "pageNo": 51, "periods": null, "subArea": null },
-        { "unit": "సెప్టెంబర్", "chapterNo": 6, "title": "పోతన బాల్యం", "pageNo": 63, "periods": null, "subArea": null },
-        { "unit": "అక్టోబర్", "chapterNo": 7, "title": "ఉడుత సాయం", "pageNo": 73, "periods": null, "subArea": null },
-        { "unit": "నవంబర్", "chapterNo": 8, "title": "చెరువు", "pageNo": 83, "periods": null, "subArea": null },
-        { "unit": "నవంబర్", "chapterNo": 9, "title": "చీమలబారు", "pageNo": 93, "periods": null, "subArea": null },
-        { "unit": "డిసెంబర్", "chapterNo": 10, "title": "బాలనాగమ్మ", "pageNo": 103, "periods": null, "subArea": null },
-        { "unit": "జనవరి", "chapterNo": 11, "title": "పల్లెటూరి పిల్లగాడా!", "pageNo": 117, "periods": null, "subArea": null },
-        { "unit": "ఫిబ్రవరి", "chapterNo": 12, "title": "కాపాడుకుందాం", "pageNo": 127, "periods": null, "subArea": null },
-        { "unit": "ఉపవాచకం", "chapterNo": 13, "title": "సోమనాద్రి", "pageNo": 140, "periods": null, "subArea": null },
-        { "unit": "ఉపవాచకం", "chapterNo": 14, "title": "మన జాతర - జన జాతర", "pageNo": 145, "periods": null, "subArea": null },
-        { "unit": "ఉపవాచకం", "chapterNo": 15, "title": "ఎలుకమ్మ పెళ్ళి", "pageNo": 150, "periods": null, "subArea": null },
-        { "unit": "ఉపవాచకం", "chapterNo": 16, "title": "తెలంగాణ పల్లెలు - సంస్కృతి", "pageNo": 154, "periods": null, "subArea": null },
-        { "unit": "ఉపవాచకం", "chapterNo": 17, "title": "వాగ్గేయకారుడు రామదాసు", "pageNo": 160, "periods": null, "subArea": null },
-        { "unit": "అనుబంధం", "chapterNo": 18, "title": "పదాలు - అర్థాలు & విశేషాంశాలు", "pageNo": 168, "periods": null, "subArea": null }
+        {
+          "unit": "జూన్",
+          "chapterNo": 1,
+          "title": "అభినందన",
+          "pageNo": 11,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "జూలై",
+          "chapterNo": 2,
+          "title": "స్నేహబంధం",
+          "pageNo": 19,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "జూలై",
+          "chapterNo": 3,
+          "title": "వర్షం",
+          "pageNo": 29,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఆగష్టు",
+          "chapterNo": 4,
+          "title": "లేఖ",
+          "pageNo": 39,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఆగష్టు",
+          "chapterNo": 5,
+          "title": "శతకసుధ",
+          "pageNo": 51,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "సెప్టెంబర్",
+          "chapterNo": 6,
+          "title": "పోతన బాల్యం",
+          "pageNo": 63,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "అక్టోబర్",
+          "chapterNo": 7,
+          "title": "ఉడుత సాయం",
+          "pageNo": 73,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "నవంబర్",
+          "chapterNo": 8,
+          "title": "చెరువు",
+          "pageNo": 83,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "నవంబర్",
+          "chapterNo": 9,
+          "title": "చీమలబారు",
+          "pageNo": 93,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "డిసెంబర్",
+          "chapterNo": 10,
+          "title": "బాలనాగమ్మ",
+          "pageNo": 103,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "జనవరి",
+          "chapterNo": 11,
+          "title": "పల్లెటూరి పిల్లగాడా!",
+          "pageNo": 117,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఫిబ్రవరి",
+          "chapterNo": 12,
+          "title": "కాపాడుకుందాం",
+          "pageNo": 127,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఉపవాచకం",
+          "chapterNo": 13,
+          "title": "సోమనాద్రి",
+          "pageNo": 140,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఉపవాచకం",
+          "chapterNo": 14,
+          "title": "మన జాతర - జన జాతర",
+          "pageNo": 145,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఉపవాచకం",
+          "chapterNo": 15,
+          "title": "ఎలుకమ్మ పెళ్ళి",
+          "pageNo": 150,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఉపవాచకం",
+          "chapterNo": 16,
+          "title": "తెలంగాణ పల్లెలు - సంస్కృతి",
+          "pageNo": 154,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "ఉపవాచకం",
+          "chapterNo": 17,
+          "title": "వాగ్గేయకారుడు రామదాసు",
+          "pageNo": 160,
+          "periods": null,
+          "subArea": null
+        },
+        {
+          "unit": "అనుబంధం",
+          "chapterNo": 18,
+          "title": "పదాలు - అర్థాలు & విశేషాంశాలు",
+          "pageNo": 168,
+          "periods": null,
+          "subArea": null
+        }
       ]
     },
     {
@@ -105,7 +231,7 @@
       "title": "శతకసుధ",
       "pageStart": 51,
       "pageEnd": 62,
-      "status": "coming-soon",
+      "status": "available",
       "periods": null,
       "subArea": null,
       "author": "శతక కవులు",
