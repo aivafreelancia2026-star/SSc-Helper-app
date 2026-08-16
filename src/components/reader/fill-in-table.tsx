@@ -210,7 +210,7 @@ export function FillInTable({
                               }`}
                             />
                             {isRevealed && cell.correctAnswers && (
-                              <span className="pointer-events-none absolute inset-y-0 right-2 flex items-center font-mono text-[10px] font-semibold text-primary/70">
+                              <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center rounded-r-[6px] bg-primary/10 px-2 text-xs font-bold text-primary">
                                 {cell.correctAnswers[0]}
                               </span>
                             )}
