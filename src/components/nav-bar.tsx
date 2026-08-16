@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FeedbackModal } from "@/components/feedback-widget";
 import { InfoModal } from "@/components/info-modal";
 import {
@@ -16,7 +16,7 @@ import { useClassGrade } from "@/lib/use-class-grade";
 import { usePageTurn } from "@/lib/use-page-turn";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
-type ActiveModal = "feedback" | "reset" | "more" | "upgrade" | null;
+type ActiveModal = "feedback" | "reset" | "more" | null;
 
 const NAV_ITEMS = [
   { key: "feedback" as const, label: "Feedback", icon: FeedbackIcon },
@@ -32,6 +32,7 @@ const SWIPE_THRESHOLD_PX = 50;
 export function NavBar({ defaultClass }: { defaultClass: number | null }) {
   const [activeModal, setActiveModal] = useState<ActiveModal>(null);
   const close = () => setActiveModal(null);
+  const router = useRouter();
 
   // Inside a book (a page is open in the reader), the arrows/swipe turn
   // pages instead of switching grades — same controls, context-dependent
@@ -93,7 +94,13 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
           <button
             key={key}
             type="button"
-            onClick={() => setActiveModal(key)}
+            onClick={() => {
+              if (key === "upgrade") {
+                router.push("/upgrade");
+                return;
+              }
+              setActiveModal(key);
+            }}
             className="flex cursor-pointer flex-col items-center gap-1.5 py-4 font-heading text-sm font-semibold text-foreground/80 transition-colors hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary/40"
           >
             <Icon className="h-7 w-7" />
@@ -165,14 +172,6 @@ export function NavBar({ defaultClass }: { defaultClass: number | null }) {
         <InfoModal
           title="Others"
           message="More options are coming soon."
-          onClose={close}
-        />
-      )}
-
-      {activeModal === "upgrade" && (
-        <InfoModal
-          title="Upgrade"
-          message="Premium features aren't available yet — check back soon."
           onClose={close}
         />
       )}

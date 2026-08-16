@@ -319,6 +319,50 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     6: dynamic(() =>
       import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page6").then((m) => m.C6TeluguCh5Page6),
     ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page7").then((m) => m.C6TeluguCh5Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page8").then((m) => m.C6TeluguCh5Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page9").then((m) => m.C6TeluguCh5Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page10").then((m) => m.C6TeluguCh5Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page11").then((m) => m.C6TeluguCh5Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch5-page12").then((m) => m.C6TeluguCh5Page12),
+    ),
+  },
+  "6-Telugu-ch6": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page1").then((m) => m.C6TeluguCh6Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page2").then((m) => m.C6TeluguCh6Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page3").then((m) => m.C6TeluguCh6Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page4").then((m) => m.C6TeluguCh6Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page5").then((m) => m.C6TeluguCh6Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page6").then((m) => m.C6TeluguCh6Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page7").then((m) => m.C6TeluguCh6Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page8").then((m) => m.C6TeluguCh6Page8),
+    ),
   },
 };
 

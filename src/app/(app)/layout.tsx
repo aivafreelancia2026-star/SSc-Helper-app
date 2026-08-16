@@ -8,6 +8,7 @@ import { ClassSelector } from "@/components/class-selector";
 import { BookStatusBar } from "@/components/book-status-bar";
 import { BottomNav } from "@/components/bottom-nav";
 import { ScoreProvider } from "@/components/score-provider";
+import { AiChatWidget } from "@/components/ai-chat-widget";
 
 // Shared shell for every page behind login (dashboard and beyond). Enforces
 // auth + a completed profile once here, so individual pages don't each need
@@ -43,6 +44,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           <ClassSelector defaultClass={profile?.classGrade ?? null} />
         </Suspense>
         <main className="flex flex-1 flex-col pb-20">{children}</main>
+        <AiChatWidget />
         <BottomNav />
       </div>
     </ScoreProvider>

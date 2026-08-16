@@ -41,6 +41,11 @@ export const PAGES = {
     route: "/profile",
     description: "Profile info + role-code unlock form",
   },
+  upgrade: {
+    id: "upgrade",
+    route: "/upgrade",
+    description: "Subscription page for premium AI learning features",
+  },
 } as const;
 
 export type PageKey = keyof typeof PAGES;
