@@ -48,7 +48,7 @@ export function AiChatWidget() {
         type="button"
         onClick={() => setIsOpen(true)}
         aria-label="Open SSC Helper AI chat"
-        className="fixed right-4 z-30 flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-[18px] bg-[#020817] shadow-[6px_6px_14px_rgba(79,70,229,0.28),-4px_-4px_10px_rgba(255,255,255,0.65)] transition-transform duration-150 ease-out hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
+        className="fixed right-4 z-30 flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-[12px] bg-[#020817] shadow-[6px_6px_14px_rgba(79,70,229,0.28),-4px_-4px_10px_rgba(255,255,255,0.65)] transition-transform duration-150 ease-out hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30"
         style={{ bottom: "calc(5.25rem + env(safe-area-inset-bottom))" }}
       >
         <Image
