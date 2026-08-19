@@ -50,7 +50,7 @@ const PALLIKARAM_ANSWERS = [
   "peanuts, red chillies, salt",
   "groundnuts, red chillies, salt",
   "groundnuts, garlic, red chillies, salt",
-  "peanuts, red chillies, garlic"
+  "groundnuts, red chillies, garlic"
 ];
 
 const TABLE2_ROWS: TableCell[][] = [
@@ -73,42 +73,56 @@ const TABLE2_ROWS: TableCell[][] = [
 
 export function C6ScienceCh1Page3() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      {/* Fig 2 Container */}
       <div className="bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
         <IconGallery items={INGREDIENT_ITEMS} caption="Fig 2 : Ingredients required to cook Biryani" />
       </div>
 
-      <p>
-        To make different kinds of food we need different materials. These materials which are
-        required to prepare food are known as ingredients.
-      </p>
-      <p>
-        Discuss in groups some food items you like to eat and try to find out what ingredients are
-        used to prepare them. Write them in a table form.
-      </p>
+      {/* Two-Column Text Split */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="space-y-4">
+          <p>
+            To make different kinds of food we need different materials. These materials which are
+            required to prepare food are known as ingredients.
+          </p>
+          <p>
+            Discuss in groups some food items you like to eat and try to find out what ingredients are
+            used to prepare them. Write them in a table form.
+          </p>
+          <p>
+            When you purchase packaged food, biscuits or any cool drink, you will find their
+            ingredients written on their packets.
+          </p>
+        </div>
+
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-4 md:pt-0 md:pl-8">
+          <p>
+            Have you ever thought from where these ingredients come. Do you know we get vegetables and
+            fruits from plants; eggs, milk, meat from animals. Is there any other source you can think
+            of?
+          </p>
+          <p>
+            Some ingredients have been listed in Table-3. Find out the source of each ingredient; if
+            it is a plant mark (P) or an animal (A), or something else (O).
+          </p>
+        </div>
+      </div>
       
-      <FillInTable
-        title="Table 2 - Ingredients of some food items"
-        columns={["S.No.", "Food items you like", "Required ingredients (comma-separated, e.g. milk, rice, sugar)"]}
-        rows={TABLE2_ROWS}
-        storageKey="c6-science-ch1-table2"
-      />
+      {/* Table 2 */}
+      <div className="pt-2">
+        <FillInTable
+          title="Table 2 - Ingredients of some food items"
+          columns={["S.No.", "Food items you like", "Required ingredients (comma-separated, e.g. milk, rice, sugar)"]}
+          rows={TABLE2_ROWS}
+          storageKey="c6-science-ch1-table2"
+        />
+      </div>
 
-      <p className="pt-2">
-        When you purchase packaged food, biscuits or any cool drink, you will find their
-        ingredients written on their packets.
-      </p>
-      <p>
-        Have you ever thought from where these ingredients come. Do you know we get vegetables and
-        fruits from plants; eggs, milk, meat from animals. Is there any other source you can think
-        of?
-      </p>
-      <p>
-        Some ingredients have been listed in Table-3. Find out the source of each ingredient; if
-        it is a plant mark (P) or an animal (A), or something else (O).
-      </p>
-
-      <TipBox>Chicory is beneficial for digestive and circulatory system.</TipBox>
+      {/* Tip Box */}
+      <div className="pt-4 border-t border-sky-100">
+        <TipBox>Chicory is beneficial for digestive and circulatory system.</TipBox>
+      </div>
     </div>
   );
 }

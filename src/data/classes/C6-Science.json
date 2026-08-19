@@ -15,7 +15,7 @@
       "title": "Introduction",
       "pageStart": 1,
       "pageEnd": 8,
-      "status": "coming-soon",
+      "status": "available",
       "periods": null,
       "subArea": null
     },
@@ -26,7 +26,7 @@
       "title": "Index",
       "pageStart": 9,
       "pageEnd": 9,
-      "status": "coming-soon",
+      "status": "available",
       "periods": null,
       "subArea": null,
       "indexData": [
@@ -167,7 +167,7 @@
       "title": "Our food",
       "pageStart": 10,
       "pageEnd": 19,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 10,
       "subArea": "Biology"
     },
