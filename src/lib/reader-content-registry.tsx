@@ -364,6 +364,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page8").then((m) => m.C6TeluguCh6Page8),
     ),
   },
+  "6-Maths-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page1").then((m) => m.C6MathsCh1Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page2").then((m) => m.C6MathsCh1Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page3").then((m) => m.C6MathsCh1Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page4").then((m) => m.C6MathsCh1Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page5").then((m) => m.C6MathsCh1Page5),
+    ),
+  },
 };
 
 export function getPageContent(
