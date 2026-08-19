@@ -48,42 +48,56 @@ export function C6ScienceCh2Page3() {
         storageKey="c6-science-ch2-table1"
       />
 
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>Which materials are attracted by a magnet?</li>
-        <li>Which materials are not attracted by a magnet?</li>
-      </ul>
+      {/* Split Columns Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pt-4">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">
+            <li>Which materials are attracted by a magnet?</li>
+            <li>Which materials are not attracted by a magnet?</li>
+          </ul>
 
-      <p>
-        The materials that are attracted by magnets are called <strong>magnetic materials</strong>.
-        The materials that are not attracted by magnets are called{" "}
-        <strong>non-magnetic materials</strong>.
-      </p>
+          <p>
+            The materials that are attracted by magnets are called <strong>magnetic materials</strong>.
+            The materials that are not attracted by magnets are called{" "}
+            <strong>non-magnetic materials</strong>.
+          </p>
 
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>Give your own examples for magnetic materials.</li>
-        <li>Give your own examples for non-magnetic materials.</li>
-      </ul>
+          <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">
+            <li>Give your own examples for magnetic materials.</li>
+            <li>Give your own examples for non-magnetic materials.</li>
+          </ul>
 
-      <p>
-        Magnets have the property of attracting materials like Iron. Based on this property of
-        magnets they can be used to separate some mixtures.
-      </p>
+          <p>
+            Magnets have the property of attracting materials like Iron. Based on this property of
+            magnets they can be used to separate some mixtures.
+          </p>
+        </div>
 
-      <h2 className="font-heading text-base font-bold text-primary">
-        Activity-3: Can we separate iron filings from soil?
-      </h2>
-      <p>Take a bar magnet and roll it in the soil in your school ground for some time. Pull out the magnet.</p>
-      <p>What do you find? Does anything get attached to the magnet?</p>
-      <p>You may find some dark particles of soil sticking to the magnet.</p>
-      <p>
-        Now gently remove these dark particles from the magnet and collect them in a sheet of white
-        paper. These are iron filings.
-      </p>
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <h2 className="font-heading text-base font-bold text-primary">
+            Activity-3: Can we separate iron filings from soil?
+          </h2>
+          <p>Take a bar magnet and roll it in the soil in your school ground for some time. Pull out the magnet.</p>
+          <p>What do you find? Does anything get attached to the magnet?</p>
+          <p>You may find some dark particles of soil sticking to the magnet.</p>
+          <p>
+            Now gently remove these dark particles from the magnet and collect them in a sheet of white
+            paper. These are iron filings.
+          </p>
+        </div>
 
-      <TipBox>
-        Once the Greek scientist Archimedes used lodestone to win enemies in battles by using
-        lodestone to get the nails from the ship. So the ship would sink.
-      </TipBox>
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-4 border-t border-sky-100">
+        <TipBox>
+          Once the Greek scientist Archimedes used lodestone to win enemies in battles by using
+          lodestone to get the nails from the ship. So the ship would sink.
+        </TipBox>
+      </div>
     </div>
   );
 }
