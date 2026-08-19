@@ -42,7 +42,11 @@ export default function SignupPage() {
 
     setIsSubmitting(true);
     const supabase = createClient();
-    const { data, error } = await supabase.auth.signUp({ email, password });
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+    });
 
     setIsSubmitting(false);
     if (error) {
