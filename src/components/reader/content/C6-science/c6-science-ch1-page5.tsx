@@ -36,7 +36,7 @@ export function C6ScienceCh1Page5() {
       <CalloutBox title="Do you know?">
         To make biryani, we use different types of ingredients such as ilaichi (cardamom), lavang
         (clove), dalchini (cinnamon), biryani leaves, pepper etc. They are called condiments
-        (sugandha dravyalu / fragrant material) to make kheer. Cashew nuts, almonds, kismis (dried
+        (sugandha dravyalu / fragrant material). To make kheer, Cashew nuts, almonds, kismis (dried
         grapes) etc are used. These are dry fruits. Condiments and dry fruits grow in particular
         places only. They are not available in large quantities. So, they are expensive.
       </CalloutBox>

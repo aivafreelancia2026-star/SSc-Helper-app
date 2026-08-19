@@ -12,47 +12,58 @@ const TABLE6_ROWS: TableCell[][] = [
 export function C6ScienceCh1Page8() {
   return (
     <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <h2 className="font-heading text-base font-bold text-primary">Activity-3: Let us cook</h2>
-      <p>What is your favourite food? Find out how it is prepared. Write the recipe in your note book.</p>
+      {/* Split Columns Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <h2 className="font-heading text-base font-bold text-primary">Activity-3: Let us cook</h2>
+          <p>What is your favourite food? Find out how it is prepared. Write the recipe in your note book.</p>
 
-      <h2 className="font-heading text-base font-bold text-primary">1.6. Preservation of food</h2>
-      <p>
-        The discussion about food will be incomplete unless we talk about food preservation. How do
-        farmers protect rice from pests and insects after it is harvested? How is rice stored in
-        your home? Why does curry get spoiled when kept out for a couple of days but pickle stays
-        fresh for so long? It is only because of preservation. For preserving certain food-items,
-        they are salted and dried. They are used when needed. In certain areas dried fish is
-        commonly used. Vegetables and meat are stored by drying and also pickled.
-      </p>
+          <h2 className="font-heading text-base font-bold text-primary pt-2">1.6. Preservation of food</h2>
+          <p>
+            The discussion about food will be incomplete unless we talk about food preservation. How do
+            farmers protect rice from pests and insects after it is harvested? How is rice stored in
+            your home? Why does curry get spoiled when kept out for a couple of days but pickle stays
+            fresh for so long? It is only because of preservation. For preserving certain food-items,
+            they are salted and dried. They are used when needed. In certain areas dried fish is
+            commonly used. Vegetables and meat are stored by drying and also pickled.
+          </p>
 
-      <div className="space-y-1">
-        <p>• Try to find out how vegetables are pickled at home.</p>
-        <p>• Find out the ingredients that help to preserve vegetables.</p>
+          <div className="space-y-2 text-foreground/80 pl-2">
+            <p>• Try to find out how vegetables are pickled at home.</p>
+            <p>• Find out the ingredients that help to preserve vegetables.</p>
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <p>
+            Salt, Chilli Powder, Oil and turmeric powder are used for preservation while making
+            pickles.
+          </p>
+          <p>In coastal areas it&apos;s a common sight to see fish being smoked for preservation.</p>
+
+          <div className="space-y-2 text-foreground/80 pl-2">
+            <p>• Try to find out more about this process.</p>
+            <p>• What are the other food material preserved by this process?</p>
+          </div>
+
+          <CalloutBox title="Do you know?">
+            Sugar syrup or honey is a good preservative. Fruits are often preserved in sugar syrup or
+            honey. Jams and fruit juices are good examples of preservation with sugar.
+          </CalloutBox>
+
+          <p>Ask your parents other ways of preservation that they follow.</p>
+
+          <h2 className="font-heading text-base font-bold text-primary pt-2">Activity-4: Let us store food</h2>
+          <p>
+            Form groups of 4-5 members, discuss and write in table form the preservatives used to store
+            different food items.
+          </p>
+        </div>
+
       </div>
-
-      <p>
-        Salt, Chilli Powder, Oil and turmeric powder are used for preservation while making
-        pickles.
-      </p>
-      <p>In coastal areas it&apos;s a common sight to see fish being smoked for preservation.</p>
-
-      <div className="space-y-1">
-        <p>• Try to find out more about this process.</p>
-        <p>• What are the other food material preserved by this process?</p>
-      </div>
-
-      <CalloutBox title="Do you know?">
-        Sugar syrup or honey is a good preservative. Fruits are often preserved in sugar syrup or
-        honey. Jams and fruit juices are good examples of preservation with sugar.
-      </CalloutBox>
-
-      <p>Ask your parents other ways of preservation that they follow.</p>
-
-      <h2 className="font-heading text-base font-bold text-primary">Activity-4: Let us store food</h2>
-      <p>
-        Form groups of 4-5 members, discuss and write in table form the preservatives used to store
-        different food items.
-      </p>
 
       <FillInTable
         title="Table 6 - How to preserve food?"

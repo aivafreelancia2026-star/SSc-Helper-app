@@ -35,20 +35,27 @@ export function C6ScienceCh1Page7() {
       </p>
       <p>Joseph knows how to make tomato curry. Listen to him.</p>
 
-      <blockquote className="rounded-[16px] border-l-4 border-primary/40 bg-primary/5 p-4 italic text-foreground/80">
-        &quot;I like tomato curry. I learnt how to make it from my father. To prepare it, we need
-        two tomatoes, one onion, two green chillies, one red chilly, turmeric powder, salt, oil,
-        mustard seeds, black gram and jeera.
-        <br />
-        <br />
-        First, clean all the vegetables in water, and chop them into pieces. Place a pan on the
-        flame, pour three spoons of oil. When oil becomes hot, put one spoon-full of mustard, black
-        gram and jeera. Then add green and red chilli pieces and put a pinch of turmeric powder.
-        Half a minute later add pieces of onion and tomato. Then add some salt and close the lid.
-        After five minutes the tasty curry is ready.&quot;
-      </blockquote>
+      {/* Split Columns Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-2">
+        <div className="space-y-4">
+          <blockquote className="rounded-[16px] border-l-4 border-primary/40 bg-primary/5 p-5 italic text-foreground/80 leading-relaxed">
+            &quot;I like tomato curry. I learnt how to make it from my father. To prepare it, we need
+            two tomatoes, one onion, two green chillies, one red chilly, turmeric powder, salt, oil,
+            mustard seeds, black gram and jeera.
+            <br />
+            <br />
+            First, clean all the vegetables in water, and chop them into pieces. Place a pan on the
+            flame, pour three spoons of oil. When oil becomes hot, put one spoon-full of mustard, black
+            gram and jeera. Then add green and red chilli pieces and put a pinch of turmeric powder.
+            Half a minute later add pieces of onion and tomato. Then add some salt and close the lid.
+            After five minutes the tasty curry is ready.&quot;
+          </blockquote>
+        </div>
 
-      <FigureNote emoji="🍳" caption="Fig. 4 — Joseph's father cooking tomato curry" />
+        <div className="flex flex-col items-center">
+          <FigureNote emoji="🍳" caption="Fig. 4 — Joseph's father cooking tomato curry" />
+        </div>
+      </div>
 
       <TipBox>Sweet potatoes have carotenoids and antioxidants. These purify blood.</TipBox>
     </div>
