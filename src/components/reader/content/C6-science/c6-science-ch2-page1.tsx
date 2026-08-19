@@ -36,8 +36,15 @@ export function C6ScienceCh2Page1() {
             have seen that in this pin holder, some pins are attached to the cap. See Fig.1(a).
           </p>
 
-          <div className="flex justify-center py-1">
-            <FigureNote emoji="📌" caption="Fig. 1 (a) — Pin holder with pins stuck to the cap" />
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+            <img
+              src="/assets/images/C6-science/ch2_fig1a.png"
+              alt="Fig. 1 (a) — Pin holder with pins stuck to the cap"
+              className="max-w-full h-auto rounded-lg shadow-sm"
+            />
+            <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+              Fig. 1 (a) — Pin holder with pins stuck to the cap
+            </p>
           </div>
 
           <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">
@@ -52,8 +59,15 @@ export function C6ScienceCh2Page1() {
             refrigerator. See Fig.1 (b).
           </p>
 
-          <div className="flex justify-center py-1">
-            <FigureNote emoji="🧲" caption="Fig. 1 (b) — Metal sticker stuck to a refrigerator door" />
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+            <img
+              src="/assets/images/C6-science/ch2_fig1b.png"
+              alt="Fig. 1 (b) — Metal sticker stuck to a refrigerator door"
+              className="max-w-full h-auto rounded-lg shadow-sm"
+            />
+            <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+              Fig. 1 (b) — Metal sticker stuck to a refrigerator door
+            </p>
           </div>
 
           <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">

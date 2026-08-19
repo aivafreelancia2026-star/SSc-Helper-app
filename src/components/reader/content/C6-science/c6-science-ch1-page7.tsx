@@ -52,8 +52,15 @@ export function C6ScienceCh1Page7() {
           </blockquote>
         </div>
 
-        <div className="flex flex-col items-center">
-          <FigureNote emoji="🍳" caption="Fig. 4 — Joseph's father cooking tomato curry" />
+        <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+          <img
+            src="/assets/images/C6-science/fig4.png"
+            alt="Fig. 4 — Joseph's father cooking tomato curry"
+            className="max-w-full h-auto rounded-lg shadow-sm"
+          />
+          <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+            Fig. 4 — Joseph's father cooking tomato curry
+          </p>
         </div>
       </div>
 

@@ -31,7 +31,16 @@ const TABLE4_ROWS: TableCell[][] = [
 export function C6ScienceCh1Page5() {
   return (
     <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <IconGallery items={CONDIMENT_ITEMS} caption="Fig 3" />
+      <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+        <img
+          src="/assets/images/C6-science/fig3.png"
+          alt="Fig 3"
+          className="max-w-full h-auto rounded-lg shadow-sm"
+        />
+        <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+          Fig 3
+        </p>
+      </div>
 
       <CalloutBox title="Do you know?">
         To make biryani, we use different types of ingredients such as ilaichi (cardamom), lavang

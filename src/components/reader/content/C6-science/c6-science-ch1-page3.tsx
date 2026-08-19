@@ -75,8 +75,15 @@ export function C6ScienceCh1Page3() {
   return (
     <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
       {/* Fig 2 Container */}
-      <div className="bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
-        <IconGallery items={INGREDIENT_ITEMS} caption="Fig 2 : Ingredients required to cook Biryani" />
+      <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+        <img
+          src="/assets/images/C6-science/fig2.png"
+          alt="Fig 2 : Ingredients required to cook Biryani"
+          className="max-w-full h-auto rounded-lg shadow-sm"
+        />
+        <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+          Fig 2 : Ingredients required to cook Biryani
+        </p>
       </div>
 
       {/* Two-Column Text Split */}

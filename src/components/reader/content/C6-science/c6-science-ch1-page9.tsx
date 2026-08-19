@@ -60,8 +60,15 @@ export function C6ScienceCh1Page9() {
             your own carving with the vegetables available to you.
           </CalloutBox>
 
-          <div className="flex justify-center py-2">
-            <FigureNote emoji="🍉" caption="Fig. 5 — Vegetable and fruit carving" />
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+            <img
+              src="/assets/images/C6-science/fig5.png"
+              alt="Fig. 5 — Vegetable and fruit carving"
+              className="max-w-full h-auto rounded-lg shadow-sm"
+            />
+            <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+              Fig. 5 — Vegetable and fruit carving
+            </p>
           </div>
 
           <div className="rounded-[16px] border border-border/50 bg-white/70 p-4">

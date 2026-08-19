@@ -33,7 +33,16 @@ export function C6ScienceCh2Page2() {
         shapes of magnets are shown in Fig. 2.
       </p>
 
-      <IconGallery items={MAGNET_SHAPES} caption="Fig. 2 — Bar, Horse Shoe, Ring and Disc magnets" />
+      <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+        <img
+          src="/assets/images/C6-science/ch2_fig2.png"
+          alt="Fig. 2 — Magnets of different shapes"
+          className="max-w-full h-auto rounded-lg shadow-sm"
+        />
+        <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+          Fig. 2 — Bar, Horse Shoe, Ring and Disc magnets
+        </p>
+      </div>
 
       <p>Can we make a magnet in whatever shape we desire? Think.</p>
 
