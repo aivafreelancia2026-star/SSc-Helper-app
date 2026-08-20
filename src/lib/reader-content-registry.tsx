@@ -380,6 +380,27 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     5: dynamic(() =>
       import("@/components/reader/content/C6-maths/c6-maths-ch1-page5").then((m) => m.C6MathsCh1Page5),
     ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page6").then((m) => m.C6MathsCh1Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page7").then((m) => m.C6MathsCh1Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page8").then((m) => m.C6MathsCh1Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page9").then((m) => m.C6MathsCh1Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page10").then((m) => m.C6MathsCh1Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page11").then((m) => m.C6MathsCh1Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page12").then((m) => m.C6MathsCh1Page12),
+    ),
   },
 };
 
