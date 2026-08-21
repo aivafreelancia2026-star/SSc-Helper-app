@@ -4,6 +4,7 @@ import { getProfile } from "@/lib/profile";
 import { BackgroundBlobs } from "@/components/logo-mark";
 import { RoleCodeForm } from "@/components/role-code-form";
 import { LanguageInputPreference } from "@/components/language-input-preference";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import { PAGES } from "@/lib/pages";
 
 const ROLE_LABEL: Record<string, string> = {
@@ -54,6 +55,10 @@ export default async function ProfilePage() {
 
       <div className="relative z-10 flex w-full flex-col items-center">
         <RoleCodeForm />
+      </div>
+
+      <div className="relative z-10 w-full max-w-sm rounded-[32px] border border-white/60 bg-white/80 p-6 shadow-[12px_12px_28px_rgba(79,70,229,0.12),-8px_-8px_20px_rgba(255,255,255,0.8)] backdrop-blur-sm">
+        <ThemeSwitcher />
       </div>
 
       <LanguageInputPreference />
