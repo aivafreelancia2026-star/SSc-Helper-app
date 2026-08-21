@@ -364,6 +364,85 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C6-telugu/c6-telugu-ch6-page8").then((m) => m.C6TeluguCh6Page8),
     ),
   },
+  "6-Maths-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page1").then((m) => m.C6MathsCh1Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page2").then((m) => m.C6MathsCh1Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page3").then((m) => m.C6MathsCh1Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page4").then((m) => m.C6MathsCh1Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page5").then((m) => m.C6MathsCh1Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page6").then((m) => m.C6MathsCh1Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page7").then((m) => m.C6MathsCh1Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page8").then((m) => m.C6MathsCh1Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page9").then((m) => m.C6MathsCh1Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page10").then((m) => m.C6MathsCh1Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page11").then((m) => m.C6MathsCh1Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page12").then((m) => m.C6MathsCh1Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page13").then((m) => m.C6MathsCh1Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page14").then((m) => m.C6MathsCh1Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch1-page15").then((m) => m.C6MathsCh1Page15),
+    ),
+  },
+  "6-Maths-ch2": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page1").then((m) => m.C6MathsCh2Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page2").then((m) => m.C6MathsCh2Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page3").then((m) => m.C6MathsCh2Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page4").then((m) => m.C6MathsCh2Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page5").then((m) => m.C6MathsCh2Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page6").then((m) => m.C6MathsCh2Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page7").then((m) => m.C6MathsCh2Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page8").then((m) => m.C6MathsCh2Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page9").then((m) => m.C6MathsCh2Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page10").then((m) => m.C6MathsCh2Page10),
+    ),
+  },
 };
 
 export function getPageContent(

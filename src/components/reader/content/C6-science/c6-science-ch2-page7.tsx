@@ -18,7 +18,7 @@ const TABLE2_ROWS: TableCell[][] = [
 
 export function C6ScienceCh2Page7() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
       <h2 className="font-heading text-base font-bold text-primary">
         Activity-8: Finding out whether the given object is a magnet or not.
       </h2>
@@ -38,32 +38,46 @@ export function C6ScienceCh2Page7() {
         storageKey="c6-science-ch2-table2"
       />
 
-      <p>What do you conclude by comparing the recorded observations?</p>
-      <p>By the above observations we conclude the following:</p>
-      <p>
-        If an object is attracted by one pole of the bar magnet and repelled by its other pole,
-        then you can say that it is a magnet.
-      </p>
-      <p>
-        If an object is attracted by both the poles of a bar magnet and not repelled by any pole,
-        then you can say that it is not a magnet but a magnetic material.
-      </p>
-      <p>
-        If an object is neither attracted nor repelled by the poles of the magnet, then you can say
-        that it is a non-magnetic material.
-      </p>
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pt-4">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <p>What do you conclude by comparing the recorded observations?</p>
+          <p className="font-semibold text-primary">By the above observations we conclude the following:</p>
+          <p>
+            If an object is attracted by one pole of the bar magnet and repelled by its other pole,
+            then you can say that it is a magnet.
+          </p>
+          <p>
+            If an object is attracted by both the poles of a bar magnet and not repelled by any pole,
+            then you can say that it is not a magnet but a magnetic material.
+          </p>
+          <p>
+            If an object is neither attracted nor repelled by the poles of the magnet, then you can say
+            that it is a non-magnetic material.
+          </p>
+        </div>
 
-      <h2 className="font-heading text-base font-bold text-primary">Activity-9: Make your own magnet</h2>
-      <p>
-        Take an iron nail and place it on a table. (Make sure that the nail neither attracted by
-        magnet earlier). Take a bar magnet and place one of its poles near one edge of the nail.
-        Without lifting the bar magnet, move it along the length of the iron nail till you reach the
-        other end. Then lift the bar magnet, bring it to the first end of the nail and move along
-        the length again as shown in Fig. 9. Repeat this process 20-30 times. (Always move the
-        magnet in one direction, don&apos;t drag the magnet back and forth.)
-      </p>
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <h2 className="font-heading text-base font-bold text-primary">Activity-9: Make your own magnet</h2>
+          <p>
+            Take an iron nail and place it on a table. (Make sure that the nail neither attracted by
+            magnet earlier). Take a bar magnet and place one of its poles near one edge of the nail.
+            Without lifting the bar magnet, move it along the length of the iron nail till you reach the
+            other end. Then lift the bar magnet, bring it to the first end of the nail and move along
+            the length again as shown in Fig. 9. Repeat this process 20-30 times. (Always move the
+            magnet in one direction, don&apos;t drag the magnet back and forth.)
+          </p>
+        </div>
 
-      <TipBox>The compass was used hundreds of years ago by chinese sailors.</TipBox>
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-4 border-t border-sky-100">
+        <TipBox>The compass was used hundreds of years ago by chinese sailors.</TipBox>
+      </div>
     </div>
   );
 }

@@ -66,9 +66,19 @@ const EXERCISES: ExerciseItem[] = [
 ];
 
 export function C6ScienceCh1Page10() {
+  const leftExercises = EXERCISES.slice(0, 4);
+  const rightExercises = EXERCISES.slice(4);
+
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <ExerciseList title="" items={EXERCISES} start={5} />
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="space-y-4">
+          <ExerciseList title="" items={leftExercises} start={5} />
+        </div>
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <ExerciseList title="" items={rightExercises} start={9} />
+        </div>
+      </div>
     </div>
   );
 }

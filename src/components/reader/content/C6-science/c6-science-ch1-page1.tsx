@@ -151,18 +151,30 @@ export function C6ScienceCh1Page1() {
       </p>
       <p className="font-semibold text-primary/90">Observe the following food items and name them.</p>
 
+      {/* Textbook Image Container */}
+      <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+        <img
+          src="/assets/images/C6-science/fig1.png"
+          alt="Fig 1 : Variety of food"
+          className="max-w-full h-auto rounded-lg shadow-sm max-h-[220px]"
+        />
+        <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+          Fig 1 : Variety of food
+        </p>
+      </div>
+
       {/* Interactive Food Quiz Section */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {QUIZ_ITEMS.map((item) => {
+      <div className="grid grid-cols-3 gap-3">
+        {QUIZ_ITEMS.map((item, index) => {
           const typedVal = answers[item.id] ?? "";
           const isCorrect = graded[item.id]?.value === typedVal.trim().toLowerCase() ? graded[item.id]?.correct : null;
 
           return (
             <div
               key={item.id}
-              className="rounded-[16px] border border-border/40 bg-white/60 p-3 flex flex-col items-center gap-2 shadow-sm relative group hover:border-primary/40 hover:bg-white/80 transition-all"
+              className="rounded-[12px] border border-border/40 bg-white/60 p-2.5 flex flex-col items-center gap-1 shadow-sm relative group hover:border-primary/40 hover:bg-white/80 transition-all"
             >
-              <span className="text-4xl filter drop-shadow-sm select-none py-2">{item.emoji}</span>
+              <span className="text-xs font-bold text-sky-800">Item {index + 1}</span>
               <div className="w-full relative">
                 <input
                   type="text"
@@ -170,7 +182,7 @@ export function C6ScienceCh1Page1() {
                   onChange={(e) => handleChange(item.id, e.target.value)}
                   onBlur={() => handleBlur(item)}
                   placeholder={item.placeholder}
-                  className={`w-full text-center rounded-[10px] border bg-white/80 px-2 py-1 text-xs text-foreground placeholder:text-foreground/30 focus:outline-none transition-all ${
+                  className={`w-full text-center rounded-[8px] border bg-white/80 px-2 py-1 text-xs text-foreground placeholder:text-foreground/30 focus:outline-none transition-all ${
                     isRevealed ? "border-primary bg-primary/5" :
                     isCorrect === true ? "border-green-500 bg-green-50 text-green-700" :
                     isCorrect === false ? "border-destructive bg-destructive/5 text-destructive" :
@@ -178,7 +190,7 @@ export function C6ScienceCh1Page1() {
                   }`}
                 />
                 {isRevealed && (
-                  <span className="absolute -bottom-4 left-0 right-0 text-[9px] text-center font-bold text-primary">
+                  <span className="absolute -bottom-4 left-0 right-0 text-[8px] text-center font-bold text-primary">
                     {item.displayLabel}
                   </span>
                 )}
@@ -186,18 +198,15 @@ export function C6ScienceCh1Page1() {
               
               {/* Correctness indicators */}
               {isCorrect === true && !isRevealed && (
-                <span className="absolute top-2 right-2 text-green-600 font-bold text-xs bg-green-100 rounded-full w-5 h-5 flex items-center justify-center">✓</span>
+                <span className="absolute top-1.5 right-1.5 text-green-600 font-bold text-[10px] bg-green-100 rounded-full w-4 h-4 flex items-center justify-center">✓</span>
               )}
               {isCorrect === false && !isRevealed && (
-                <span className="absolute top-2 right-2 text-destructive font-bold text-xs bg-destructive/10 rounded-full w-5 h-5 flex items-center justify-center">✗</span>
+                <span className="absolute top-1.5 right-1.5 text-destructive font-bold text-[10px] bg-destructive/10 rounded-full w-4 h-4 flex items-center justify-center">✗</span>
               )}
             </div>
           );
         })}
       </div>
-      <p className="text-center font-body text-xs italic text-foreground/50 mt-1">
-        Fig 1 : Variety of food
-      </p>
 
       <TipBox>Banana contains potassium which is useful for us.</TipBox>
     </div>
