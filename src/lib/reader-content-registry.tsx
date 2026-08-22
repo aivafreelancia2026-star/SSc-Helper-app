@@ -445,6 +445,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     11: dynamic(() =>
       import("@/components/reader/content/C6-maths/c6-maths-ch2-page11").then((m) => m.C6MathsCh2Page11),
     ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page12").then((m) => m.C6MathsCh2Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch2-page13").then((m) => m.C6MathsCh2Page13),
+    ),
+  },
+  "6-Maths-ch3": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch3-page1").then((m) => m.C6MathsCh3Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch3-page2").then((m) => m.C6MathsCh3Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch3-page3").then((m) => m.C6MathsCh3Page3),
+    ),
   },
 };
 
