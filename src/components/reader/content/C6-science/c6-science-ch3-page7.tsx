@@ -46,24 +46,54 @@ const EXERCISES: ExerciseItem[] = [
 
 export function C6ScienceCh3Page7() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <SummaryBox title="" points={SUMMARY_POINTS} />
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <SummaryBox title="What we have learnt (continued)" points={SUMMARY_POINTS} />
 
-      <ExerciseList items={EXERCISES} />
+          <div className="flex items-center justify-between border-b border-sky-100 pb-4 pt-2">
+            <h2 className="font-heading text-base font-bold text-primary">Improve your learning</h2>
+            <div className="flex flex-col items-center border border-sky-200 rounded p-1.5 bg-white shadow-xs">
+              <span className="text-[9px] font-mono font-bold leading-none tracking-widest text-sky-600 mb-1">QR CODE</span>
+              <div className="w-12 h-12 bg-sky-50 border border-sky-100 flex items-center justify-center text-[10px] font-bold text-sky-700 font-mono select-none">
+                K8R1V6
+              </div>
+            </div>
+          </div>
 
-      <div className="rounded-[16px] border-2 border-primary/30 bg-primary/5 p-4">
-        <p className="text-center font-heading text-base font-bold text-primary">Dangerous plastic bags</p>
-        <p className="mt-2 indent-4 font-body text-sm leading-relaxed text-foreground/80">
-          We use plastic bags, covers frequently. We use disposble plates and glases in functions.
-          All food materials are also packed with polythene paper in super markets. In this way we
-          use polythiene covers and throw away. But it takes very long time to decompose and mix
-          into soil. These layers of plastics prevent the sinking of rain water into the soil. It
-          leads to decreasing of ground water. They also obstruct drain water and channels during
-          rainy season. It results in floods. Mainly cities and towns are effected by this.
-        </p>
+          <ExerciseList title="" items={EXERCISES.slice(0, 7)} start={1} />
+        </div>
+
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <ExerciseList title="" items={EXERCISES.slice(7)} start={8} />
+        </div>
+
       </div>
 
-      <TipBox>In some rainforests of equatorial region there are flying squirrels and snakes are present.</TipBox>
+      {/* Dangerous Plastic Bags card spanning full-width */}
+      <div className="pt-4 border-t border-sky-100">
+        <div className="rounded-[16px] border-2 border-red-200 bg-red-50/50 p-6 shadow-xs">
+          <p className="text-center font-heading text-base font-bold text-red-800">Dangerous plastic bags</p>
+          <p className="mt-3 indent-4 font-body text-sm leading-relaxed text-foreground/80">
+            We use plastic bags, covers frequently. We use disposable plates and glasses in functions.
+            All food materials are also packed with polythene paper in supermarkets. In this way we
+            use polythene covers and throw away. But it takes very long time to decompose and mix
+            into soil. These layers of plastics prevent the sinking of rain water into the soil. It
+            leads to decreasing of ground water. They also obstruct drain water and channels during
+            rainy season. It results in floods. Mainly cities and towns are affected by this.
+          </p>
+        </div>
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-2">
+        <TipBox>In some rainforests of equatorial region there are flying squirrels and snakes are present.</TipBox>
+      </div>
     </div>
   );
 }
