@@ -28,21 +28,41 @@ const EXERCISES: ExerciseItem[] = [
 
 export function C6ScienceCh2Page10() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <ExerciseList title="" items={EXERCISES} start={6} />
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <ExerciseList title="" items={EXERCISES.slice(0, 5)} start={6} />
+        </div>
 
-      <div className="rounded-[16px] border-2 border-primary/40 bg-primary/5 p-6 text-center italic text-foreground/80">
-        <p>
-          Every living creature is better alive than dead. Even a grasshopper, a mongoose or a
-          mango tree have right to life. We shall understand this. This is our responsibility.
-        </p>
-        <p className="mt-2 font-semibold not-italic">— Saleem Ali</p>
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <ExerciseList title="" items={EXERCISES.slice(5)} start={11} />
+        </div>
+
       </div>
 
-      <TipBox>
-        It is believed that the earth&apos;s magnet power comes from a current in the liquid center
-        of the Earth causing it to become a gigantic electromagnet!
-      </TipBox>
+      {/* Quote card spanning full-width */}
+      <div className="pt-4 border-t border-sky-100">
+        <div className="rounded-[16px] border-2 border-primary/30 bg-primary/5 p-6 text-center italic text-foreground/80 shadow-xs">
+          <p className="leading-relaxed">
+            Every living creature is better alive than dead. Even a grasshopper, a mongoose or a
+            mango tree have right to life. We shall understand this. This is our responsibility.
+          </p>
+          <p className="mt-2 font-semibold not-italic text-primary">— Saleem Ali</p>
+        </div>
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-2">
+        <TipBox>
+          It is believed that the earth&apos;s magnet power comes from a current in the liquid center
+          of the Earth causing it to become a gigantic electromagnet!
+        </TipBox>
+      </div>
     </div>
   );
 }

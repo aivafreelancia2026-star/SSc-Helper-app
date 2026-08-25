@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Baloo_2, Comic_Neue } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const baloo2 = Baloo_2({
@@ -31,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${baloo2.variable} ${comicNeue.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-background font-body text-foreground">
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
