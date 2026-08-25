@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { setTheme, getTheme } from "@/components/theme-provider";
+import { toggleTheme, getTheme } from "@/components/theme-provider";
 import type { Theme } from "@/components/theme-provider";
 
 export function ThemeSwitcher() {
-  const [theme, setCurrentTheme] = useState<Theme>("system");
+  const [theme, setCurrentTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,29 +15,26 @@ export function ThemeSwitcher() {
 
   if (!mounted) return null;
 
-  const handleThemeChange = (newTheme: Theme) => {
-    setCurrentTheme(newTheme);
-    setTheme(newTheme);
+  const handleToggle = () => {
+    toggleTheme();
+    setCurrentTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
-    <div className="space-y-3">
-      <label className="block text-sm font-semibold text-foreground">Theme</label>
-      <div className="flex gap-2">
-        {(["light", "dark", "system"] as const).map((t) => (
-          <button
-            key={t}
-            onClick={() => handleThemeChange(t)}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors capitalize ${
-              theme === t
-                ? "bg-primary text-on-primary"
-                : "bg-muted text-foreground hover:bg-border"
-            }`}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
-    </div>
+    <button
+      onClick={handleToggle}
+      className="flex items-center gap-2 rounded-lg bg-muted px-4 py-2 font-medium text-foreground transition-colors hover:bg-border"
+      title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+    >
+      {theme === "light" ? (
+        <>
+          🌙 Dark Mode
+        </>
+      ) : (
+        <>
+          ☀️ Light Mode
+        </>
+      )}
+    </button>
   );
 }

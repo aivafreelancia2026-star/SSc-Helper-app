@@ -2,12 +2,12 @@
 
 import { useEffect, ReactNode } from "react";
 
-export type Theme = "light" | "dark" | "system";
+export type Theme = "light" | "dark";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as Theme | null;
-    const theme = storedTheme ?? "system";
+    const theme = storedTheme ?? "light";
     applyTheme(theme);
   }, []);
 
@@ -18,24 +18,25 @@ export function useTheme() {
   return {
     setTheme,
     getTheme,
+    toggleTheme,
   };
 }
 
 function applyTheme(theme: Theme) {
   const root = document.documentElement;
-
-  if (theme === "system") {
-    root.removeAttribute("data-theme");
-  } else {
-    root.setAttribute("data-theme", theme);
-  }
-
+  root.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
 }
 
 export function getTheme(): Theme {
   const stored = localStorage.getItem("theme") as Theme | null;
-  return stored ?? "system";
+  return stored ?? "light";
+}
+
+export function toggleTheme() {
+  const current = getTheme();
+  const next = current === "light" ? "dark" : "light";
+  setTheme(next);
 }
 
 export function setTheme(theme: Theme) {
