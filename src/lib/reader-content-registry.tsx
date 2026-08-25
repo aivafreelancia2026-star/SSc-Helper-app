@@ -50,6 +50,11 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
         (m) => m.C6HindiCh2Page1,
       ),
     ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch2-page2").then(
+        (m) => m.C6HindiCh2Page2,
+      ),
+    ),
   },
   "6-Science-ch1": {
     1: dynamic(() =>
