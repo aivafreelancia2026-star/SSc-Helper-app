@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { Chapter } from "@/lib/content";
 
-const MONTH_MAPPING: Record<number, string> = {
+const MONTH_MAPPING: Record<number | string, string> = {
   1: "June",
   2: "June",
   3: "July",
@@ -42,11 +42,12 @@ export function ChapterIndex({
 
   const indexData = (indexChapter as any).indexData as Array<{
     unit: string;
-    chapterNo: number;
+    chapterNo: number | string;
     title: string;
     pageNo: number;
     periods: number | null;
     subArea: string | null;
+    genre?: string;
   }>;
 
   // Render textbook-like table for Class 6 Science
@@ -215,12 +216,17 @@ export function ChapterIndex({
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1 min-w-0">
                           <p className="font-heading font-semibold text-foreground text-sm">
-                            Chapter {item.chapterNo}: {item.title}
+                            {typeof item.chapterNo === 'number' ? `Chapter ${item.chapterNo}` : item.chapterNo}: {item.title}
                           </p>
                           <div className="mt-1 flex flex-wrap gap-2 text-xs">
                             {item.subArea && (
                               <span className="inline-block rounded-full bg-primary/10 px-2 py-1 text-primary font-semibold">
                                 {item.subArea}
+                              </span>
+                            )}
+                            {item.genre && (
+                              <span className="inline-block rounded-full bg-primary/10 px-2 py-1 text-primary font-semibold">
+                                {item.genre}
                               </span>
                             )}
                             <span className="text-foreground/60">Page {item.pageNo}</span>
