@@ -73,7 +73,7 @@ export default async function ReaderPage({
       ? Math.min(requestedPage, totalPages)
       : null;
 
-  if (!page) {
+  if (!page || page < indexChapter.pageStart) {
     redirect(
       `/reader?class=${classGrade}&subject=${subject}&page=${indexChapter.pageStart}&total=${totalPages}&index=${indexChapter.pageStart}`,
     );
@@ -94,20 +94,6 @@ export default async function ReaderPage({
   }
 
   if (page === indexChapter.pageStart) {
-    if (indexChapter.status === "coming-soon") {
-      return (
-        <div className="relative flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
-          <AutoRunController totalPages={totalPages} />
-          <PageTurnTransition page={page}>
-            <div className="w-full max-w-2xl space-y-4">
-              <h1 className="font-heading text-2xl font-bold text-foreground">Index</h1>
-              <ComingSoonCard message="Chapter index will be available soon — check back later." />
-            </div>
-          </PageTurnTransition>
-        </div>
-      );
-    }
-
     return (
       <div className="relative flex flex-1 flex-col items-center overflow-hidden py-8">
         <AutoRunController totalPages={totalPages} />
@@ -126,16 +112,11 @@ export default async function ReaderPage({
   }
 
   const selectedChapter =
-    page === indexChapter.pageStart
-      ? null
-      : page <= introChapter.pageEnd
-        ? introChapter
-        : findChapterForPage(chapters, page);
+    (introChapter && page <= introChapter.pageEnd) ? null : findChapterForPage(chapters, page);
 
-  const PageContent =
-    selectedChapter && selectedChapter.status !== "coming-soon"
-      ? getPageContent(classGrade, subject, selectedChapter.id, page - selectedChapter.pageStart + 1)
-      : null;
+  const PageContent = selectedChapter
+    ? getPageContent(classGrade, subject, selectedChapter.id, page - selectedChapter.pageStart + 1)
+    : null;
 
   return (
     <div className="relative flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
@@ -155,6 +136,8 @@ export default async function ReaderPage({
                   </span>
                   {selectedChapter.periods && <span>{selectedChapter.periods} periods</span>}
                   {selectedChapter.subArea && <span>{selectedChapter.subArea}</span>}
+                  {selectedChapter.author && <span>{selectedChapter.author}</span>}
+                  {selectedChapter.genre && <span>{selectedChapter.genre}</span>}
                 </div>
               </>
             ) : (

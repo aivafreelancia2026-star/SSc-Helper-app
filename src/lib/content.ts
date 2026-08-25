@@ -15,11 +15,12 @@ export type Chapter = {
   genre?: string | null;
   indexData?: Array<{
     unit: string;
-    chapterNo: number;
+    chapterNo: number | string;
     title: string;
     pageNo: number;
     periods: number | null;
     subArea: string | null;
+    genre?: string;
   }>;
 };
 
@@ -37,16 +38,17 @@ export type ClassContent = {
 // list itself.
 import class6Science from "@/data/classes/C6-Science.json";
 import class6Telugu from "@/data/classes/C6-Telugu.json";
-import class6Maths from "@/data/classes/C6-Maths.json";
+import class6Hindi from "@/data/classes/C6-Hindi.json";
 
 const CLASS_CONTENT: Partial<Record<string, ClassContent>> = {
   "6-Science": class6Science as ClassContent,
   "6-Telugu": class6Telugu as ClassContent,
-  "6-Maths": class6Maths as ClassContent,
+  "6-Hindi": class6Hindi as ClassContent,
 };
 
 export function loadClassContent(classGrade: number, subject: string): ClassContent | null {
-  return CLASS_CONTENT[`${classGrade}-${subject}`] ?? null;
+  const normalizedKey = `${classGrade}-${subject.charAt(0).toUpperCase() + subject.slice(1).toLowerCase()}`;
+  return CLASS_CONTENT[normalizedKey] ?? CLASS_CONTENT[`${classGrade}-${subject}`] ?? null;
 }
 
 export function getChapterById(content: ClassContent, id: string): Chapter | null {
