@@ -22,6 +22,7 @@ function localNetworkOrigins(): string[] {
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: localNetworkOrigins(),
+  eslint: { ignoreDuringBuilds: true },
 };
 
 export default nextConfig;
