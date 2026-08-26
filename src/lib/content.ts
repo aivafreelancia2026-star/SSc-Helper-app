@@ -39,11 +39,13 @@ export type ClassContent = {
 import class6Science from "@/data/classes/C6-Science.json";
 import class6Telugu from "@/data/classes/C6-Telugu.json";
 import class6Hindi from "@/data/classes/C6-Hindi.json";
+import class6Maths from "@/data/classes/C6-Maths.json";
 
 const CLASS_CONTENT: Partial<Record<string, ClassContent>> = {
   "6-Science": class6Science as ClassContent,
   "6-Telugu": class6Telugu as ClassContent,
   "6-Hindi": class6Hindi as ClassContent,
+  "6-Maths": class6Maths as ClassContent,
 };
 
 export function loadClassContent(classGrade: number, subject: string): ClassContent | null {
