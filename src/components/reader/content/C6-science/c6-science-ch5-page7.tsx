@@ -15,55 +15,79 @@ const TABLE7_ROWS: TableCell[][] = Array.from({ length: 2 }, () => [
 
 export function C6ScienceCh5Page7() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <h2 className="font-heading text-base font-bold text-primary">A dilemma with sugar</h2>
-      <p>
-        While thinking about properties of solids, a group of students in class 6, put sugar in a
-        glass and in a bowl. They observed that sugar takes the shape of the container. Since they
-        know that liquids take the shape of the container, they concluded that sugar is a liquid.
-      </p>
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>The second group in the class disagreed with the first. What do you think? Is sugar a solid or a liquid? How will you decide?</li>
-      </ul>
-      <p>
-        Razia, a student from the second group came up with an idea. She took a single crystal of
-        sugar and one drop of water and declared that sugar is a solid while water is a liquid. The
-        first group also had to agree with her argument.
-      </p>
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>What must she have argued using only one crystal of sugar and one drop of water?</li>
-        <li>Discuss with your friends and find out why sugar is a solid although it takes the shape of the container.</li>
-        <li>Is common salt is a solid or a liquid?</li>
-      </ul>
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <h2 className="font-heading text-base font-bold text-indigo-800">A dilemma with sugar</h2>
+          <p>
+            While thinking about properties of solids, a group of students in class 6, put sugar in a
+            glass and in a bowl. They observed that sugar takes the shape of the container. Since they
+            know that liquids take the shape of the container, they concluded that sugar is a liquid.
+          </p>
+          <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">
+            <li>The second group in the class disagreed with the first. What do you think? Is sugar a solid or a liquid? How will you decide?</li>
+          </ul>
+          <p>
+            Razia, a student from the second group came up with an idea. She took a single crystal of
+            sugar and one drop of water and declared that sugar is a solid while water is a liquid. The
+            first group also had to agree with her argument.
+          </p>
+          <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">
+            <li>What must she have argued using only one crystal of sugar and one drop of water?</li>
+            <li>Discuss with your friends and find out why sugar is a solid although it takes the shape of the container.</li>
+            <li>Is common salt is a solid or a liquid?</li>
+          </ul>
 
-      <h2 className="font-heading text-base font-bold text-primary">Activity-7: Sinking or floating in water</h2>
-      <p>
-        Let us assume that a tomato, brinjal, potato, iron nail, sponge, wood, stone, leaf, piece
-        of chalk and paper are given to you. Predict which of them sink or float in water. Record
-        your predictions in table 6.
-      </p>
+          <h2 className="font-heading text-base font-bold text-indigo-800 pt-2">Activity-7: Sinking or floating in water</h2>
+          <p>
+            Let us assume that a tomato, brinjal, potato, iron nail, sponge, wood, stone, leaf, piece
+            of chalk and paper are given to you. Predict which of them sink or float in water. Record
+            your predictions in table 6.
+          </p>
+        </div>
 
-      <FigureNote emoji="🧪" caption="Fig. 8 — Students testing objects in a bowl of water" />
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-indigo-100 pt-6 md:pt-0 md:pl-8">
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-indigo-100 p-4 shadow-sm max-w-[160px] mx-auto">
+            <img
+              src="/assets/images/C6-science/ch5_fig8.png"
+              alt="Fig. 8 — Students testing objects in a bowl of water"
+              className="max-w-full h-auto rounded-lg shadow-sm"
+            />
+            <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+              Fig. 8
+            </p>
+          </div>
 
-      <FillInTable title="Table 6" columns={["Prediction", "Object"]} rows={TABLE6_ROWS} storageKey="c6-science-ch5-table6" />
+          <FillInTable title="Table 6" columns={["Prediction", "Object"]} rows={TABLE6_ROWS} storageKey="c6-science-ch5-table6" />
 
-      <p>
-        Now try to test whether your predictions are correct or wrong by dropping the above
-        objects in a beaker of water one by one. What do you find record your observations in the
-        following table 7.
-      </p>
+          <p className="pt-2">
+            Now try to test whether your predictions are correct or wrong by dropping the above
+            objects in a beaker of water one by one. What do you find record your observations in the
+            following table 7.
+          </p>
 
-      <FillInTable title="Table 7" columns={["Object", "Prediction", "Finding"]} rows={TABLE7_ROWS} storageKey="c6-science-ch5-table7" />
+          <FillInTable title="Table 7" columns={["Object", "Prediction", "Finding"]} rows={TABLE7_ROWS} storageKey="c6-science-ch5-table7" />
 
-      <p>Are your predictions right / wrong?</p>
-      <p>Now, add a lot of salt to the water in the beaker. Try this same activity with water which is excessively salty.</p>
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>What do you observe?</li>
-        <li>Do you get the same result? Discuss.</li>
-        <li>Are there any objects which has sinked in normal water but float in salt water? Think why do they float in salt water.</li>
-      </ul>
+          <p className="pt-2">Are your predictions right / wrong?</p>
+          <p>Now, add a lot of salt to the water in the beaker. Try this same activity with water which is excessively salty.</p>
+          <ul className="list-disc space-y-1.5 pl-5 text-foreground/80">
+            <li>What do you observe?</li>
+            <li>Do you get the same result? Discuss.</li>
+            <li>Are there any objects which has sinked in normal water but float in salt water? Think why do they float in salt water.</li>
+          </ul>
+        </div>
 
-      <TipBox>Candles made of bee wax have sweet smell and give less smoke.</TipBox>
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-4 border-t border-indigo-100">
+        <TipBox>Candles made of bee wax have sweet smell and give less smoke.</TipBox>
+      </div>
     </div>
   );
 }
