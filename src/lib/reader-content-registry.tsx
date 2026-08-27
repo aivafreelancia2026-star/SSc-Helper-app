@@ -10,7 +10,46 @@ import type { ComponentType } from "react";
 // page doesn't bundle every other hand-built page's JS along with it — this
 // matters more as more chapters get real content and the registry grows.
 const REGISTRY: Record<string, Record<number, ComponentType>> = {
+  "6-Hindi-ch_read_1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch-read-1-page1").then(
+        (m) => m.C6HindiChRead1Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch-read-1-page2").then(
+        (m) => m.C6HindiChRead1Page2,
+      ),
+    ),
+  },
+  "6-Hindi-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch1-page1").then(
+        (m) => m.C6HindiCh1Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch1-page2").then(
+        (m) => m.C6HindiCh1Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch1-page3").then(
+        (m) => m.C6HindiCh1Page3,
+      ),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch1-page4").then(
+        (m) => m.C6HindiCh1Page4,
+      ),
+    ),
+  },
   "6-Hindi-ch2": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch2-page1").then(
+        (m) => m.C6HindiCh2Page1,
+      ),
+    ),
     2: dynamic(() =>
       import("@/components/reader/content/c6-hindi-ch2-page2").then(
         (m) => m.C6HindiCh2Page2,
