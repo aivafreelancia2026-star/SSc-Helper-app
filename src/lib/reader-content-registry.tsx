@@ -22,6 +22,13 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       ),
     ),
   },
+  "6-Hindi-ch_read_2": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch-read-2-page1").then(
+        (m) => m.C6HindiChRead2Page1,
+      ),
+    ),
+  },
   "6-Hindi-ch1": {
     1: dynamic(() =>
       import("@/components/reader/content/c6-hindi-ch1-page1").then(
