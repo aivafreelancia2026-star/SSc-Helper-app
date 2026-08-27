@@ -68,7 +68,7 @@ export function C6HindiCh3Page3() {
               <span className="text-xs font-bold text-gray-500 mb-1">QR CODE</span>
               <div className="w-16 h-16 grid grid-cols-4 grid-rows-4 gap-1 p-1 bg-white border border-gray-300">
                 {[...Array(16)].map((_, i) => (
-                  <div key={i} className={`bg-gray-800 rounded-sm ${Math.random() > 0.5 ? 'opacity-100' : 'opacity-0'}`} />
+                  <div key={i} className={`bg-gray-800 rounded-sm ${[0,2,3,5,6,9,10,12,14,15].includes(i) ? 'opacity-100' : 'opacity-0'}`} />
                 ))}
               </div>
               <span className="text-xs font-bold mt-1 text-gray-700 tracking-widest">V5C8G7</span>
