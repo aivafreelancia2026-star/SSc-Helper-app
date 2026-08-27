@@ -61,10 +61,49 @@ const EXERCISES: ExerciseItem[] = [
 
 export function C6ScienceCh4Page13() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <ExerciseList title="" items={EXERCISES} start={5} />
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <ExerciseList title="" items={EXERCISES.slice(0, 8)} start={5} />
+        </div>
 
-      <TipBox>Birds are vertebrate animals. The reason is they have a backbone.</TipBox>
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <ExerciseList
+            title=""
+            items={[
+              ...EXERCISES.slice(8, 11),
+              {
+                text: "Identify the given animal :",
+                subItems: ["What does it eat?", "Which part of the body helps it in eating?"],
+                extra: (
+                  <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm mt-3">
+                    <img
+                      src="/assets/images/C6-science/ch4_fig_anteater.png"
+                      alt="An anteater"
+                      className="max-w-full h-auto rounded-lg shadow-sm"
+                    />
+                    <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+                      An anteater
+                    </p>
+                  </div>
+                )
+              }
+            ]}
+            start={13}
+          />
+        </div>
+
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-4 border-t border-sky-100">
+        <TipBox>Birds are vertebrate animals. The reason is they have a backbone.</TipBox>
+      </div>
     </div>
   );
 }

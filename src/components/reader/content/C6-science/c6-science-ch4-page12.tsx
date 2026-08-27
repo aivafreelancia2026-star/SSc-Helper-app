@@ -31,25 +31,61 @@ const EXERCISES: ExerciseItem[] = [
 
 export function C6ScienceCh4Page12() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <FigureNote emoji="🐜" caption="Leafcutter ants carrying pieces of leaf back to their colony" />
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl border border-sky-100 p-4 shadow-sm">
+            <img
+              src="/assets/images/C6-science/ch4_fig_leafcutter.png"
+              alt="Leafcutter ants carrying pieces of leaf back to their colony"
+              className="max-w-full h-auto rounded-lg shadow-sm"
+            />
+            <p className="text-center font-body text-xs italic text-foreground/50 mt-2">
+              Leafcutter ants carrying pieces of leaf
+            </p>
+          </div>
 
-      <p>Like us ants are good farmers as well they cut leaves into pieces and create a bed to grow a type of fungus which they eat!</p>
-      <p>Think! What can we learn from ants? Write your opinion in your notebook.</p>
+          <p className="pt-2">Like us ants are good farmers as well they cut leaves into pieces and create a bed to grow a type of fungus which they eat!</p>
+          <p>Think! What can we learn from ants? Write your opinion in your notebook.</p>
 
-      <div className="rounded-[16px] border border-border/50 bg-white/70 p-4">
-        <p className="font-heading text-sm font-bold text-primary">Keywords</p>
-        <p className="mt-1 font-body text-sm text-foreground/80">
-          Food habit, food chain, sucking, picking, chewing, habitat, herbivore, carnivore,
-          omnivore, rumination, nocturnal.
-        </p>
+          <div className="rounded-[16px] border border-border/50 bg-white/70 p-4">
+            <p className="font-heading text-sm font-bold text-emerald-800">Keywords</p>
+            <p className="mt-1 font-body text-xs text-foreground/80 leading-relaxed">
+              Food habit, food chain, sucking, picking, chewing, habitat, herbivore, carnivore,
+              omnivore, rumination, nocturnal.
+            </p>
+          </div>
+
+          <SummaryBox title="What we have learnt" points={SUMMARY_POINTS.slice(0, 3)} />
+        </div>
+
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-sky-100 pt-6 md:pt-0 md:pl-8">
+          <SummaryBox title="What we have learnt (continued)" points={SUMMARY_POINTS.slice(3)} />
+
+          <div className="flex items-center justify-between border-b border-sky-100 pb-4 pt-2">
+            <h2 className="font-heading text-base font-bold text-emerald-800">Improve your learning</h2>
+            <div className="flex flex-col items-center border border-emerald-200 rounded p-1.5 bg-white shadow-xs">
+              <span className="text-[9px] font-mono font-bold leading-none tracking-widest text-emerald-600 mb-1">QR CODE</span>
+              <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 flex items-center justify-center text-[10px] font-bold text-emerald-700 font-mono select-none">
+                H8T6J9
+              </div>
+            </div>
+          </div>
+
+          <ExerciseList items={EXERCISES} />
+        </div>
+
       </div>
 
-      <SummaryBox points={SUMMARY_POINTS} />
-
-      <ExerciseList items={EXERCISES} />
-
-      <TipBox>The leopard is a member of the cat family. The life span of leopard is between 12 to 17 years.</TipBox>
+      {/* Tip Box spanning full-width */}
+      <div className="pt-4 border-t border-sky-100">
+        <TipBox>The leopard is a member of the cat family. The life span of leopard is between 12 to 17 years.</TipBox>
+      </div>
     </div>
   );
 }
