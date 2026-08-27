@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { TipBox } from "@/components/reader/tip-box";
 
