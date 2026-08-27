@@ -209,6 +209,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     4: dynamic(() =>
       import("@/components/reader/content/C6-science/c6-science-ch6-page4").then((m) => m.C6ScienceCh6Page4),
     ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch6-page5").then((m) => m.C6ScienceCh6Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch6-page6").then((m) => m.C6ScienceCh6Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch6-page7").then((m) => m.C6ScienceCh6Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch6-page8").then((m) => m.C6ScienceCh6Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch6-page9").then((m) => m.C6ScienceCh6Page9),
+    ),
   },
 
   "6-Telugu-ch1": {
