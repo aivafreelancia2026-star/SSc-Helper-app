@@ -214,8 +214,8 @@ export function C6MathsCh3Page9() {
       {feedback && (
         <AnswerFeedback
           key={feedback.id}
-          isCorrect={feedback.correct}
-          points={1}
+          correct={feedback.correct}
+          onDone={() => setFeedback(null)}
         />
       )}
 
