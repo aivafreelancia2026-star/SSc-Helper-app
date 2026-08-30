@@ -657,6 +657,30 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     10: dynamic(() =>
       import("@/components/reader/content/C6-science/c6-science-ch16-page10").then((m) => m.C6ScienceCh16Page10),
     ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page11").then((m) => m.C6ScienceCh16Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page12").then((m) => m.C6ScienceCh16Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page13").then((m) => m.C6ScienceCh16Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page14").then((m) => m.C6ScienceCh16Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page15").then((m) => m.C6ScienceCh16Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page16").then((m) => m.C6ScienceCh16Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page17").then((m) => m.C6ScienceCh16Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch16-page18").then((m) => m.C6ScienceCh16Page18),
+    ),
   },
 
   "6-Telugu-ch1": {
