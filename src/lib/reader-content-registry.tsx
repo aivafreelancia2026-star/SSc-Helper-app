@@ -578,6 +578,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     11: dynamic(() =>
       import("@/components/reader/content/C6-science/c6-science-ch14-page11").then((m) => m.C6ScienceCh14Page11),
     ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch14-page12").then((m) => m.C6ScienceCh14Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch14-page13").then((m) => m.C6ScienceCh14Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch14-page14").then((m) => m.C6ScienceCh14Page14),
+    ),
+  },
+  "6-Science-ch15": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch15-page1").then((m) => m.C6ScienceCh15Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-science/c6-science-ch15-page2").then((m) => m.C6ScienceCh15Page2),
+    ),
   },
 
   "6-Telugu-ch1": {
