@@ -42,10 +42,37 @@ const EXERCISES: ExerciseItem[] = [
 
 export function C6ScienceCh5Page9() {
   return (
-    <div className="w-full space-y-4 font-body text-sm leading-relaxed text-foreground/90">
-      <ExerciseList items={EXERCISES} />
+    <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
+      
+      {/* 2-Column Split Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        {/* Left Column */}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-indigo-100 pb-4 pt-2">
+            <h2 className="font-heading text-base font-bold text-indigo-800">Improve your learning</h2>
+            <div className="flex flex-col items-center border border-indigo-200 rounded p-1.5 bg-white shadow-xs">
+              <span className="text-[9px] font-mono font-bold leading-none tracking-widest text-indigo-600 mb-1">QR CODE</span>
+              <div className="w-12 h-12 bg-indigo-50 border border-indigo-100 flex items-center justify-center text-[10px] font-bold text-indigo-700 font-mono select-none">
+                A6B4F1
+              </div>
+            </div>
+          </div>
 
-      <TipBox>When white light falls on an object it may reflected, absorbed or transmitted.</TipBox>
+          <ExerciseList title="" items={EXERCISES.slice(0, 7)} start={1} />
+        </div>
+
+        {/* Right Column */}
+        <div className="space-y-4 border-t md:border-t-0 md:border-l border-indigo-100 pt-6 md:pt-0 md:pl-8">
+          <ExerciseList title="" items={EXERCISES.slice(7)} start={8} />
+        </div>
+
+      </div>
+
+      {/* Tip Box spanning full-width */}
+      <div className="pt-4 border-t border-indigo-100">
+        <TipBox>When white light falls on an object it may reflected, absorbed or transmitted.</TipBox>
+      </div>
     </div>
   );
 }

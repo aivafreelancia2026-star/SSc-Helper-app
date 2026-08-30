@@ -211,7 +211,7 @@
       "title": "Materials - Objects",
       "pageStart": 50,
       "pageEnd": 58,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 12,
       "subArea": "Chemistry"
     },
@@ -222,7 +222,7 @@
       "title": "Habitat",
       "pageStart": 59,
       "pageEnd": 69,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 12,
       "subArea": "Biology"
     },
@@ -233,7 +233,7 @@
       "title": "Separation of Substances",
       "pageStart": 70,
       "pageEnd": 78,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 12,
       "subArea": "Chemistry"
     },
@@ -244,7 +244,7 @@
       "title": "Fibre to Fabric",
       "pageStart": 79,
       "pageEnd": 87,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 11,
       "subArea": "Chemistry"
     },
@@ -255,7 +255,7 @@
       "title": "Plants: parts and functions",
       "pageStart": 88,
       "pageEnd": 97,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 10,
       "subArea": "Biology"
     },
@@ -266,7 +266,7 @@
       "title": "Changes around us",
       "pageStart": 98,
       "pageEnd": 109,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 11,
       "subArea": "Chemistry"
     },
@@ -277,7 +277,7 @@
       "title": "Water in our life",
       "pageStart": 110,
       "pageEnd": 117,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 11,
       "subArea": "Chemistry"
     },
@@ -288,7 +288,7 @@
       "title": "Simple electric circuits",
       "pageStart": 118,
       "pageEnd": 126,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 12,
       "subArea": "Physics"
     },
@@ -299,7 +299,7 @@
       "title": "Learning how to measure",
       "pageStart": 127,
       "pageEnd": 141,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 11,
       "subArea": "Physics"
     },
@@ -310,7 +310,7 @@
       "title": "Movements in animals",
       "pageStart": 142,
       "pageEnd": 155,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 12,
       "subArea": "Biology"
     },
@@ -321,7 +321,7 @@
       "title": "Light, Shadows and Images",
       "pageStart": 156,
       "pageEnd": 167,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 12,
       "subArea": "Physics"
     },
@@ -332,7 +332,7 @@
       "title": "Living and non living",
       "pageStart": 168,
       "pageEnd": 180,
-      "status": "coming-soon",
+      "status": "available",
       "periods": 10,
       "subArea": "Biology"
     }
