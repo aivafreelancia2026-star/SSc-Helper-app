@@ -73,7 +73,7 @@ export default async function ReaderPage({
       ? Math.min(requestedPage, totalPages)
       : null;
 
-  if (!page || page < indexChapter.pageStart) {
+  if (!page) {
     redirect(
       `/reader?class=${classGrade}&subject=${subject}&page=${indexChapter.pageStart}&total=${totalPages}&index=${indexChapter.pageStart}`,
     );
