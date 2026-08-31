@@ -970,6 +970,134 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     8: dynamic(() =>
       import("@/components/reader/content/C6-telugu/c6-telugu-ch9-page8").then((m) => m.C6TeluguCh9Page8),
     ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch9-page9").then((m) => m.C6TeluguCh9Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch9-page10").then((m) => m.C6TeluguCh9Page10),
+    ),
+  },
+  "6-Telugu-ch10": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page1").then((m) => m.C6TeluguCh10Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page2").then((m) => m.C6TeluguCh10Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page3").then((m) => m.C6TeluguCh10Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page4").then((m) => m.C6TeluguCh10Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page5").then((m) => m.C6TeluguCh10Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page6").then((m) => m.C6TeluguCh10Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page7").then((m) => m.C6TeluguCh10Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page8").then((m) => m.C6TeluguCh10Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page9").then((m) => m.C6TeluguCh10Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page10").then((m) => m.C6TeluguCh10Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page11").then((m) => m.C6TeluguCh10Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page12").then((m) => m.C6TeluguCh10Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page13").then((m) => m.C6TeluguCh10Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch10-page14").then((m) => m.C6TeluguCh10Page14),
+    ),
+  },
+  "6-Telugu-ch11": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page1").then((m) => m.C6TeluguCh11Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page2").then((m) => m.C6TeluguCh11Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page3").then((m) => m.C6TeluguCh11Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page4").then((m) => m.C6TeluguCh11Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page5").then((m) => m.C6TeluguCh11Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page6").then((m) => m.C6TeluguCh11Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page7").then((m) => m.C6TeluguCh11Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page8").then((m) => m.C6TeluguCh11Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page9").then((m) => m.C6TeluguCh11Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch11-page10").then((m) => m.C6TeluguCh11Page10),
+    ),
+  },
+  "6-Telugu-ch12": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page1").then((m) => m.C6TeluguCh12Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page2").then((m) => m.C6TeluguCh12Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page3").then((m) => m.C6TeluguCh12Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page4").then((m) => m.C6TeluguCh12Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page5").then((m) => m.C6TeluguCh12Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page6").then((m) => m.C6TeluguCh12Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page7").then((m) => m.C6TeluguCh12Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page8").then((m) => m.C6TeluguCh12Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page9").then((m) => m.C6TeluguCh12Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page10").then((m) => m.C6TeluguCh12Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page11").then((m) => m.C6TeluguCh12Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page12").then((m) => m.C6TeluguCh12Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch12-page13").then((m) => m.C6TeluguCh12Page13),
+    ),
+  },
+  "6-Telugu-ch13": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch13-page1").then((m) => m.C6TeluguCh13Page1),
+    ),
   },
   "6-Maths-ch1": {
     1: dynamic(() =>
@@ -1356,6 +1484,36 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     ),
     5: dynamic(() =>
       import("@/components/reader/content/C8-English/c8-english-ch5-page5").then((m) => m.C8EnglishCh5Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page6").then((m) => m.C8EnglishCh5Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page7").then((m) => m.C8EnglishCh5Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page8").then((m) => m.C8EnglishCh5Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page9").then((m) => m.C8EnglishCh5Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page10").then((m) => m.C8EnglishCh5Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page11").then((m) => m.C8EnglishCh5Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page12").then((m) => m.C8EnglishCh5Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page13").then((m) => m.C8EnglishCh5Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page14").then((m) => m.C8EnglishCh5Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch5-page15").then((m) => m.C8EnglishCh5Page15),
     ),
   },
 };
