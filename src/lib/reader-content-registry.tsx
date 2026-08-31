@@ -1223,6 +1223,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C8-English/c8-english-ch2-page16").then((m) => m.C8EnglishCh2Page16),
     ),
   },
+  "8-English-ch3": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page1").then((m) => m.C8EnglishCh3Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page2").then((m) => m.C8EnglishCh3Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page3").then((m) => m.C8EnglishCh3Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page4").then((m) => m.C8EnglishCh3Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page5").then((m) => m.C8EnglishCh3Page5),
+    ),
+  },
 };
 
 export function getPageContent(
