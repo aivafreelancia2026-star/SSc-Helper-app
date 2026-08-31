@@ -321,6 +321,78 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "A summary is shorter than the original, but it should still preserve the main movement of the story."
+  },
+  16: {
+    title: "Reading C: The Garden Within",
+    subtitle: "Poem study without full transcription",
+    sections: [
+      {
+        title: "Poem overview",
+        body: "The poem presents the heart as a garden where good qualities can grow. It links beauty, hope, gratitude, and personal goals."
+      },
+      {
+        title: "Glossary focus",
+        body: "Use these words to discuss the poem's images and feelings.",
+        items: ["in fits and starts", "petal", "bestowed", "bower", "nutritious", "reaps", "spirit", "gratitude", "goal"]
+      },
+      {
+        title: "Image stand-in",
+        body: "A seedling growing from soil suggests inner growth, care, and hope."
+      }
+    ],
+    gallery: [
+      { emoji: "🌱", label: "Inner growth" },
+      { emoji: "💚", label: "Kind heart" },
+      { emoji: "🎯", label: "Goal" },
+      { emoji: "🙏", label: "Gratitude" }
+    ],
+    tip: "For poems, focus on images and ideas instead of retelling every line."
+  },
+  17: {
+    title: "Poem Comprehension",
+    subtitle: "Central idea and figures of speech",
+    sections: [
+      {
+        title: "Answer in your own words",
+        body: "Use short evidence-based responses for these questions.",
+        items: [
+          "What is the central idea of the poem?",
+          "Which features of the inner garden are mentioned in the first stanza?",
+          "What is the poet's mood: sad, hopeful, or thankful?",
+          "Explain gratitude as it is used in the poem."
+        ]
+      },
+      {
+        title: "Figures of speech",
+        body: "Identify how comparison and human qualities make language more powerful.",
+        items: [
+          "Simile: a direct comparison using like or as.",
+          "Metaphor: one thing is described as another to show shared qualities.",
+          "Personification: a non-human thing is given human qualities."
+        ]
+      }
+    ],
+    tip: "A figure of speech is useful only when you can explain what effect it creates."
+  },
+  18: {
+    title: "Unit 3 Wrap-up",
+    subtitle: "Project work and self-assessment",
+    sections: [
+      {
+        title: "A garden of qualities",
+        body: "Reflect on personal qualities and ask family members or friends to identify qualities they see in themselves. Add more qualities if needed.",
+        items: ["encouraging", "hard working", "friendly", "generous", "careful", "punctual", "sensitive", "confident", "trustworthy", "compassionate"]
+      },
+      {
+        title: "Self-assessment",
+        body: "Review the unit honestly. Check whether you understood the readings, vocabulary, gerunds, notice writing, oral activity, listening task, summary work, and project."
+      },
+      {
+        title: "Unit reflection",
+        body: "Write three sentences about how this unit connects kindness in stories with kindness in real life."
+      }
+    ],
+    tip: "Self-assessment works best when it leads to one clear next step for improvement."
   }
 };
 
