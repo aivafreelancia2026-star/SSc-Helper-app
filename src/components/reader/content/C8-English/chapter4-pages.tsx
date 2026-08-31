@@ -52,6 +52,73 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "A strong debate answer uses examples, not just opinion."
+  },
+  3: {
+    title: "Reading A: The Fun They Had",
+    subtitle: "A real book in the future",
+    sections: [
+      {
+        title: "Story opening",
+        body: "Margie writes in her diary that Tommy has found a real printed book. To children used to screens, paper pages feel strange and old-fashioned."
+      },
+      {
+        title: "Compare",
+        body: "Notice how the children compare a printed book with telebooks on a screen.",
+        items: [
+          "What surprises Margie and Tommy about the old book?",
+          "Why does Tommy think throwing away a paper book is wasteful?",
+          "What does Margie's reaction to the word school tell us about her feelings?"
+        ]
+      }
+    ],
+    tip: "Science fiction often makes ordinary things look unusual by placing them in a future world."
+  },
+  4: {
+    title: "Margie's Mechanical Teacher",
+    subtitle: "Learning through machines",
+    gallery: [
+      { emoji: "🖥️", label: "Screen lessons" },
+      { emoji: "🤖", label: "Mechanical teacher" },
+      { emoji: "📝", label: "Tests" },
+      { emoji: "🔧", label: "Inspector" }
+    ],
+    sections: [
+      {
+        title: "What happens",
+        body: "Margie's mechanical teacher keeps giving her tests in geography, and her performance gets worse. Her mother calls the County Inspector to repair the machine."
+      },
+      {
+        title: "Think about learning",
+        body: "The scene raises questions about machines, testing, and how students feel when technology controls learning.",
+        items: [
+          "Why is Margie unhappy with school?",
+          "What role does the County Inspector play?",
+          "How does the illustration show a technology-based classroom?"
+        ]
+      }
+    ],
+    tip: "A futuristic setting can still show familiar feelings like frustration, pressure, and curiosity."
+  },
+  5: {
+    title: "Old School, New School",
+    subtitle: "A conversation about teachers",
+    sections: [
+      {
+        title: "Tommy explains",
+        body: "Tommy tells Margie that old schools had human teachers and special buildings where children learned together. Margie finds this difficult to imagine."
+      },
+      {
+        title: "Discussion prompts",
+        body: "Use Tommy and Margie's conversation to compare two models of education.",
+        items: [
+          "How is Margie's school different from the old kind of school?",
+          "Why does Tommy speak as if he knows more about the past?",
+          "What advantages might a human teacher have?",
+          "What advantages might a mechanical teacher have?"
+        ]
+      }
+    ],
+    tip: "Comparison answers are clearer when you use two columns: future school and old school."
   }
 };
 
