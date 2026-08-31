@@ -239,7 +239,7 @@ export function C6MathsCh3Page15() {
   return (
     <div className="space-y-8 text-foreground leading-relaxed font-body">
       {feedback && (
-        <AnswerFeedback key={feedback.id} isCorrect={feedback.correct} points={1} />
+        <AnswerFeedback key={feedback.id} correct={feedback.correct} onDone={() => setFeedback(null)} />
       )}
 
       {/* 3.8 Relationship between LCM and HCF */}

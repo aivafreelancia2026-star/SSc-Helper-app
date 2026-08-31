@@ -275,7 +275,7 @@ export function C6MathsCh3Page19() {
   return (
     <div className="space-y-8 text-foreground leading-relaxed font-body">
       {feedback && (
-        <AnswerFeedback key={feedback.id} isCorrect={feedback.correct} points={1} />
+        <AnswerFeedback key={feedback.id} correct={feedback.correct} onDone={() => setFeedback(null)} />
       )}
 
       {/* Try These */}
