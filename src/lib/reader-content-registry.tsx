@@ -1080,6 +1080,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C8-English/c8-english-ch1-page14").then((m) => m.C8EnglishCh1Page14),
     ),
   },
+  "8-English-ch2": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch2-page1").then((m) => m.C8EnglishCh2Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch2-page2").then((m) => m.C8EnglishCh2Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch2-page3").then((m) => m.C8EnglishCh2Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch2-page4").then((m) => m.C8EnglishCh2Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch2-page5").then((m) => m.C8EnglishCh2Page5),
+    ),
+  },
 };
 
 export function getPageContent(
