@@ -323,6 +323,116 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "When studying a poem, notice the speaker's attitude as much as the subject."
+  },
+  16: {
+    title: "Preteen Pretext Review",
+    subtitle: "Glossary and comprehension",
+    sections: [
+      {
+        title: "Glossary focus",
+        body: "Use the poem's vocabulary to talk about phone habits, family routines, and feelings.",
+        items: ["jitters", "emitting", "bluish", "grin", "elevate", "pile", "exhale", "chores", "alibis", "tether", "grandiose"]
+      },
+      {
+        title: "Comprehension",
+        body: "Answer these questions without copying the poem.",
+        items: [
+          "Who is likely to be the speaker of the poem?",
+          "What attitude is shown near the beginning of the poem?",
+          "How are cell phones useful according to the poem?",
+          "What does the final question make us think about?"
+        ]
+      },
+      {
+        title: "Life link",
+        body: "Discuss how speaking to parents, friends, and teachers can help us share thoughts, feelings, and problems."
+      }
+    ],
+    tip: "A poem can praise a thing and question it at the same time."
+  },
+  17: {
+    title: "Reading C: The Computer Game",
+    subtitle: "A quiz show play",
+    sections: [
+      {
+        title: "Drama setup",
+        body: "The play is set in a television studio. A human contestant competes against a computer named MT2 in a game show."
+      },
+      {
+        title: "Characters",
+        body: "Identify each role and predict how the contest may create humour.",
+        items: ["Gary Lopez: host", "Joan Robinson: human player", "MT2: computer player", "Noisemakers: buzz-in signals", "Audience children: supporters"]
+      },
+      {
+        title: "Opening conflict",
+        body: "The computer begins strongly because it can calculate and recall precise information very quickly."
+      }
+    ],
+    gallery: [
+      { emoji: "🎙️", label: "Game host" },
+      { emoji: "🤖", label: "Computer contestant" },
+      { emoji: "🏆", label: "Quiz contest" }
+    ],
+    tip: "In a play, stage directions and tone tell us how the scene should feel."
+  },
+  18: {
+    title: "Beating the Computer",
+    subtitle: "Thinking beyond programmed forms",
+    sections: [
+      {
+        title: "Turning point",
+        body: "Joan realises that the computer may fail when a question is not asked in the exact form it expects. A child helps by asking in a command-like way."
+      },
+      {
+        title: "Discuss",
+        body: "Use the scene to compare human flexibility with machine programming.",
+        items: [
+          "Why does the computer fail to follow the question?",
+          "How does Joan use intelligence differently from MT2?",
+          "What makes the scene funny?",
+          "What does the play suggest about depending only on machines?"
+        ]
+      }
+    ],
+    tip: "Human intelligence includes creativity, context, and quick adaptation."
+  },
+  19: {
+    title: "The Computer Game Activities",
+    subtitle: "Comprehension and dialogue writing",
+    sections: [
+      {
+        title: "Comprehension",
+        body: "Answer the textbook questions about the quiz master, the winner, the boy's support, the computer's failure, and your own possible question."
+      },
+      {
+        title: "Writing",
+        body: "Imagine that you own a robot that starts doing something different from your command. Create a funny dialogue between you and the robot."
+      },
+      {
+        title: "Performance",
+        body: "Use short lines, clear stage actions, and expressive voice changes when presenting the dialogue."
+      }
+    ],
+    tip: "Funny dialogue often comes from a mismatch between what someone says and what someone understands."
+  },
+  20: {
+    title: "Unit 4 Wrap-up",
+    subtitle: "Project work and self-assessment",
+    sections: [
+      {
+        title: "Mobile comparison project",
+        body: "Compare four mobile phones by features such as screen size, battery, keyboard, camera, sound, price, and internet support. Choose one and explain why."
+      },
+      {
+        title: "Self-assessment",
+        body: "Review whether you understood the readings, vocabulary, relative clauses, reply letter, school posters, listening task, and project work."
+      },
+      {
+        title: "Unit reflection",
+        body: "Write a short paragraph on how technology can help people while still needing wise human use."
+      }
+    ],
+    tip: "When comparing products, choose according to need, not only according to the longest feature list."
   }
 };
 
