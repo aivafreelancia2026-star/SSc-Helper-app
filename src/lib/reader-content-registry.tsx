@@ -1036,6 +1036,50 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C6-maths/c6-maths-ch4-page2").then((m) => m.C6MathsCh4Page2),
     ),
   },
+  "8-English-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page1").then((m) => m.C8EnglishCh1Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page2").then((m) => m.C8EnglishCh1Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page3").then((m) => m.C8EnglishCh1Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page4").then((m) => m.C8EnglishCh1Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page5").then((m) => m.C8EnglishCh1Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page6").then((m) => m.C8EnglishCh1Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page7").then((m) => m.C8EnglishCh1Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page8").then((m) => m.C8EnglishCh1Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page9").then((m) => m.C8EnglishCh1Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page10").then((m) => m.C8EnglishCh1Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page11").then((m) => m.C8EnglishCh1Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page12").then((m) => m.C8EnglishCh1Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page13").then((m) => m.C8EnglishCh1Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch1-page14").then((m) => m.C8EnglishCh1Page14),
+    ),
+  },
 };
 
 export function getPageContent(

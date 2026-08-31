@@ -1,5 +1,137 @@
 {
   "class": 8,
   "subject": "English",
-  "chapters": []
+  "subAreas": [],
+  "totalPages": 153,
+  "chapters": [
+    {
+      "id": "index",
+      "unit": "Index",
+      "number": 0,
+      "title": "Contents",
+      "pageStart": 0,
+      "pageEnd": 0,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "indexData": [
+        { "unit": "1", "chapterNo": 1, "title": "Family", "pageNo": 1, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "2", "chapterNo": 2, "title": "Social Issues", "pageNo": 15, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "3", "chapterNo": 3, "title": "Humanity", "pageNo": 31, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "4", "chapterNo": 4, "title": "Science and Technology", "pageNo": 49, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "5", "chapterNo": 5, "title": "Education and Career", "pageNo": 69, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "6", "chapterNo": 6, "title": "Art and Culture", "pageNo": 85, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "7", "chapterNo": 7, "title": "Women Empowerment", "pageNo": 105, "periods": null, "subArea": null, "genre": "Thematic unit" },
+        { "unit": "8", "chapterNo": 8, "title": "Gratitude", "pageNo": 123, "periods": null, "subArea": null, "genre": "Thematic unit" }
+      ]
+    },
+    {
+      "id": "ch1",
+      "unit": "1",
+      "number": 1,
+      "title": "Family",
+      "pageStart": 1,
+      "pageEnd": 14,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: The Tattered Blanket; Reading B: My Mother (Poem); Reading C: Letter to a Friend"
+    },
+    {
+      "id": "ch2",
+      "unit": "2",
+      "number": 2,
+      "title": "Social Issues",
+      "pageStart": 15,
+      "pageEnd": 30,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: Oliver Asks for More; Reading B: The Cry of Children (Poem); Reading C: Reaching the Unreached"
+    },
+    {
+      "id": "ch3",
+      "unit": "3",
+      "number": 3,
+      "title": "Humanity",
+      "pageStart": 31,
+      "pageEnd": 48,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: The Selfish Giant I; Reading B: The Selfish Giant II; Reading C: The Garden Within (Poem)"
+    },
+    {
+      "id": "ch4",
+      "unit": "4",
+      "number": 4,
+      "title": "Science and Technology",
+      "pageStart": 49,
+      "pageEnd": 68,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: The Fun They Had; Reading B: Preteen Pretext (Poem); Reading C: The Computer Game"
+    },
+    {
+      "id": "ch5",
+      "unit": "5",
+      "number": 5,
+      "title": "Education and Career",
+      "pageStart": 69,
+      "pageEnd": 84,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: The Treasure Within; Reading C: They Literally Build the Nation"
+    },
+    {
+      "id": "ch6",
+      "unit": "6",
+      "number": 6,
+      "title": "Art and Culture",
+      "pageStart": 85,
+      "pageEnd": 104,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: The Story of Ikat; Reading B: The Earthen Goblet (Poem); Reading C: Maestro with a Mission"
+    },
+    {
+      "id": "ch7",
+      "unit": "7",
+      "number": 7,
+      "title": "Women Empowerment",
+      "pageStart": 105,
+      "pageEnd": 122,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: Bonsai Life; Reading C: I Can Take Care of Myself"
+    },
+    {
+      "id": "ch8",
+      "unit": "8",
+      "number": 8,
+      "title": "Gratitude",
+      "pageStart": 123,
+      "pageEnd": 141,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reading A: Dr. Dwarakanath Kotnis; Reading B: Be Thankful (Poem); Reading C: The Dead Rat"
+    },
+    {
+      "id": "appendices",
+      "unit": "Appendices",
+      "number": 0,
+      "title": "Listening Texts and Assessment Procedures",
+      "pageStart": 142,
+      "pageEnd": 153,
+      "status": "coming-soon",
+      "periods": null,
+      "subArea": null,
+      "genre": "Reference"
+    }
+  ]
 }
