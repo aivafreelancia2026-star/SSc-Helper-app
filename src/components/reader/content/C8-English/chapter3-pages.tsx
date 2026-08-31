@@ -111,6 +111,105 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
         body: "The first part shows that selfishness can make even a beautiful place lifeless. Humanity begins when we make room for others."
       }
     ]
+  },
+  6: {
+    title: "Glossary and Comprehension",
+    subtitle: "Reviewing The Selfish Giant Part I",
+    sections: [
+      {
+        title: "Vocabulary from the play",
+        body: "Use the glossary words to describe the garden, the wall, and the cold season that enters the story.",
+        items: ["springtime", "delicate blossoms", "castle", "trespassers", "whispering", "scatter", "cloak", "delightful"]
+      },
+      {
+        title: "Comprehension",
+        body: "Answer these questions after reading Part I.",
+        items: [
+          "What are the major characters in the play?",
+          "Why are the children named by shapes or appearances?",
+          "How can you say that the giant was selfish?",
+          "Who stayed with the giant, and what do their names suggest?"
+        ]
+      }
+    ],
+    tip: "Names like Snow, Frost, and North Wind help turn weather into living stage characters."
+  },
+  7: {
+    title: "Reading B: The Selfish Giant",
+    subtitle: "Part II begins",
+    sections: [
+      {
+        title: "Change in atmosphere",
+        body: "Part II begins with sound, fragrance, and signs of spring. The garden changes because children have returned."
+      },
+      {
+        title: "Character change",
+        body: "The giant notices a small child who cannot climb a tree. This moment softens his heart and begins his transformation.",
+        items: [
+          "What does the bird song suggest?",
+          "Why is one corner still winter?",
+          "What does the small child need?",
+          "What does the giant realise?"
+        ]
+      }
+    ],
+    tip: "A turning point is the moment when a character begins to change."
+  },
+  8: {
+    title: "Kindness Restores the Garden",
+    subtitle: "From regret to action",
+    sections: [
+      {
+        title: "What the giant does",
+        body: "The giant understands that his selfishness kept joy away. He decides to help the little child and open the garden to children."
+      },
+      {
+        title: "Symbol work",
+        body: "Connect each image with an idea.",
+        items: ["Wall: separation", "Garden: shared joy", "Winter: selfishness", "Spring: kindness", "Child: innocence and love"]
+      }
+    ],
+    tip: "In this story, nature changes when the giant's heart changes."
+  },
+  9: {
+    title: "A Shared Garden",
+    subtitle: "Children return",
+    sections: [
+      {
+        title: "After the wall falls",
+        body: "The garden becomes a place of play again. The children thank the giant, and he begins to value them more than the flowers."
+      },
+      {
+        title: "Discuss",
+        body: "Use evidence from the play to explain the giant's new attitude.",
+        items: [
+          "Why do the children return?",
+          "How do they describe the garden after the change?",
+          "Why does the giant remember the little child?",
+          "What does he mean by seeing children as the most beautiful flowers?"
+        ]
+      }
+    ]
+  },
+  10: {
+    title: "Ending and Author Note",
+    subtitle: "Love, wonder, and Oscar Wilde",
+    sections: [
+      {
+        title: "Ending",
+        body: "The final scene gives the story a spiritual and emotional close. The once-selfish character has learned love, humility, and welcome."
+      },
+      {
+        title: "About Oscar Wilde",
+        body: "Oscar Wilde was an Irish writer known for plays, stories, wit, and memorable moral tales for children."
+      },
+      {
+        title: "Reflect",
+        body: "Write a short paragraph on how the giant changes from ownership to generosity.",
+        items: ["What was he like at first?", "What made him change?", "How did his actions prove the change?"]
+      }
+    ],
+    tip: "A strong character paragraph uses before, turning point, and after."
   }
 };
 
