@@ -210,6 +210,117 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "A strong character paragraph uses before, turning point, and after."
+  },
+  11: {
+    title: "Part II Review",
+    subtitle: "Glossary and comprehension",
+    sections: [
+      {
+        title: "Glossary focus",
+        body: "Use the new words from Part II to describe sound, movement, weakness, and kindness in the play.",
+        items: ["linnet bird", "hail", "cease", "twittering", "sneeze", "feeble", "hath", "thee", "slay", "art", "thou"]
+      },
+      {
+        title: "Comprehension",
+        body: "Answer these in your own words after rereading the second part.",
+        items: [
+          "How is the little child different from the other children?",
+          "How does the narrator show that spring has arrived?",
+          "Which figurative expressions make the garden feel alive?",
+          "What is the main theme of the play?"
+        ]
+      }
+    ],
+    tip: "For theme questions, move beyond events and explain the larger idea about human behaviour."
+  },
+  12: {
+    title: "Check Your Understanding",
+    subtitle: "Multiple choice and phrasal verbs",
+    sections: [
+      {
+        title: "Choose the best answer",
+        body: "Use the context of the play to select the correct option.",
+        items: [
+          "The images of flowers and peach blossoms point to the arrival of spring.",
+          "The giant observes children playing in the garden.",
+          "He recognises spring through the song of a linnet bird.",
+          "The little boy shows affection by reaching towards the giant.",
+          "The delighted exclamation about the garden is spoken by the giant."
+        ]
+      },
+      {
+        title: "Phrasal verb",
+        body: "In the sentence about blossoms, broke out means came out or appeared suddenly. Make your own sentences with break out, break down, break into, and break up."
+      }
+    ],
+    tip: "A phrasal verb often changes meaning when the small word after the verb changes."
+  },
+  13: {
+    title: "Vocabulary Practice",
+    subtitle: "Antonyms and similar meanings",
+    sections: [
+      {
+        title: "Opposites",
+        body: "Find suitable antonyms from the play or from your vocabulary.",
+        items: ["hell", "foe", "started", "uncovered", "nearest"]
+      },
+      {
+        title: "Sounds of speaking and crying",
+        body: "Match each word with the kind of sound it suggests. Then use any four in short sentences.",
+        items: ["scream", "whisper", "yell", "roar", "groan", "weep", "shriek", "babble", "wail", "twitter"]
+      }
+    ],
+    tip: "Precise sound words help a reader imagine volume, emotion, and situation."
+  },
+  14: {
+    title: "Word Meaning and Grammar",
+    subtitle: "Context clues and gerunds",
+    sections: [
+      {
+        title: "Choose the meaning",
+        body: "Explain these words using clues from the sentences in the play.",
+        items: ["trespassers", "roared", "blossoms", "rattled"]
+      },
+      {
+        title: "Gerunds",
+        body: "A gerund is an -ing form used like a noun. Compare an action in progress with an -ing word used as the subject or object of a sentence.",
+        items: [
+          "The wind ceased roaring.",
+          "The child did not notice the giant coming.",
+          "Swimming is good for health.",
+          "I enjoy reading plays aloud."
+        ]
+      }
+    ],
+    tip: "Ask whether the -ing word names an activity. If it does, it may be acting as a gerund."
+  },
+  15: {
+    title: "Language Activities",
+    subtitle: "Gerunds, notices, speaking, and summary",
+    sections: [
+      {
+        title: "Identify gerunds",
+        body: "Underline the -ing forms and decide which ones are used as nouns.",
+        items: [
+          "The children were whispering outside the wall.",
+          "Why is spring late in coming?",
+          "Walking every day keeps the body active."
+        ]
+      },
+      {
+        title: "Writing notices",
+        body: "Write one-line notices for places such as hospitals, banks, schools, public parks, and homes. Keep the language brief, clear, and polite."
+      },
+      {
+        title: "Listening and speaking",
+        body: "Listen for details about a garden, then speak about a garden you have visited. Mention its location, what made it special, and how people used the space."
+      },
+      {
+        title: "Study skill",
+        body: "Summarise the play by separating main ideas from supporting details. Keep only the ideas needed to explain the change in the giant."
+      }
+    ],
+    tip: "A summary is shorter than the original, but it should still preserve the main movement of the story."
   }
 };
 

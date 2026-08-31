@@ -1254,6 +1254,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     10: dynamic(() =>
       import("@/components/reader/content/C8-English/c8-english-ch3-page10").then((m) => m.C8EnglishCh3Page10),
     ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page11").then((m) => m.C8EnglishCh3Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page12").then((m) => m.C8EnglishCh3Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page13").then((m) => m.C8EnglishCh3Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page14").then((m) => m.C8EnglishCh3Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch3-page15").then((m) => m.C8EnglishCh3Page15),
+    ),
   },
 };
 
