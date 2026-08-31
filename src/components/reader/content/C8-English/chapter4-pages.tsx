@@ -119,6 +119,210 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "Comparison answers are clearer when you use two columns: future school and old school."
+  },
+  6: {
+    title: "The Fun They Had Ends",
+    subtitle: "Margie imagines old schools",
+    sections: [
+      {
+        title: "Story close",
+        body: "Margie returns to her schoolroom, but her mind stays with the old book. She imagines children learning together, helping one another, and enjoying a shared school day."
+      },
+      {
+        title: "Reflect",
+        body: "Answer these after reading the ending.",
+        items: [
+          "Why does Margie want to continue reading the old book?",
+          "How is her home school different from the school she imagines?",
+          "Why is the title The Fun They Had meaningful?"
+        ]
+      }
+    ],
+    tip: "The ending contrasts efficient machine learning with the warmth of learning together."
+  },
+  7: {
+    title: "About Isaac Asimov",
+    subtitle: "Author note and glossary",
+    sections: [
+      {
+        title: "Author note",
+        body: "Isaac Asimov was an American writer famous for science fiction. His stories often use future settings to ask thoughtful questions about people, machines, and society."
+      },
+      {
+        title: "Glossary focus",
+        body: "Use these words to discuss the story clearly.",
+        items: ["crinkly", "telebooks", "attic", "scornful", "slot", "disappointed", "geared", "loftily", "regular teacher", "nonchalantly", "mechanical"]
+      },
+      {
+        title: "Comprehension begins",
+        body: "Start with factual answers: what Margie wrote in her diary and what she found strange about the old book."
+      }
+    ],
+    tip: "Science-fiction vocabulary often mixes ordinary words with imagined technology."
+  },
+  8: {
+    title: "Comprehension and Vocabulary",
+    subtitle: "Reviewing Reading A",
+    sections: [
+      {
+        title: "Comprehension",
+        body: "Answer in complete sentences, using the story's contrast between the future classroom and the old school.",
+        items: [
+          "Why was Margie disappointed?",
+          "Why did she think the old school must have been fun?",
+          "Do you agree that the old school was better than the future school? Give reasons.",
+          "What kind of school would you like after thirty years?",
+          "What does the expression about teachers being people suggest?"
+        ]
+      },
+      {
+        title: "Fill in the blanks",
+        body: "Practise using words such as slots, loftily, dispute, screamed, and scornful in suitable contexts."
+      },
+      {
+        title: "Opposites",
+        body: "Find opposites from the story for words such as serious, scarce, idle, agree, create, and knowingly."
+      }
+    ],
+    tip: "Vocabulary practice is strongest when you reuse the word in a new sentence of your own."
+  },
+  9: {
+    title: "Adjective Order",
+    subtitle: "Size, shape, and noun description",
+    sections: [
+      {
+        title: "Grammar idea",
+        body: "When more than one adjective comes before a noun, English usually keeps a natural order. The lesson focuses on adjectives of size and shape."
+      },
+      {
+        title: "Practice",
+        body: "Choose two adjectives of size and shape and place them before each noun.",
+        items: ["table", "pencil", "room", "chapathi", "cat"]
+      }
+    ],
+    tip: "Try saying the phrase aloud. Natural adjective order often sounds smoother."
+  },
+  10: {
+    title: "Adverbs of Manner",
+    subtitle: "How an action is done",
+    sections: [
+      {
+        title: "Grammar idea",
+        body: "Adverbs of manner tell how an action is performed. In the story, words such as carefully and loftily describe the way someone speaks or acts."
+      },
+      {
+        title: "Practice",
+        body: "Pick verbs and adverbs from the story or elsewhere, then use them in original sentences.",
+        items: ["speak politely", "walk slowly", "read carefully", "answer quickly", "listen patiently"]
+      },
+      {
+        title: "Fill in the blanks",
+        body: "Use adverbs such as nonchalantly, quickly, completely, sorrowfully, awfully, carefully, and differently where they fit best."
+      }
+    ],
+    tip: "Most manner adverbs answer the question how?"
+  },
+  11: {
+    title: "Relative Clauses",
+    subtitle: "Adding information about nouns",
+    sections: [
+      {
+        title: "Grammar idea",
+        body: "A relative clause gives extra information about a person, place, time, or thing. It often begins with who, where, when, which, or that."
+      },
+      {
+        title: "Underline the clause",
+        body: "Identify the relative clause in sentences from the story and notice the noun it describes."
+      },
+      {
+        title: "Combine sentences",
+        body: "Join pairs of sentences using where, who, which, or that. Check that the new sentence is clear and not repetitive."
+      }
+    ],
+    tip: "Relative clauses behave like adjectives because they describe or identify nouns."
+  },
+  12: {
+    title: "Editing and Letter Writing",
+    subtitle: "Accuracy and future classrooms",
+    sections: [
+      {
+        title: "Editing",
+        body: "Read the short passage carefully. Each numbered sentence has one error, so correct tense, preposition, agreement, or word form as needed."
+      },
+      {
+        title: "Letter task",
+        body: "Write a reply imagining classrooms thirty years from now. Use ideas such as e-library, robot teacher, online evaluation, e-screen, and e-mail."
+      },
+      {
+        title: "Writing checklist",
+        body: "Include place, date, greeting, body, closing, and signature. Keep the reply friendly and organised."
+      }
+    ],
+    tip: "In a reply letter, answer the friend's idea first, then add your own imagination."
+  },
+  13: {
+    title: "Listening and Study Skills",
+    subtitle: "Space message and school posters",
+    sections: [
+      {
+        title: "Listening task",
+        body: "Listen to a message from Sunita Williams and answer questions about its topic, place, occasion, family influence, and the role of the Upanishads."
+      },
+      {
+        title: "Study skills",
+        body: "Read school posters carefully and identify information such as school name, location, facilities, values, and target audience."
+      }
+    ],
+    tip: "Poster reading means scanning for headings, features, address, and purpose."
+  },
+  14: {
+    title: "Comparing School Posters",
+    subtitle: "Choosing with reasons",
+    sections: [
+      {
+        title: "Poster comparison",
+        body: "Compare two schools by looking at their facilities, values, activities, and learning promises. Decide which one suits your aspiration."
+      },
+      {
+        title: "Opinion writing",
+        body: "Write which school you would like to join and why. Support your choice with two or three details from the posters."
+      },
+      {
+        title: "Multiple intelligences",
+        body: "The page introduces different kinds of intelligence: linguistic, logical, spatial, bodily, musical, interpersonal, intrapersonal, naturalistic, and spiritual."
+      }
+    ],
+    tip: "A good opinion paragraph gives a choice, reasons, and a closing sentence."
+  },
+  15: {
+    title: "Reading B: Preteen Pretext",
+    subtitle: "Poem about phones and family",
+    gallery: [
+      { emoji: "📱", label: "Phone" },
+      { emoji: "💬", label: "Messages" },
+      { emoji: "👩‍👧", label: "Parent and child" },
+      { emoji: "🏠", label: "Home" }
+    ],
+    sections: [
+      {
+        title: "Poem overview",
+        body: "The poem looks at a preteen's phone use from a parent's point of view. It shows both the convenience of technology and the worry that real conversation may reduce."
+      },
+      {
+        title: "Key ideas",
+        body: "Track the mixed feelings in the poem.",
+        items: [
+          "The phone keeps the child connected.",
+          "Messages and calls make family routines easier.",
+          "The parent still wonders whether face-to-face talk is being lost."
+        ]
+      },
+      {
+        title: "Image stand-in",
+        body: "A phone and a home scene represent digital contact inside family life."
+      }
+    ],
+    tip: "When studying a poem, notice the speaker's attitude as much as the subject."
   }
 };
 

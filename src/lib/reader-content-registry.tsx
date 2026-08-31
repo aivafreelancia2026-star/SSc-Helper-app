@@ -1295,6 +1295,36 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     5: dynamic(() =>
       import("@/components/reader/content/C8-English/c8-english-ch4-page5").then((m) => m.C8EnglishCh4Page5),
     ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page6").then((m) => m.C8EnglishCh4Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page7").then((m) => m.C8EnglishCh4Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page8").then((m) => m.C8EnglishCh4Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page9").then((m) => m.C8EnglishCh4Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page10").then((m) => m.C8EnglishCh4Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page11").then((m) => m.C8EnglishCh4Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page12").then((m) => m.C8EnglishCh4Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page13").then((m) => m.C8EnglishCh4Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page14").then((m) => m.C8EnglishCh4Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch4-page15").then((m) => m.C8EnglishCh4Page15),
+    ),
   },
 };
 
