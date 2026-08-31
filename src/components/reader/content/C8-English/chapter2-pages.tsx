@@ -222,6 +222,102 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "For poetry, describe the feeling in your own words before analysing lines."
+  },
+  12: {
+    title: "Poem Comprehension",
+    subtitle: "The Cry of Children and Reading C",
+    sections: [
+      {
+        title: "Answer after reading",
+        body: "The poem presents child labour as painful, exhausting, and unjust. These questions help you connect imagery with the poet's attitude.",
+        items: [
+          "What kind of places are the children working in?",
+          "What does the flower image suggest about childhood?",
+          "How does hard work affect the children?",
+          "Do children enjoy themselves when engaged in work?",
+          "What is the poet's attitude towards child labour?"
+        ]
+      },
+      {
+        title: "Reading C preview",
+        body: "Reaching the Unreached presents children who are pushed into labour by poverty, family crisis, and lack of protection."
+      }
+    ]
+  },
+  13: {
+    title: "Reaching the Unreached",
+    subtitle: "Children, labour, and rescue",
+    sections: [
+      {
+        title: "Article summary",
+        body: "The article describes children who leave school or home and end up in difficult work. It also shows how neighbours, rescue teams, helplines, and child-rights organisations can help."
+      },
+      {
+        title: "Key ideas",
+        body: "Track each child's age, reason for work, type of work, and the support they receive.",
+        items: ["poverty", "domestic violence", "school dropout", "child labour", "rescue", "rehabilitation"]
+      }
+    ],
+    tip: "When reading an article, separate facts about people from facts about organisations."
+  },
+  14: {
+    title: "CRY and SOS",
+    subtitle: "Organisations that support children",
+    sections: [
+      {
+        title: "CRY",
+        body: "Child Rights and You works with communities and partner organisations so that children can claim their rights instead of depending only on charity."
+      },
+      {
+        title: "SOS Children's Villages",
+        body: "SOS supports children and families through care, advocacy, family strengthening, and direct support when a child cannot safely remain at home."
+      },
+      {
+        title: "Comprehension",
+        body: "Answer in complete sentences.",
+        items: ["Who rescued the two children?", "What is the role of CRY?", "Whom can children report abuse to?", "How does SOS work?"]
+      }
+    ]
+  },
+  15: {
+    title: "Study Skills",
+    subtitle: "Making notes from a passage",
+    sections: [
+      {
+        title: "Why make notes?",
+        body: "Notes help you reduce a long passage into headings, subpoints, and important details. They are useful for revision and presentations."
+      },
+      {
+        title: "Note-making steps",
+        body: "Use a clear title and arrange ideas logically.",
+        items: ["Read the passage once for meaning.", "Underline key ideas.", "Choose short headings.", "Write subpoints in brief phrases.", "Avoid copying every sentence."]
+      },
+      {
+        title: "Task",
+        body: "Read the CRY passage again and make notes on its work, method, and impact."
+      }
+    ],
+    tip: "Good notes are shorter than the passage but still preserve the structure of the idea."
+  },
+  16: {
+    title: "Project and Self Assessment",
+    subtitle: "Completing Unit 2",
+    sections: [
+      {
+        title: "Project profile",
+        body: "Collect information about one child worker respectfully and safely. Do not pressure anyone to share personal details.",
+        items: ["Age", "Gender", "Nature of work", "Wages", "Working hours", "Reason for work", "School history", "Willingness to join school"]
+      },
+      {
+        title: "Group analysis",
+        body: "Discuss why children take up jobs, how they are paid, and how many wish to leave work and join school."
+      },
+      {
+        title: "Self check",
+        body: "Review whether you understood the three readings, vocabulary, yes/no questions, question tags, diary writing, note-making, listening, and project work."
+      }
+    ],
+    tip: "For real-life project work about children, protect privacy and speak to a trusted adult or teacher first."
   }
 };
 
