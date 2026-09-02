@@ -188,6 +188,13 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       ),
     ),
   },
+  "6-Hindi-ch_read_4": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch-read-4-page1").then(
+        (m) => m.C6HindiChRead4Page1,
+      ),
+    ),
+  },
   "6-Hindi-ch7": {
     1: dynamic(() =>
       import("@/components/reader/content/c6-hindi-ch7-page1").then(
@@ -217,6 +224,77 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     6: dynamic(() =>
       import("@/components/reader/content/c6-hindi-ch7-page6").then(
         (m) => m.C6HindiCh7Page6,
+      ),
+    ),
+  },
+  "6-Hindi-ch8": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch8-page1").then(
+        (m) => m.C6HindiCh8Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch8-page2").then(
+        (m) => m.C6HindiCh8Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch8-page3").then(
+        (m) => m.C6HindiCh8Page3,
+      ),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch8-page4").then(
+        (m) => m.C6HindiCh8Page4,
+      ),
+    ),
+  },
+  "6-Hindi-ch9": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch9-page1").then(
+        (m) => m.C6HindiCh9Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch9-page2").then(
+        (m) => m.C6HindiCh9Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch9-page3").then(
+        (m) => m.C6HindiCh9Page3,
+      ),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch9-page4").then(
+        (m) => m.C6HindiCh9Page4,
+      ),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch9-page5").then(
+        (m) => m.C6HindiCh9Page5,
+      ),
+    ),
+  },
+  "6-Hindi-ch10": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch10-page1").then(
+        (m) => m.C6HindiCh10Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch10-page2").then(
+        (m) => m.C6HindiCh10Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch10-page3").then(
+        (m) => m.C6HindiCh10Page3,
+      ),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch10-page4").then(
+        (m) => m.C6HindiCh10Page4,
       ),
     ),
   },

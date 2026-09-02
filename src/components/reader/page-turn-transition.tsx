@@ -21,8 +21,13 @@ const SWIPE_THRESHOLD_PX = 50;
 // content (not just the nav bar strip) moves to the next/previous page.
 export function PageTurnTransition({ page, children }: { page: number; children: ReactNode }) {
   const prevPageRef = useRef(page);
-  const direction = page >= prevPageRef.current ? "forward" : "backward";
-  prevPageRef.current = page;
+  const directionRef = useRef<"forward" | "backward">("forward");
+  
+  if (page !== prevPageRef.current) {
+    directionRef.current = page > prevPageRef.current ? "forward" : "backward";
+    prevPageRef.current = page;
+  }
+  const direction = directionRef.current;
 
   const { goPrev, goNext } = usePageTurn();
   const touchStart = useRef<{ x: number; y: number } | null>(null);
