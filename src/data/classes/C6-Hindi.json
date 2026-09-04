@@ -30,7 +30,11 @@
         { "unit": "IV", "chapterNo": "📖", "title": "हिंद देश के निवासी", "pageNo": 58, "periods": null, "subArea": null, "genre": "गीत" },
         { "unit": "IV", "chapterNo": 10, "title": "चुक्की और जब्बार", "pageNo": 59, "periods": null, "subArea": null, "genre": "कहानी" },
         { "unit": "IV", "chapterNo": 11, "title": "उद्यान", "pageNo": 65, "periods": null, "subArea": null, "genre": "निबंध" },
-        { "unit": "IV", "chapterNo": 12, "title": "बच्चे चले क्रिकेट खेलने", "pageNo": 69, "periods": null, "subArea": null, "genre": "कहानी" }
+        { "unit": "IV", "chapterNo": 12, "title": "बच्चे चले क्रिकेट खेलने", "pageNo": 69, "periods": null, "subArea": null, "genre": "कहानी" },
+        { "unit": "IV", "chapterNo": 13, "title": "शब्दकोश", "pageNo": 75, "periods": null, "subArea": null, "genre": "शब्दकोश" },
+        { "unit": "IV", "chapterNo": 14, "title": "अभ्यास तालिका", "pageNo": 78, "periods": null, "subArea": null, "genre": "अभ्यास तालिका" },
+        { "unit": "IV", "chapterNo": 15, "title": "व्यक्तिगत शारीरिक सुरक्षा नियम", "pageNo": 80, "periods": null, "subArea": null, "genre": "सुरक्षा नियम" },
+        { "unit": "IV", "chapterNo": 16, "title": "सीखने के प्रतिफल एवं सूचनाएँ", "pageNo": 82, "periods": null, "subArea": null, "genre": "अधिगम प्रतिफल" }
       ]
     },
     {
@@ -208,7 +212,7 @@
       "title": "उद्यान",
       "pageStart": 65,
       "pageEnd": 68,
-      "status": "coming-soon",
+      "status": "available",
       "periods": null,
       "subArea": null,
       "genre": "निबंध"
@@ -219,11 +223,59 @@
       "number": 12,
       "title": "बच्चे चले क्रिकेट खेलने",
       "pageStart": 69,
-      "pageEnd": 80,
-      "status": "coming-soon",
+      "pageEnd": 74,
+      "status": "available",
       "periods": null,
       "subArea": null,
       "genre": "कहानी"
+    },
+    {
+      "id": "ch13",
+      "unit": "IV",
+      "number": 13,
+      "title": "शब्दकोश",
+      "pageStart": 75,
+      "pageEnd": 77,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "genre": "शब्दकोश"
+    },
+    {
+      "id": "ch14",
+      "unit": "IV",
+      "number": 14,
+      "title": "अभ्यास तालिका",
+      "pageStart": 78,
+      "pageEnd": 79,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "genre": "अभ्यास तालिका"
+    },
+    {
+      "id": "ch15",
+      "unit": "IV",
+      "number": 15,
+      "title": "व्यक्तिगत शारीरिक सुरक्षा नियम",
+      "pageStart": 80,
+      "pageEnd": 81,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "genre": "सुरक्षा नियम"
+    },
+    {
+      "id": "ch16",
+      "unit": "IV",
+      "number": 16,
+      "title": "सीखने के प्रतिफल एवं सूचनाएँ",
+      "pageStart": 82,
+      "pageEnd": 83,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "genre": "अधिगम प्रतिफल"
     }
   ]
 }

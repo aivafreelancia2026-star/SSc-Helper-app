@@ -297,6 +297,123 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
         (m) => m.C6HindiCh10Page4,
       ),
     ),
+    5: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch10-page5").then(
+        (m) => m.C6HindiCh10Page5,
+      ),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch10-page6").then(
+        (m) => m.C6HindiCh10Page6,
+      ),
+    ),
+  },
+  "6-Hindi-ch11": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch11-page1").then(
+        (m) => m.C6HindiCh11Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch11-page2").then(
+        (m) => m.C6HindiCh11Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch11-page3").then(
+        (m) => m.C6HindiCh11Page3,
+      ),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch11-page4").then(
+        (m) => m.C6HindiCh11Page4,
+      ),
+    ),
+  },
+  "6-Hindi-ch12": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch12-page1").then(
+        (m) => m.C6HindiCh12Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch12-page2").then(
+        (m) => m.C6HindiCh12Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch12-page3").then(
+        (m) => m.C6HindiCh12Page3,
+      ),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch12-page4").then(
+        (m) => m.C6HindiCh12Page4,
+      ),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch12-page5").then(
+        (m) => m.C6HindiCh12Page5,
+      ),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch12-page6").then(
+        (m) => m.C6HindiCh12Page6,
+      ),
+    ),
+  },
+  "6-Hindi-ch13": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch13-page1").then(
+        (m) => m.C6HindiCh13Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch13-page2").then(
+        (m) => m.C6HindiCh13Page2,
+      ),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch13-page3").then(
+        (m) => m.C6HindiCh13Page3,
+      ),
+    ),
+  },
+  "6-Hindi-ch14": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch14-page1").then(
+        (m) => m.C6HindiCh14Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch14-page2").then(
+        (m) => m.C6HindiCh14Page2,
+      ),
+    ),
+  },
+  "6-Hindi-ch15": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch15-page1").then(
+        (m) => m.C6HindiCh15Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch15-page2").then(
+        (m) => m.C6HindiCh15Page2,
+      ),
+    ),
+  },
+  "6-Hindi-ch16": {
+    1: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch16-page1").then(
+        (m) => m.C6HindiCh16Page1,
+      ),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/c6-hindi-ch16-page2").then(
+        (m) => m.C6HindiCh16Page2,
+      ),
+    ),
   },
   "6-Science-ch1": {
     1: dynamic(() =>
