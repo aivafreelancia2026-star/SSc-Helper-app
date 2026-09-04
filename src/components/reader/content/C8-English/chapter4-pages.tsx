@@ -1,4 +1,5 @@
 import { IconGallery } from "@/components/reader/icon-gallery";
+import { ReadingTaskChecklist } from "@/components/reader/reading-task-checklist";
 import { TipBox } from "@/components/reader/tip-box";
 
 type Section = {
@@ -436,8 +437,17 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
   }
 };
 
+function getPageTasks(content: { title: string; sections: Section[] }) {
+  return [
+    `Read the ${content.title} page summary carefully.`,
+    `Complete one response from the ${content.sections[0]?.title ?? "first"} section.`,
+    "Say or write one new idea you learned from this page."
+  ];
+}
+
 export function C8EnglishChapter4Page({ page }: { page: number }) {
   const content = PAGE_CONTENT[page];
+  const tasks = getPageTasks(content);
 
   return (
     <div className="w-full space-y-6 font-body text-sm leading-relaxed text-foreground/90">
@@ -462,6 +472,8 @@ export function C8EnglishChapter4Page({ page }: { page: number }) {
           )}
         </section>
       ))}
+
+      <ReadingTaskChecklist title="Page Activity" tasks={tasks} storageKey={`c8-english-ch4-page${page}-activity`} />
 
       {content.tip && <TipBox>{content.tip}</TipBox>}
     </div>
