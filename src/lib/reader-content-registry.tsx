@@ -1961,6 +1961,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     8: dynamic(() =>
       import("@/components/reader/content/C8-Science/c8-science-ch2-page8").then((m) => m.C8ScienceCh2Page8),
     ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page9").then((m) => m.C8ScienceCh2Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page10").then((m) => m.C8ScienceCh2Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page11").then((m) => m.C8ScienceCh2Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page12").then((m) => m.C8ScienceCh2Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page13").then((m) => m.C8ScienceCh2Page13),
+    ),
   },
 };
 
