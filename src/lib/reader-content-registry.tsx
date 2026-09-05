@@ -2008,6 +2008,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     9: dynamic(() =>
       import("@/components/reader/content/C8-Science/c8-science-ch3-page9").then((m) => m.C8ScienceCh3Page9),
     ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page14").then((m) => m.C8ScienceCh3Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page15").then((m) => m.C8ScienceCh3Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page16").then((m) => m.C8ScienceCh3Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page17").then((m) => m.C8ScienceCh3Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page18").then((m) => m.C8ScienceCh3Page18),
+    ),
   },
 };
 
