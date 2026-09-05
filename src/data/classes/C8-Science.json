@@ -5,5 +5,76 @@
     "Physics",
     "Chemistry"
   ],
-  "chapters": []
+  "totalPages": 150,
+  "chapters": [
+    {
+      "id": "index",
+      "unit": "Index",
+      "number": 0,
+      "title": "Index",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "status": "available",
+      "periods": null,
+      "subArea": null,
+      "indexData": [
+        {
+          "unit": "Physics",
+          "chapterNo": 1,
+          "title": "Force",
+          "pageNo": 2,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 2,
+          "title": "Friction",
+          "pageNo": 15,
+          "periods": 10,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 3,
+          "title": "Sound",
+          "pageNo": 28,
+          "periods": 10,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 4,
+          "title": "Electrical Conductivity of Liquids",
+          "pageNo": 42,
+          "periods": 10,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 5,
+          "title": "Reflection of Light at Plane Surfaces",
+          "pageNo": 56,
+          "periods": 12,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 6,
+          "title": "Stars and the Solar System",
+          "pageNo": 70,
+          "periods": 10,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 7,
+          "title": "Some Natural Phenomena",
+          "pageNo": 84,
+          "periods": 8,
+          "subArea": "Physics"
+        }
+      ]
+    }
+  ]
 }
