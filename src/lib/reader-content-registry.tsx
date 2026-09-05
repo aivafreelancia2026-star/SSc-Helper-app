@@ -1977,6 +1977,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C8-Science/c8-science-ch2-page13").then((m) => m.C8ScienceCh2Page13),
     ),
   },
+  "8-Science-ch3": {
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page5").then((m) => m.C8ScienceCh3Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page6").then((m) => m.C8ScienceCh3Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page7").then((m) => m.C8ScienceCh3Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page8").then((m) => m.C8ScienceCh3Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page9").then((m) => m.C8ScienceCh3Page9),
+    ),
+  },
 };
 
 export function getPageContent(
