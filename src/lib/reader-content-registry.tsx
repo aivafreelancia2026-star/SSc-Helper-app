@@ -1976,8 +1976,23 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     13: dynamic(() =>
       import("@/components/reader/content/C8-Science/c8-science-ch2-page13").then((m) => m.C8ScienceCh2Page13),
     ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page14").then((m) => m.C8ScienceCh2Page14),
+    ),
   },
   "8-Science-ch3": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page1").then((m) => m.C8ScienceCh3Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page2").then((m) => m.C8ScienceCh3Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page3").then((m) => m.C8ScienceCh3Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page4").then((m) => m.C8ScienceCh3Page4),
+    ),
     5: dynamic(() =>
       import("@/components/reader/content/C8-Science/c8-science-ch3-page5").then((m) => m.C8ScienceCh3Page5),
     ),
