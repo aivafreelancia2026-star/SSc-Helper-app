@@ -1914,6 +1914,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     12: dynamic(() =>
       import("@/components/reader/content/C8-Science/c8-science-ch1-page12").then((m) => m.C8ScienceCh1Page12),
     ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page13").then((m) => m.C8ScienceCh1Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page14").then((m) => m.C8ScienceCh1Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page15").then((m) => m.C8ScienceCh1Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page16").then((m) => m.C8ScienceCh1Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page17").then((m) => m.C8ScienceCh1Page17),
+    ),
   },
 };
 
