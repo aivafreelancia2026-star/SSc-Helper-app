@@ -1867,6 +1867,24 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C8-English/c8-english-ch5-page15").then((m) => m.C8EnglishCh5Page15),
     ),
   },
+  "8-Science-intro": {
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-intro-page7").then((m) => m.C8ScienceIntroPage7),
+    ),
+  },
+  "8-Science-preamble": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-intro-page9").then((m) => m.C8ScienceIntroPage9),
+    ),
+  },
+  "8-Science-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page1").then((m) => m.C8ScienceCh1Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page2").then((m) => m.C8ScienceCh1Page2),
+    ),
+  },
 };
 
 export function getPageContent(

@@ -5,15 +5,26 @@
     "Physics",
     "Chemistry"
   ],
-  "totalPages": 150,
+  "totalPages": 197,
   "chapters": [
+    {
+      "id": "intro",
+      "unit": "Front Matter",
+      "number": 0,
+      "title": "National Anthem, Songs & Pledge",
+      "pageStart": 1,
+      "pageEnd": 7,
+      "status": "available",
+      "periods": null,
+      "subArea": null
+    },
     {
       "id": "index",
       "unit": "Index",
       "number": 0,
       "title": "Index",
-      "pageStart": 1,
-      "pageEnd": 1,
+      "pageStart": 8,
+      "pageEnd": 8,
       "status": "available",
       "periods": null,
       "subArea": null,
@@ -22,59 +33,242 @@
           "unit": "Physics",
           "chapterNo": 1,
           "title": "Force",
-          "pageNo": 2,
-          "periods": 12,
+          "pageNo": 10,
+          "periods": 8,
           "subArea": "Physics"
         },
         {
           "unit": "Physics",
           "chapterNo": 2,
           "title": "Friction",
-          "pageNo": 15,
-          "periods": 10,
+          "pageNo": 29,
+          "periods": 8,
           "subArea": "Physics"
         },
         {
-          "unit": "Physics",
+          "unit": "Chemistry",
           "chapterNo": 3,
-          "title": "Sound",
-          "pageNo": 28,
-          "periods": 10,
-          "subArea": "Physics"
+          "title": "Synthetic fibres and plastics",
+          "pageNo": 43,
+          "periods": 11,
+          "subArea": "Chemistry"
         },
         {
-          "unit": "Physics",
+          "unit": "Chemistry",
           "chapterNo": 4,
-          "title": "Electrical Conductivity of Liquids",
-          "pageNo": 42,
-          "periods": 10,
-          "subArea": "Physics"
+          "title": "Metals and non-metals",
+          "pageNo": 63,
+          "periods": 12,
+          "subArea": "Chemistry"
         },
         {
           "unit": "Physics",
           "chapterNo": 5,
-          "title": "Reflection of Light at Plane Surfaces",
-          "pageNo": 56,
+          "title": "Sound",
+          "pageNo": 77,
           "periods": 12,
           "subArea": "Physics"
         },
         {
           "unit": "Physics",
           "chapterNo": 6,
-          "title": "Stars and the Solar System",
-          "pageNo": 70,
+          "title": "Reflection of light by plane surfaces",
+          "pageNo": 96,
+          "periods": 6,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Chemistry",
+          "chapterNo": 7,
+          "title": "Coal and petroleum",
+          "pageNo": 106,
+          "periods": 12,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "Chemistry",
+          "chapterNo": 8,
+          "title": "Combustion, fuels and flame",
+          "pageNo": 121,
           "periods": 10,
+          "subArea": "Chemistry"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 9,
+          "title": "Electrical conductivity of liquids",
+          "pageNo": 134,
+          "periods": 11,
           "subArea": "Physics"
         },
         {
           "unit": "Physics",
-          "chapterNo": 7,
-          "title": "Some Natural Phenomena",
-          "pageNo": 84,
-          "periods": 8,
+          "chapterNo": 10,
+          "title": "Some natural phenomena",
+          "pageNo": 147,
+          "periods": 11,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 11,
+          "title": "Stars and solar system",
+          "pageNo": 163,
+          "periods": 13,
+          "subArea": "Physics"
+        },
+        {
+          "unit": "Physics",
+          "chapterNo": 12,
+          "title": "Graphs of motion",
+          "pageNo": 187,
+          "periods": 4,
           "subArea": "Physics"
         }
       ]
+    },
+    {
+      "id": "preamble",
+      "unit": "Front Matter",
+      "number": 0,
+      "title": "The Constitution of India - Preamble",
+      "pageStart": 9,
+      "pageEnd": 9,
+      "status": "available",
+      "periods": null,
+      "subArea": null
+    },
+    {
+      "id": "ch1",
+      "unit": "Physics",
+      "number": 1,
+      "title": "Force",
+      "pageStart": 10,
+      "pageEnd": 28,
+      "status": "available",
+      "periods": 8,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch2",
+      "unit": "Physics",
+      "number": 2,
+      "title": "Friction",
+      "pageStart": 29,
+      "pageEnd": 42,
+      "status": "coming-soon",
+      "periods": 8,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch3",
+      "unit": "Chemistry",
+      "number": 3,
+      "title": "Synthetic fibres and plastics",
+      "pageStart": 43,
+      "pageEnd": 62,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch4",
+      "unit": "Chemistry",
+      "number": 4,
+      "title": "Metals and non-metals",
+      "pageStart": 63,
+      "pageEnd": 76,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch5",
+      "unit": "Physics",
+      "number": 5,
+      "title": "Sound",
+      "pageStart": 77,
+      "pageEnd": 95,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch6",
+      "unit": "Physics",
+      "number": 6,
+      "title": "Reflection of light by plane surfaces",
+      "pageStart": 96,
+      "pageEnd": 105,
+      "status": "coming-soon",
+      "periods": 6,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch7",
+      "unit": "Chemistry",
+      "number": 7,
+      "title": "Coal and petroleum",
+      "pageStart": 106,
+      "pageEnd": 120,
+      "status": "coming-soon",
+      "periods": 12,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch8",
+      "unit": "Chemistry",
+      "number": 8,
+      "title": "Combustion, fuels and flame",
+      "pageStart": 121,
+      "pageEnd": 133,
+      "status": "coming-soon",
+      "periods": 10,
+      "subArea": "Chemistry"
+    },
+    {
+      "id": "ch9",
+      "unit": "Physics",
+      "number": 9,
+      "title": "Electrical conductivity of liquids",
+      "pageStart": 134,
+      "pageEnd": 146,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch10",
+      "unit": "Physics",
+      "number": 10,
+      "title": "Some natural phenomena",
+      "pageStart": 147,
+      "pageEnd": 162,
+      "status": "coming-soon",
+      "periods": 11,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch11",
+      "unit": "Physics",
+      "number": 11,
+      "title": "Stars and solar system",
+      "pageStart": 163,
+      "pageEnd": 186,
+      "status": "coming-soon",
+      "periods": 13,
+      "subArea": "Physics"
+    },
+    {
+      "id": "ch12",
+      "unit": "Physics",
+      "number": 12,
+      "title": "Graphs of motion",
+      "pageStart": 187,
+      "pageEnd": 197,
+      "status": "coming-soon",
+      "periods": 4,
+      "subArea": "Physics"
     }
   ]
 }

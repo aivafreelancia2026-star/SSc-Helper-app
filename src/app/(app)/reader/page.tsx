@@ -116,7 +116,7 @@ export default async function ReaderPage({
 
   const PageContent = selectedChapter
     ? getPageContent(classGrade, subject, selectedChapter.id, page - selectedChapter.pageStart + 1)
-    : null;
+    : getPageContent(classGrade, subject, "intro", page);
 
   return (
     <div className="relative flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">
