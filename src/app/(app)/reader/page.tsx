@@ -69,7 +69,8 @@ export default async function ReaderPage({
   // everywhere inside this subject, not just once a specific chapter is open.
   const requestedPage = Number(params.page);
   const page =
-    Number.isInteger(requestedPage) && requestedPage >= 1
+    Number.isInteger(requestedPage) &&
+    (requestedPage >= 1 || requestedPage === indexChapter.pageStart)
       ? Math.min(requestedPage, totalPages)
       : null;
 
