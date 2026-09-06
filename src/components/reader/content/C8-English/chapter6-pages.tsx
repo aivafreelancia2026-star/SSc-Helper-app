@@ -219,6 +219,210 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "In reported questions, use statement word order after if, whether, or a question word."
+  },
+  11: {
+    title: "Reading B: The Earthen Goblet",
+    subtitle: "Poem summary and imagery",
+    gallery: [
+      { emoji: "🏺", label: "Earthen goblet" },
+      { emoji: "👐", label: "Potter's hands" },
+      { emoji: "🌱", label: "Clay and earth" },
+      { emoji: "🌸", label: "Flower memory" }
+    ],
+    sections: [
+      {
+        title: "Poem idea",
+        body: "The poem imagines a goblet speaking about its life. It remembers being part of the earth and feels sorrow about being shaped into an object."
+      },
+      {
+        title: "Speaker and feeling",
+        body: "The goblet is treated like a living speaker. Its voice creates sympathy for clay, earth, flowers, and the natural world."
+      },
+      {
+        title: "Poet note",
+        body: "Harindranath Chattopadhyay was a poet, dramatist, actor, musician, and public figure. His short biographical note helps students connect the poem to a creative personality."
+      }
+    ],
+    tip: "For poems, explain feelings and images in your own words instead of copying lines."
+  },
+  12: {
+    title: "Poem Comprehension",
+    subtitle: "Feelings, speaker, and literary devices",
+    sections: [
+      {
+        title: "Glossary focus",
+        body: "Use these words from the poem to discuss the speaker's experience.",
+        items: ["twirl", "fatal", "captive"]
+      },
+      {
+        title: "Comprehension",
+        body: "Answer questions about who speaks in the poem, what the flower means to the goblet, whether the poem is tender toward earth or object, and which life the goblet prefers."
+      },
+      {
+        title: "Literary devices",
+        body: "The page introduces devices such as tone, genre, satire, point of view, metaphor, and simile. Use them as tools to analyse how a poem creates meaning."
+      }
+    ],
+    tip: "Point of view matters here because the object speaks like a person."
+  },
+  13: {
+    title: "Reading C: Maestro with a Mission",
+    subtitle: "Vempati Chinna Satyam and Kuchipudi",
+    gallery: [
+      { emoji: "💃", label: "Kuchipudi" },
+      { emoji: "🎭", label: "Dance drama" },
+      { emoji: "🚶", label: "Journey" },
+      { emoji: "🏛️", label: "Classical art" }
+    ],
+    sections: [
+      {
+        title: "Opening situation",
+        body: "The reading begins with a young man leaving home with very little money but a powerful dream: to raise the status of the Kuchipudi dance form."
+      },
+      {
+        title: "Art form background",
+        body: "Kuchipudi began in the village of the same name. The text explains how it moved from temple and street performance toward wider classical recognition."
+      },
+      {
+        title: "Early transformation",
+        body: "Earlier, men performed many roles, including female roles. Later gurus enriched the form and opened space for women to perform different roles too."
+      }
+    ],
+    tip: "A biographical profile often begins with a striking incident that reveals the person's purpose."
+  },
+  14: {
+    title: "Hardship and Training",
+    subtitle: "From insult to determination",
+    sections: [
+      {
+        title: "Challenges",
+        body: "Satyam faces humiliation, poverty, family responsibility, and uncertainty. These hardships make his commitment to Kuchipudi more remarkable."
+      },
+      {
+        title: "Teachers and inspiration",
+        body: "He learns from respected gurus and develops serious interest in the difficult aspects of the style. Their encouragement helps him continue."
+      },
+      {
+        title: "Film connection",
+        body: "He also contributes to Telugu cinema as a dance director, but his larger aim remains the revival and popularisation of Kuchipudi."
+      }
+    ],
+    tip: "When writing about a life, connect difficulty with the choice or value it reveals."
+  },
+  15: {
+    title: "Kuchipudi Art Academy",
+    subtitle: "Work, recognition, and influence",
+    sections: [
+      {
+        title: "Institution building",
+        body: "Vempati Chinna Satyam establishes Kuchipudi Art Academy in Madras in 1963 to train dancers and spread the art form."
+      },
+      {
+        title: "Major contributions",
+        body: "He composes and choreographs many solo items and dance dramas. His works travel widely and bring recognition to Kuchipudi."
+      },
+      {
+        title: "Communication",
+        body: "The text highlights his ability to communicate fine details of dance to both experts and ordinary viewers."
+      }
+    ],
+    tip: "A maestro is not only a performer; a maestro teaches, shapes, and preserves an art."
+  },
+  16: {
+    title: "Awards and Legacy",
+    subtitle: "Why he is called a maestro",
+    sections: [
+      {
+        title: "Honours",
+        body: "The profile lists several awards and honours, including national recognition, university honours, and cultural fellowships."
+      },
+      {
+        title: "Disciples",
+        body: "His students include well-known dancers and performers. Their pride in learning from him shows the strength of his influence."
+      },
+      {
+        title: "Central idea",
+        body: "The reading presents Dr. Vempati as a central inspiration in the rise of Kuchipudi as a respected classical dance form in modern India."
+      }
+    ],
+    tip: "In a profile, awards are supporting details; the main idea is the person's lasting contribution."
+  },
+  17: {
+    title: "Reading C Review",
+    subtitle: "Glossary and comprehension",
+    sections: [
+      {
+        title: "Glossary focus",
+        body: "Use these words and expressions to discuss Dr. Vempati's life and work.",
+        items: ["passion", "choreography", "ardent", "oblivion", "carve a niche", "reverent", "nuance", "connoisseur", "coveted", "stupendous"]
+      },
+      {
+        title: "Comprehension",
+        body: "Answer questions about whether Satyam succeeded, why he kept silent before the station master, how his departure helped Kuchipudi, and why the title Dr. Vempati is appropriate."
+      },
+      {
+        title: "Evidence practice",
+        body: "For each answer, support your view with one event, achievement, or quality from the profile."
+      }
+    ],
+    tip: "Opinion questions are stronger when they include evidence from the text."
+  },
+  18: {
+    title: "Biographical Sketch",
+    subtitle: "Writing about S. P. Balasubrahmanyam",
+    sections: [
+      {
+        title: "Writing task",
+        body: "Use the given details about S. P. Balasubrahmanyam to prepare a biographical sketch in connected paragraphs."
+      },
+      {
+        title: "Details to organise",
+        body: "Group the notes into birth, education, entry into films, achievements, other roles, and awards."
+      },
+      {
+        title: "Listening task",
+        body: "Listen to the news bulletin and answer questions about the highlights, the art and culture policy programme, and benefits for weavers."
+      }
+    ],
+    tip: "A biographical sketch should sound like a paragraph, not a copied list of facts."
+  },
+  19: {
+    title: "Study Skills and Project Work",
+    subtitle: "Tree diagrams and artist interviews",
+    sections: [
+      {
+        title: "Tree diagram",
+        body: "The study skill shows how information about dance forms can be converted into a tree diagram. Students then organise musical instruments in the same way."
+      },
+      {
+        title: "Instrument groups",
+        body: "Classify instruments by type, such as wind, stringed, and percussion, then place examples under each branch."
+      },
+      {
+        title: "Project work",
+        body: "Interview a local performing artist such as a singer, dancer, or craftsperson. Collect details about birthplace, teacher, reasons for choosing the art, support, financial status, and message."
+      }
+    ],
+    tip: "A tree diagram helps turn a paragraph into a quick visual memory map."
+  },
+  20: {
+    title: "Self Assessment and Email Writing",
+    subtitle: "Unit reflection and digital communication",
+    sections: [
+      {
+        title: "Self assessment",
+        body: "Review whether you understood the three readings, vocabulary work, reported speech, editing, study skills, listening, and project work."
+      },
+      {
+        title: "Email writing",
+        body: "The reference note explains that email is a way to send digital messages. It identifies fields such as to, subject, message, attachment, and send."
+      },
+      {
+        title: "Practice",
+        body: "Draft a short email inviting a friend to a school cultural programme. Include recipient, subject, greeting, message, closing, and sender name."
+      }
+    ],
+    tip: "A clear email has a useful subject line and a message that is polite, brief, and complete."
   }
 };
 
