@@ -1425,6 +1425,20 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     1: dynamic(() =>
       import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page1").then((m) => m.C6TeluguCh15Page1),
     ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page2").then((m) => m.C6TeluguCh15Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page3").then((m) => m.C6TeluguCh15Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page4").then((m) => m.C6TeluguCh15Page4),
+    ),
+  },
+  "6-Telugu-ch16": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page1").then((m) => m.C6TeluguCh16Page1),
+    ),
   },
   "6-Maths-ch1": {
     1: dynamic(() =>
