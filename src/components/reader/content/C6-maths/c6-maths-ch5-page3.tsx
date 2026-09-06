@@ -50,7 +50,8 @@ const REVEAL_TEXT: Record<string, string> = {
    Answer Validator
 ───────────────────────────────────────────── */
 function validateAnswer(id: string, rawValue: string): boolean {
-  const v = rawValue.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+  const raw = rawValue.trim().toLowerCase();
+  const v = raw.replace(/[^a-z0-9]/g, "");
   if (!v) return false;
 
   switch (id) {
@@ -72,7 +73,7 @@ function validateAnswer(id: string, rawValue: string): boolean {
       );
 
     case "q_p71_try_postcard_same":
-      if (v.includes("no") || v.includes("different")) return false;
+      if (v.includes("no") || v.includes("different") || v.includes("differ")) return false;
       return v.includes("yes") || v.includes("same");
 
     case "q_p71_try_postcard_dimensions":
@@ -114,7 +115,14 @@ function validateAnswer(id: string, rawValue: string): boolean {
       );
 
     case "q_p71_ex51_q3_ascending":
-      if (v.includes("allsegment") || v.includes("equalinlength") || v.startsWith("ae<ad")) return false;
+      if (
+        v.includes("allsegment") ||
+        v.includes("equalinlength") ||
+        raw.startsWith("ae") ||
+        raw.includes("ae <") ||
+        v.startsWith("aead")
+      )
+        return false;
       return (
         (v.includes("ab") && v.includes("ae")) ||
         v.includes("ascending") ||
@@ -133,12 +141,15 @@ function validateAnswer(id: string, rawValue: string): boolean {
       return v.includes("reshma");
 
     case "q_p71_ex51_q4_midpoint_def":
-      if (v.includes("greater") || v.includes("less") || v.includes("ac>cb") || v.includes("ac<cb")) return false;
-      return (
-        v.includes("equal") ||
-        v.includes("accb") ||
-        v.includes("same")
-      );
+      if (
+        raw.includes(">") ||
+        raw.includes("<") ||
+        v.includes("greater") ||
+        v.includes("less") ||
+        v.includes("not")
+      )
+        return false;
+      return v.includes("equal") || raw.includes("=") || v.includes("same");
 
     case "q_p71_ex51_q5_pyramid_edges":
       if (v.includes("4") || v.includes("6") || v.includes("12") || v.includes("four") || v.includes("six") || v.includes("twelve")) {
