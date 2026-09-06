@@ -1989,6 +1989,30 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     10: dynamic(() =>
       import("@/components/reader/content/C8-English/c8-english-ch7-page10").then((m) => m.C8EnglishCh7Page10),
     ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page11").then((m) => m.C8EnglishCh7Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page12").then((m) => m.C8EnglishCh7Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page13").then((m) => m.C8EnglishCh7Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page14").then((m) => m.C8EnglishCh7Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page15").then((m) => m.C8EnglishCh7Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page16").then((m) => m.C8EnglishCh7Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page17").then((m) => m.C8EnglishCh7Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page18").then((m) => m.C8EnglishCh7Page18),
+    ),
   },
   "8-Science-intro": {
     7: dynamic(() =>

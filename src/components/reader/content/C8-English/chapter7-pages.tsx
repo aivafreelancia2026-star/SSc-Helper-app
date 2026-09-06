@@ -213,6 +213,165 @@ const PAGE_CONTENT: Record<number, { title: string; subtitle: string; sections: 
       }
     ],
     tip: "Idioms often cannot be understood word by word; look for the idea in the whole sentence."
+  },
+  11: {
+    title: "Similes and Idioms",
+    subtitle: "Figurative language practice",
+    sections: [
+      {
+        title: "Simile practice",
+        body: "The page gives familiar similes and asks students to use them in original sentences.",
+        items: ["bright like a full moon", "sleep like a log", "eat like a bird", "beautiful like a rose", "sweet like honey"]
+      },
+      {
+        title: "Idiom building",
+        body: "Students combine words from circles to form idioms and then use them in their own sentences."
+      },
+      {
+        title: "Meaning in use",
+        body: "The example fish out of water shows that an idiom has a meaning beyond its individual words."
+      }
+    ],
+    tip: "A good figurative sentence should fit the situation naturally, not sound pasted in."
+  },
+  12: {
+    title: "Subject and Predicate",
+    subtitle: "Grammar practice",
+    sections: [
+      {
+        title: "Grammar idea",
+        body: "Every complete sentence has a subject and a predicate. The subject names who or what the sentence is about; the predicate tells something about the subject."
+      },
+      {
+        title: "Identification practice",
+        body: "Students circle subjects and underline predicates in short sentences before applying the same skill to a paragraph from Bonsai Life."
+      },
+      {
+        title: "Paragraph link",
+        body: "The exercise reuses the story events: Akkayya's visit, the food she brought, her praise of Ammalu, the bonsai plants, and the lesson about freedom."
+      }
+    ],
+    tip: "Ask who or what first; the rest of the sentence usually gives the predicate."
+  },
+  13: {
+    title: "Poster Writing",
+    subtitle: "Handicrafts exhibition task",
+    sections: [
+      {
+        title: "Poster features",
+        body: "The model poster announces a handicrafts exhibition-cum-sale and includes the organiser, event, date, time, venue, chief guest, entry fee, and invitation."
+      },
+      {
+        title: "Writing task",
+        body: "Students prepare a new poster for a dance performance by Aarthi using the given details."
+      },
+      {
+        title: "Design choices",
+        body: "A poster should make important details easy to notice through clear layout, short lines, and strong event information."
+      }
+    ],
+    tip: "Poster writing rewards clarity: who, what, when, where, and why should be visible quickly."
+  },
+  14: {
+    title: "Listening Debate",
+    subtitle: "Girl child education",
+    sections: [
+      {
+        title: "Listening focus",
+        body: "Students listen to a debate on whether education of the girl child is a burden."
+      },
+      {
+        title: "Table completion",
+        body: "The task asks students to record arguments for and against the proposition from different speakers."
+      },
+      {
+        title: "Critical response",
+        body: "After listening, students should separate opinion from reason and notice which arguments support equality and empowerment."
+      }
+    ],
+    tip: "During a debate, write down key reasons, not every sentence."
+  },
+  15: {
+    title: "Reading C: I Can Take Care of Myself",
+    subtitle: "The search for power",
+    gallery: [
+      { emoji: "☀️", label: "Sun" },
+      { emoji: "🌧️", label: "Rain" },
+      { emoji: "⛰️", label: "Mountain" },
+      { emoji: "🪱", label: "Earthworm" }
+    ],
+    sections: [
+      {
+        title: "Story opening",
+        body: "A mother rat wants her daughter to marry the most powerful being she can find. She first asks the sun, then rain, then mountain, and then learns about the earthworm's importance."
+      },
+      {
+        title: "Power chain",
+        body: "Each being points to another form of strength. The story shows that power is not only size, brightness, or wealth; usefulness and support also matter."
+      },
+      {
+        title: "Theme connection",
+        body: "The reading continues the unit theme by questioning the idea that a girl must depend on someone powerful to be safe."
+      }
+    ],
+    tip: "Folktales often teach by repeating a pattern and changing the lesson at the end."
+  },
+  16: {
+    title: "The Daughter's Answer",
+    subtitle: "Independence and inner strength",
+    sections: [
+      {
+        title: "Main lesson",
+        body: "The daughter says that the best protection is learning to protect oneself. She wants to become strong, work hard, and support herself and those she loves."
+      },
+      {
+        title: "True power",
+        body: "The daughter rejects dependence on another person's power, position, or prosperity. She values the power within oneself."
+      },
+      {
+        title: "Comprehension",
+        body: "Students answer what is important for living well, which skills help a person become independent, and whether they agree with the daughter."
+      }
+    ],
+    tip: "When agreeing or disagreeing, include a reason and one example from life or the story."
+  },
+  17: {
+    title: "Study Skills: IMR Data",
+    subtitle: "Reading bar diagrams",
+    sections: [
+      {
+        title: "Data reading",
+        body: "Students observe bar diagrams showing male and female infant mortality rates in India from 1990 to 2008."
+      },
+      {
+        title: "Questions to answer",
+        body: "The questions ask students to compare male and female IMR, identify sudden changes, explain gaps, and think about why IMR decreased over time."
+      },
+      {
+        title: "Analytical report",
+        body: "In group work, students discuss the data and write a report on infant mortality rates in India."
+      }
+    ],
+    tip: "For a graph report, mention the trend first, then support it with years and comparisons."
+  },
+  18: {
+    title: "Oral Activity, Project, and Self Assessment",
+    subtitle: "Unit 7 wrap-up",
+    sections: [
+      {
+        title: "Oral activity",
+        body: "Students debate whether reservation in education, employment, and legislature will empower women. They also discuss statements about truth, obedience, distractions, and advertising."
+      },
+      {
+        title: "Project work",
+        body: "Students interview female family or neighbourhood members about education, employment, and opinions on girls taking up jobs, then prepare a report on woman empowerment."
+      },
+      {
+        title: "Self assessment and safety",
+        body: "The final page asks students to review their understanding of the unit and includes personal body safety rules about clothing, touching, talking, saying no, going away, and telling a safe adult."
+      }
+    ],
+    tip: "A project report should use interview information respectfully and connect it to the unit theme."
   }
 };
 
