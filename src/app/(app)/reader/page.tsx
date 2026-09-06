@@ -69,7 +69,8 @@ export default async function ReaderPage({
   // everywhere inside this subject, not just once a specific chapter is open.
   const requestedPage = Number(params.page);
   const page =
-    Number.isInteger(requestedPage) && requestedPage >= 1
+    Number.isInteger(requestedPage) &&
+    (requestedPage >= 1 || requestedPage === indexChapter.pageStart)
       ? Math.min(requestedPage, totalPages)
       : null;
 
@@ -116,7 +117,7 @@ export default async function ReaderPage({
 
   const PageContent = selectedChapter
     ? getPageContent(classGrade, subject, selectedChapter.id, page - selectedChapter.pageStart + 1)
-    : null;
+    : getPageContent(classGrade, subject, "intro", page);
 
   return (
     <div className="relative flex flex-1 flex-col items-center gap-6 overflow-hidden px-4 py-8">

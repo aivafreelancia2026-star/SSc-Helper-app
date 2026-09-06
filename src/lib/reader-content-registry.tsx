@@ -1425,6 +1425,102 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     1: dynamic(() =>
       import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page1").then((m) => m.C6TeluguCh15Page1),
     ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page2").then((m) => m.C6TeluguCh15Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page3").then((m) => m.C6TeluguCh15Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch15-page4").then((m) => m.C6TeluguCh15Page4),
+    ),
+  },
+  "6-Telugu-ch16": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page1").then((m) => m.C6TeluguCh16Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page2").then((m) => m.C6TeluguCh16Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page3").then((m) => m.C6TeluguCh16Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page4").then((m) => m.C6TeluguCh16Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page5").then((m) => m.C6TeluguCh16Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch16-page6").then((m) => m.C6TeluguCh16Page6),
+    ),
+  },
+  "6-Telugu-ch17": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page1").then((m) => m.C6TeluguCh17Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page2").then((m) => m.C6TeluguCh17Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page3").then((m) => m.C6TeluguCh17Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page4").then((m) => m.C6TeluguCh17Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page5").then((m) => m.C6TeluguCh17Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page6").then((m) => m.C6TeluguCh17Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page7").then((m) => m.C6TeluguCh17Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch17-page8").then((m) => m.C6TeluguCh17Page8),
+    ),
+  },
+  "6-Telugu-ch18": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page1").then((m) => m.C6TeluguCh18Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page2").then((m) => m.C6TeluguCh18Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page3").then((m) => m.C6TeluguCh18Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page4").then((m) => m.C6TeluguCh18Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page5").then((m) => m.C6TeluguCh18Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page6").then((m) => m.C6TeluguCh18Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page7").then((m) => m.C6TeluguCh18Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page8").then((m) => m.C6TeluguCh18Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page9").then((m) => m.C6TeluguCh18Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page10").then((m) => m.C6TeluguCh18Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page11").then((m) => m.C6TeluguCh18Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page12").then((m) => m.C6TeluguCh18Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C6-telugu/c6-telugu-ch18-page13").then((m) => m.C6TeluguCh18Page13),
+    ),
   },
   "6-Maths-ch1": {
     1: dynamic(() =>
@@ -1879,6 +1975,293 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     ),
     15: dynamic(() =>
       import("@/components/reader/content/C8-English/c8-english-ch5-page15").then((m) => m.C8EnglishCh5Page15),
+    ),
+  },
+  "8-English-ch6": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page1").then((m) => m.C8EnglishCh6Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page2").then((m) => m.C8EnglishCh6Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page3").then((m) => m.C8EnglishCh6Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page4").then((m) => m.C8EnglishCh6Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page5").then((m) => m.C8EnglishCh6Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page6").then((m) => m.C8EnglishCh6Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page7").then((m) => m.C8EnglishCh6Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page8").then((m) => m.C8EnglishCh6Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page9").then((m) => m.C8EnglishCh6Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page10").then((m) => m.C8EnglishCh6Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page11").then((m) => m.C8EnglishCh6Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page12").then((m) => m.C8EnglishCh6Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page13").then((m) => m.C8EnglishCh6Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page14").then((m) => m.C8EnglishCh6Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page15").then((m) => m.C8EnglishCh6Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page16").then((m) => m.C8EnglishCh6Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page17").then((m) => m.C8EnglishCh6Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page18").then((m) => m.C8EnglishCh6Page18),
+    ),
+    19: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page19").then((m) => m.C8EnglishCh6Page19),
+    ),
+    20: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch6-page20").then((m) => m.C8EnglishCh6Page20),
+    ),
+  },
+  "8-English-ch7": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page1").then((m) => m.C8EnglishCh7Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page2").then((m) => m.C8EnglishCh7Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page3").then((m) => m.C8EnglishCh7Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page4").then((m) => m.C8EnglishCh7Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page5").then((m) => m.C8EnglishCh7Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page6").then((m) => m.C8EnglishCh7Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page7").then((m) => m.C8EnglishCh7Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page8").then((m) => m.C8EnglishCh7Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page9").then((m) => m.C8EnglishCh7Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page10").then((m) => m.C8EnglishCh7Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page11").then((m) => m.C8EnglishCh7Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page12").then((m) => m.C8EnglishCh7Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page13").then((m) => m.C8EnglishCh7Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page14").then((m) => m.C8EnglishCh7Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page15").then((m) => m.C8EnglishCh7Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page16").then((m) => m.C8EnglishCh7Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page17").then((m) => m.C8EnglishCh7Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C8-English/c8-english-ch7-page18").then((m) => m.C8EnglishCh7Page18),
+    ),
+  },
+  "8-Science-intro": {
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-intro-page7").then((m) => m.C8ScienceIntroPage7),
+    ),
+  },
+  "8-Science-preamble": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-intro-page9").then((m) => m.C8ScienceIntroPage9),
+    ),
+  },
+  "8-Science-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page1").then((m) => m.C8ScienceCh1Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page2").then((m) => m.C8ScienceCh1Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page3").then((m) => m.C8ScienceCh1Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page4").then((m) => m.C8ScienceCh1Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page5").then((m) => m.C8ScienceCh1Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page6").then((m) => m.C8ScienceCh1Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page7").then((m) => m.C8ScienceCh1Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page8").then((m) => m.C8ScienceCh1Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page9").then((m) => m.C8ScienceCh1Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page10").then((m) => m.C8ScienceCh1Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page11").then((m) => m.C8ScienceCh1Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page12").then((m) => m.C8ScienceCh1Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page13").then((m) => m.C8ScienceCh1Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page14").then((m) => m.C8ScienceCh1Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page15").then((m) => m.C8ScienceCh1Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page16").then((m) => m.C8ScienceCh1Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page17").then((m) => m.C8ScienceCh1Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page18").then((m) => m.C8ScienceCh1Page18),
+    ),
+    19: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch1-page19").then((m) => m.C8ScienceCh1Page19),
+    ),
+  },
+  "8-Science-ch2": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page1").then((m) => m.C8ScienceCh2Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page2").then((m) => m.C8ScienceCh2Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page3").then((m) => m.C8ScienceCh2Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page4").then((m) => m.C8ScienceCh2Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page5").then((m) => m.C8ScienceCh2Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page6").then((m) => m.C8ScienceCh2Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page7").then((m) => m.C8ScienceCh2Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page8").then((m) => m.C8ScienceCh2Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page9").then((m) => m.C8ScienceCh2Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page10").then((m) => m.C8ScienceCh2Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page11").then((m) => m.C8ScienceCh2Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page12").then((m) => m.C8ScienceCh2Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page13").then((m) => m.C8ScienceCh2Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch2-page14").then((m) => m.C8ScienceCh2Page14),
+    ),
+  },
+  "8-Science-ch3": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page1").then((m) => m.C8ScienceCh3Page1),
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page2").then((m) => m.C8ScienceCh3Page2),
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page3").then((m) => m.C8ScienceCh3Page3),
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page4").then((m) => m.C8ScienceCh3Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page5").then((m) => m.C8ScienceCh3Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page6").then((m) => m.C8ScienceCh3Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page7").then((m) => m.C8ScienceCh3Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page8").then((m) => m.C8ScienceCh3Page8),
+    ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page9").then((m) => m.C8ScienceCh3Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page10").then((m) => m.C8ScienceCh3Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page11").then((m) => m.C8ScienceCh3Page11),
+    ),
+    12: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page12").then((m) => m.C8ScienceCh3Page12),
+    ),
+    13: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page13").then((m) => m.C8ScienceCh3Page13),
+    ),
+    14: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page14").then((m) => m.C8ScienceCh3Page14),
+    ),
+    15: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page15").then((m) => m.C8ScienceCh3Page15),
+    ),
+    16: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page16").then((m) => m.C8ScienceCh3Page16),
+    ),
+    17: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page17").then((m) => m.C8ScienceCh3Page17),
+    ),
+    18: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch3-page18").then((m) => m.C8ScienceCh3Page18),
     ),
   },
 };

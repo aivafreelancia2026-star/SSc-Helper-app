@@ -50,6 +50,117 @@ export function ChapterIndex({
     genre?: string;
   }>;
 
+  // Render textbook-like table for Class 8 Science
+  if (classGrade === 8 && subject === "Science") {
+    return (
+      <div className="w-full space-y-6">
+        <div className="rounded-[20px] border border-fuchsia-200 bg-fuchsia-50/40 p-6 shadow-sm">
+          {/* Header */}
+          <div className="flex items-center justify-center bg-fuchsia-100/80 rounded-xl py-2 mb-4 border border-fuchsia-200 shadow-sm">
+            <h1 className="text-fuchsia-900 font-heading text-xl font-bold tracking-wider uppercase">
+              INDEX
+            </h1>
+          </div>
+
+          {/* Textbook Table */}
+          <div className="overflow-x-auto rounded-lg border border-fuchsia-200 bg-white shadow-sm">
+            <table className="min-w-full border-collapse text-left text-sm font-body">
+              <thead>
+                <tr className="bg-fuchsia-50/70 text-fuchsia-900 font-heading font-semibold text-xs border-b border-fuchsia-200">
+                  <th className="px-4 py-3 text-left italic">Name of the lesson</th>
+                  <th className="border-l border-fuchsia-200 px-3 py-3 text-center italic">Periods</th>
+                  <th className="border-l border-fuchsia-200 px-3 py-3 text-center italic">Month</th>
+                  <th className="border-l border-fuchsia-200 px-3 py-3 text-center italic">Page No.</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-fuchsia-100 text-foreground/80 font-medium">
+                {indexData.map((item) => {
+                  const rowLink = `/reader?class=${classGrade}&subject=${subject}&page=${item.pageNo}&total=${totalPages}&index=${indexChapter.pageStart}`;
+                  const isPhysics = item.subArea === "Physics";
+                  const subAreaBadge = isPhysics
+                    ? "bg-sky-50 text-sky-700 border-sky-200"
+                    : "bg-emerald-50 text-emerald-700 border-emerald-200";
+
+                  // Display textbook printed page number
+                  const printedPageMap: Record<number | string, number> = {
+                    1: 1, 2: 20, 3: 34, 4: 54, 5: 68, 6: 87, 7: 97, 8: 112, 9: 125, 10: 138, 11: 154, 12: 178
+                  };
+
+                  return (
+                    <tr
+                      key={`${item.unit}-${item.chapterNo}`}
+                      onClick={() => (window.location.href = rowLink)}
+                      className="cursor-pointer hover:bg-fuchsia-50/50 transition-colors"
+                    >
+                      <td className="px-4 py-2.5">
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center rounded-full border border-fuchsia-300 bg-white px-2 py-0.5 shadow-2xs">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-fuchsia-900 text-[11px] font-bold text-white">
+                              {item.chapterNo}
+                            </span>
+                            <span className="ml-2 font-heading font-bold text-sm text-foreground italic pr-2">
+                              {item.title}
+                            </span>
+                          </div>
+                          {item.subArea && (
+                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${subAreaBadge}`}>
+                              {item.subArea}
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="border-l border-fuchsia-200 px-3 py-2.5 text-center text-foreground/70 font-semibold">
+                        {item.periods || "-"}
+                      </td>
+                      <td className="border-l border-fuchsia-200 px-3 py-2.5 text-center text-fuchsia-900 font-semibold">
+                        {MONTH_MAPPING[item.chapterNo] || "-"}
+                      </td>
+                      <td className="border-l border-fuchsia-200 px-3 py-2.5 text-center font-bold text-fuchsia-950">
+                        {printedPageMap[item.chapterNo] ?? item.pageNo}
+                      </td>
+                    </tr>
+                  );
+                })}
+                {/* Revision row */}
+                <tr className="bg-fuchsia-50/30 font-semibold text-foreground/90">
+                  <td className="px-4 py-2.5">
+                    <div className="inline-block rounded-full border border-fuchsia-300 bg-white px-4 py-0.5 shadow-2xs font-heading font-bold text-sm text-fuchsia-950 italic">
+                      Revision
+                    </div>
+                  </td>
+                  <td className="border-l border-fuchsia-200 px-3 py-2.5 text-center text-foreground/40">-</td>
+                  <td className="border-l border-fuchsia-200 px-3 py-2.5 text-center text-fuchsia-900 font-bold">March</td>
+                  <td className="border-l border-fuchsia-200 px-3 py-2.5 text-center text-foreground/40">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Legend */}
+        <div className="rounded-[20px] border border-fuchsia-200 bg-fuchsia-50/30 p-5 shadow-sm">
+          <h3 className="font-heading font-bold text-fuchsia-950 mb-3 text-base">Legend</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
+            <div className="flex items-center gap-2 rounded-lg bg-sky-50 border border-sky-100 p-2.5 text-sky-700">
+              <span className="font-heading font-bold px-2 py-0.5 bg-sky-200 rounded text-sky-900">Physics</span>
+              <span>Physical forces, energy, sound, light & universe</span>
+            </div>
+            <div className="flex items-center gap-2 rounded-lg bg-emerald-50 border border-emerald-100 p-2.5 text-emerald-700">
+              <span className="font-heading font-bold px-2 py-0.5 bg-emerald-200 rounded text-emerald-900">Chemistry</span>
+              <span>Materials, metals, fibres, fuels & reactions</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Textbook Footer */}
+        <div className="flex justify-between items-center text-xs text-foreground/50 border-t border-border/40 pt-3">
+          <span>Government&apos;s Gift for Students&apos; Progress</span>
+          <span className="font-semibold font-heading">vi</span>
+        </div>
+      </div>
+    );
+  }
+
   // Render textbook-like table for Class 6 Science
   if (classGrade === 6 && subject === "Science") {
     // Group index data by unit to calculate rowspan

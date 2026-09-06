@@ -41,6 +41,7 @@ import class6Telugu from "@/data/classes/C6-Telugu.json";
 import class6Hindi from "@/data/classes/C6-Hindi.json";
 import class6Maths from "@/data/classes/C6-Maths.json";
 import class8English from "@/data/classes/C8-English.json";
+import class8Science from "@/data/classes/C8-Science.json";
 
 const CLASS_CONTENT: Partial<Record<string, ClassContent>> = {
   "6-Science": class6Science as ClassContent,
@@ -48,6 +49,8 @@ const CLASS_CONTENT: Partial<Record<string, ClassContent>> = {
   "6-Hindi": class6Hindi as ClassContent,
   "6-Maths": class6Maths as ClassContent,
   "8-English": class8English as ClassContent,
+  "8-Science": class8Science as ClassContent,
+  "8-Physics": class8Science as ClassContent,
 };
 
 export function loadClassContent(classGrade: number, subject: string): ClassContent | null {
