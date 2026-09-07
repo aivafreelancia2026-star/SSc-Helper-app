@@ -20,6 +20,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     3: dynamic(() =>
       import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page3").then((m) => m.C8TeluguCh1Page3)
     ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page4").then((m) => m.C8TeluguCh1Page4)
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page5").then((m) => m.C8TeluguCh1Page5)
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page6").then((m) => m.C8TeluguCh1Page6)
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page7").then((m) => m.C8TeluguCh1Page7)
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page8").then((m) => m.C8TeluguCh1Page8)
+    ),
   },
   "6-Hindi-ch_read_1": {
     1: dynamic(() =>

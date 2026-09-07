@@ -17,7 +17,12 @@ This document captures the current state, design patterns, and next steps for th
   - Page 10 (Index / విషయసూచిక)
   - Page 11 (Chapter 1 / త్యాగనిరతి) - Fully implemented with interactive question textareas.
   - Page 12 (Lesson details & author) - Implemented with exact portrait.
-  - Page 13 (Chapter 1, page 3) - Full page background overlay pattern implemented.
+  - Page 13 (Chapter 1, page 3) - Standard block layout.
+  - Page 14 (Chapter 1, page 4) - Implemented with interactive questions and eagle illustration.
+  - Page 15 (Chapter 1, page 5) - "తాత్పర్యాలు" section implemented with clean text layout.
+  - Page 16 (Chapter 1, page 6) - "ఇవి చేయండి" section implemented with interactive MCQs and text inputs.
+  - Page 17 (Chapter 1, page 7) - "స్వీయరచన", "సృజనాత్మకత", and "పదజాల వినియోగం" sections with interactive textareas and blanks.
+  - Page 18 (Chapter 1, page 8) - Grammar exercises, project work box, self-assessment checklist, and quote.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
