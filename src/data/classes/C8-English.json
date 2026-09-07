@@ -15,14 +15,78 @@
       "periods": null,
       "subArea": null,
       "indexData": [
-        { "unit": "1", "chapterNo": 1, "title": "Family", "pageNo": 1, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "2", "chapterNo": 2, "title": "Social Issues", "pageNo": 15, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "3", "chapterNo": 3, "title": "Humanity", "pageNo": 31, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "4", "chapterNo": 4, "title": "Science and Technology", "pageNo": 49, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "5", "chapterNo": 5, "title": "Education and Career", "pageNo": 69, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "6", "chapterNo": 6, "title": "Art and Culture", "pageNo": 85, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "7", "chapterNo": 7, "title": "Women Empowerment", "pageNo": 105, "periods": null, "subArea": null, "genre": "Thematic unit" },
-        { "unit": "8", "chapterNo": 8, "title": "Gratitude", "pageNo": 123, "periods": null, "subArea": null, "genre": "Thematic unit" }
+        {
+          "unit": "1",
+          "chapterNo": 1,
+          "title": "Family",
+          "pageNo": 1,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "2",
+          "chapterNo": 2,
+          "title": "Social Issues",
+          "pageNo": 15,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "3",
+          "chapterNo": 3,
+          "title": "Humanity",
+          "pageNo": 31,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "4",
+          "chapterNo": 4,
+          "title": "Science and Technology",
+          "pageNo": 49,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "5",
+          "chapterNo": 5,
+          "title": "Education and Career",
+          "pageNo": 69,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "6",
+          "chapterNo": 6,
+          "title": "Art and Culture",
+          "pageNo": 85,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "7",
+          "chapterNo": 7,
+          "title": "Women Empowerment",
+          "pageNo": 105,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        },
+        {
+          "unit": "8",
+          "chapterNo": 8,
+          "title": "Gratitude",
+          "pageNo": 123,
+          "periods": null,
+          "subArea": null,
+          "genre": "Thematic unit"
+        }
       ]
     },
     {
@@ -116,7 +180,7 @@
       "title": "Gratitude",
       "pageStart": 123,
       "pageEnd": 141,
-      "status": "coming-soon",
+      "status": "available",
       "periods": null,
       "subArea": null,
       "genre": "Reading A: Dr. Dwarakanath Kotnis; Reading B: Be Thankful (Poem); Reading C: The Dead Rat"
@@ -128,7 +192,7 @@
       "title": "Listening Texts and Assessment Procedures",
       "pageStart": 142,
       "pageEnd": 153,
-      "status": "coming-soon",
+      "status": "available",
       "periods": null,
       "subArea": null,
       "genre": "Reference"
