@@ -12,7 +12,15 @@ This document captures the current state, design patterns, and next steps for th
   - Chapter 16: `सीखने के प्रतिफल एवं सूचनाएँ` (Pages 82–83, Printed 73–74)
 - **Next Step:** Move on to the next unit/grade integration since Class 6 Hindi is complete.
 
-## 2. Core Architecture & Routing
+## 2. Project State (Class 8 Telugu)
+- **Completed Pages:** 
+  - Page 10 (Index / విషయసూచిక)
+  - Page 11 (Chapter 1 / త్యాగనిరతి) - Fully implemented with interactive question textareas.
+  - Page 12 (Lesson details & author) - Implemented with exact portrait.
+  - Page 13 (Chapter 1, page 3) - Full page background overlay pattern implemented.
+- **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
+
+## 3. Core Architecture & Routing
 - **Data Source:** `src/data/classes/C6-Hindi.json`. When starting a new chapter, ensure `status` is set to `"available"` and update `pageEnd` accordingly as pages are added.
 - **Component Location:** Individual page components are stored in `src/components/reader/content/` following the naming convention `c6-hindi-ch[X]-page[Y].tsx`.
 - **Registry:** All new page components MUST be dynamically imported and registered in `src/lib/reader-content-registry.tsx`. Map the app's relative page number (1, 2, 3...) under the correct chapter key (e.g., `"6-Hindi-ch13"`).

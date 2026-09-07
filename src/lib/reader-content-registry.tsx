@@ -10,6 +10,17 @@ import type { ComponentType } from "react";
 // page doesn't bundle every other hand-built page's JS along with it — this
 // matters more as more chapters get real content and the registry grows.
 const REGISTRY: Record<string, Record<number, ComponentType>> = {
+  "8-Telugu-ch1": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page1").then((m) => m.C8TeluguCh1Page1)
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page2").then((m) => m.C8TeluguCh1Page2)
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch1-page3").then((m) => m.C8TeluguCh1Page3)
+    ),
+  },
   "6-Hindi-ch_read_1": {
     1: dynamic(() =>
       import("@/components/reader/content/c6-hindi-ch-read-1-page1").then(
