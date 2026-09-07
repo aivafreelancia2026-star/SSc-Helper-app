@@ -289,3 +289,4 @@ export function C8EnglishAppendicesPage({ page }: { page: number }) {
     </div>
   );
 }
+
