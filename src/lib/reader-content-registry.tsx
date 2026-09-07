@@ -2286,6 +2286,21 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     3: dynamic(() =>
       import("@/components/reader/content/C8-Science/c8-science-ch4-page3").then((m) => m.C8ScienceCh4Page3),
     ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch4-page4").then((m) => m.C8ScienceCh4Page4),
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch4-page5").then((m) => m.C8ScienceCh4Page5),
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch4-page6").then((m) => m.C8ScienceCh4Page6),
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch4-page7").then((m) => m.C8ScienceCh4Page7),
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Science/c8-science-ch4-page8").then((m) => m.C8ScienceCh4Page8),
+    ),
   },
 };
 
