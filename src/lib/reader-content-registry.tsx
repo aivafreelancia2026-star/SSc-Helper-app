@@ -74,6 +74,32 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
       import("@/components/reader/content/C8-Telugu/c8-telugu-ch2-page12").then((m) => m.C8TeluguCh2Page12)
     ),
   },
+  "8-Telugu-ch3": {
+    1: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page1").then((m) => m.C8TeluguCh3Page1)
+    ),
+    2: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page2").then((m) => m.C8TeluguCh3Page2)
+    ),
+    3: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page3").then((m) => m.C8TeluguCh3Page3)
+    ),
+    4: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page4").then((m) => m.C8TeluguCh3Page4)
+    ),
+    5: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page5").then((m) => m.C8TeluguCh3Page5)
+    ),
+    6: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page6").then((m) => m.C8TeluguCh3Page6)
+    ),
+    7: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page7").then((m) => m.C8TeluguCh3Page7)
+    ),
+    8: dynamic(() =>
+      import("@/components/reader/content/C8-Telugu/c8-telugu-ch3-page8").then((m) => m.C8TeluguCh3Page8)
+    ),
+  },
   "6-Hindi-ch_read_1": {
     1: dynamic(() =>
       import("@/components/reader/content/c6-hindi-ch-read-1-page1").then(

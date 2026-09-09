@@ -35,6 +35,14 @@ This document captures the current state, design patterns, and next steps for th
   - Page 28 (Chapter 2, page 10) - Section VI grammar exercises with complex interactive multi-input sandhi splitting and samasam naming.
   - Page 29 (Chapter 2, page 11) - Grammar exercises explaining 'అత్వసంధి' and 'బహుళం' with two-column interactive inputs.
   - Page 30 (Chapter 2, page 12) - End of chapter activities including a project work textarea, an interactive self-assessment checklist ("నేనివి చేయగలనా?"), and informational boxes.
+  - Page 31 (Chapter 3, page 1) - Introduction to "బండారి బసవన్న", featuring a chapter header, reading sections, and interactive questions.
+  - Page 32 (Chapter 3, page 2) - Informational page with lesson details, poet introduction (with cropped portrait), and student instructions.
+  - Page 33 (Chapter 3, page 3) - First part of the poem featuring a large illustration of the king and interactive "ఆలోచించండి-చెప్పండి" questions.
+  - Page 34 (Chapter 3, page 4) - Second part of the poem featuring an illustration of Shiva and animals, and interactive "ఆలోచించండి-చెప్పండి" questions.
+  - Page 35 (Chapter 3, page 5) - Summary of the story and comprehensive interactive exercises with text inputs and textareas.
+  - Page 36 (Chapter 3, page 6) - Extensive interactive workbook page featuring poem fill-in-the-blanks, self-writing textareas, creative writing exercises, and vocabulary inputs.
+  - Page 37 (Chapter 3, page 7) - Interactive language grammar exercises including matching, a detailed table for Sandhi, and fill-in-the-blanks for Gunasandhi.
+  - Page 38 (Chapter 3, page 8) - Continuation of Gunasandhi rules, project work textarea, self-assessment checklist, and a quote.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
