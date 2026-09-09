@@ -23,6 +23,18 @@ This document captures the current state, design patterns, and next steps for th
   - Page 16 (Chapter 1, page 6) - "ఇవి చేయండి" section implemented with interactive MCQs and text inputs.
   - Page 17 (Chapter 1, page 7) - "స్వీయరచన", "సృజనాత్మకత", and "పదజాల వినియోగం" sections with interactive textareas and blanks.
   - Page 18 (Chapter 1, page 8) - Grammar exercises, project work box, self-assessment checklist, and quote.
+  - Page 19 (Chapter 2, page 1 / సముద్ర ప్రయాణం) - Fully implemented with chapter header, intro, and interactive question textareas.
+  - Page 20 (Chapter 2, page 2) - Lesson details, author intro with portrait, and student instructions.
+  - Page 21 (Chapter 2, page 3) - Introduction section and beautifully cropped ship illustration with text layout.
+  - Page 22 (Chapter 2, page 4) - Two-column responsive layout with "ఆలోచించండి-చెప్పండి" interactive questions.
+  - Page 23 (Chapter 2, page 5) - Mirrored two-column layout with "ఆలోచించండి-చెప్పండి" interactive questions.
+  - Page 24 (Chapter 2, page 6) - Responsive two-column layout with right-aligned "ఆలోచించండి-చెప్పండి" box.
+  - Page 25 (Chapter 2, page 7) - Customs check illustration, continuous text, and centered "ఆలోచించండి-చెప్పండి" box.
+  - Page 26 (Chapter 2, page 8) - Interactive exercise page ("ఇవి చేయండి") with textareas and a table input grid.
+  - Page 27 (Chapter 2, page 9) - Sections III, IV, and V with self-writing, creative essay textareas, and interactive vocabulary MCQ inputs.
+  - Page 28 (Chapter 2, page 10) - Section VI grammar exercises with complex interactive multi-input sandhi splitting and samasam naming.
+  - Page 29 (Chapter 2, page 11) - Grammar exercises explaining 'అత్వసంధి' and 'బహుళం' with two-column interactive inputs.
+  - Page 30 (Chapter 2, page 12) - End of chapter activities including a project work textarea, an interactive self-assessment checklist ("నేనివి చేయగలనా?"), and informational boxes.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
