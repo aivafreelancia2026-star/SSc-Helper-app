@@ -12,7 +12,40 @@ This document captures the current state, design patterns, and next steps for th
   - Chapter 16: `सीखने के प्रतिफल एवं सूचनाएँ` (Pages 82–83, Printed 73–74)
 - **Next Step:** Move on to the next unit/grade integration since Class 6 Hindi is complete.
 
-## 2. Core Architecture & Routing
+## 2. Project State (Class 8 Telugu)
+- **Completed Pages:** 
+  - Page 10 (Index / విషయసూచిక)
+  - Page 11 (Chapter 1 / త్యాగనిరతి) - Fully implemented with interactive question textareas.
+  - Page 12 (Lesson details & author) - Implemented with exact portrait.
+  - Page 13 (Chapter 1, page 3) - Standard block layout.
+  - Page 14 (Chapter 1, page 4) - Implemented with interactive questions and eagle illustration.
+  - Page 15 (Chapter 1, page 5) - "తాత్పర్యాలు" section implemented with clean text layout.
+  - Page 16 (Chapter 1, page 6) - "ఇవి చేయండి" section implemented with interactive MCQs and text inputs.
+  - Page 17 (Chapter 1, page 7) - "స్వీయరచన", "సృజనాత్మకత", and "పదజాల వినియోగం" sections with interactive textareas and blanks.
+  - Page 18 (Chapter 1, page 8) - Grammar exercises, project work box, self-assessment checklist, and quote.
+  - Page 19 (Chapter 2, page 1 / సముద్ర ప్రయాణం) - Fully implemented with chapter header, intro, and interactive question textareas.
+  - Page 20 (Chapter 2, page 2) - Lesson details, author intro with portrait, and student instructions.
+  - Page 21 (Chapter 2, page 3) - Introduction section and beautifully cropped ship illustration with text layout.
+  - Page 22 (Chapter 2, page 4) - Two-column responsive layout with "ఆలోచించండి-చెప్పండి" interactive questions.
+  - Page 23 (Chapter 2, page 5) - Mirrored two-column layout with "ఆలోచించండి-చెప్పండి" interactive questions.
+  - Page 24 (Chapter 2, page 6) - Responsive two-column layout with right-aligned "ఆలోచించండి-చెప్పండి" box.
+  - Page 25 (Chapter 2, page 7) - Customs check illustration, continuous text, and centered "ఆలోచించండి-చెప్పండి" box.
+  - Page 26 (Chapter 2, page 8) - Interactive exercise page ("ఇవి చేయండి") with textareas and a table input grid.
+  - Page 27 (Chapter 2, page 9) - Sections III, IV, and V with self-writing, creative essay textareas, and interactive vocabulary MCQ inputs.
+  - Page 28 (Chapter 2, page 10) - Section VI grammar exercises with complex interactive multi-input sandhi splitting and samasam naming.
+  - Page 29 (Chapter 2, page 11) - Grammar exercises explaining 'అత్వసంధి' and 'బహుళం' with two-column interactive inputs.
+  - Page 30 (Chapter 2, page 12) - End of chapter activities including a project work textarea, an interactive self-assessment checklist ("నేనివి చేయగలనా?"), and informational boxes.
+  - Page 31 (Chapter 3, page 1) - Introduction to "బండారి బసవన్న", featuring a chapter header, reading sections, and interactive questions.
+  - Page 32 (Chapter 3, page 2) - Informational page with lesson details, poet introduction (with cropped portrait), and student instructions.
+  - Page 33 (Chapter 3, page 3) - First part of the poem featuring a large illustration of the king and interactive "ఆలోచించండి-చెప్పండి" questions.
+  - Page 34 (Chapter 3, page 4) - Second part of the poem featuring an illustration of Shiva and animals, and interactive "ఆలోచించండి-చెప్పండి" questions.
+  - Page 35 (Chapter 3, page 5) - Summary of the story and comprehensive interactive exercises with text inputs and textareas.
+  - Page 36 (Chapter 3, page 6) - Extensive interactive workbook page featuring poem fill-in-the-blanks, self-writing textareas, creative writing exercises, and vocabulary inputs.
+  - Page 37 (Chapter 3, page 7) - Interactive language grammar exercises including matching, a detailed table for Sandhi, and fill-in-the-blanks for Gunasandhi.
+  - Page 38 (Chapter 3, page 8) - Continuation of Gunasandhi rules, project work textarea, self-assessment checklist, and a quote.
+- **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
+
+## 3. Core Architecture & Routing
 - **Data Source:** `src/data/classes/C6-Hindi.json`. When starting a new chapter, ensure `status` is set to `"available"` and update `pageEnd` accordingly as pages are added.
 - **Component Location:** Individual page components are stored in `src/components/reader/content/` following the naming convention `c6-hindi-ch[X]-page[Y].tsx`.
 - **Registry:** All new page components MUST be dynamically imported and registered in `src/lib/reader-content-registry.tsx`. Map the app's relative page number (1, 2, 3...) under the correct chapter key (e.g., `"6-Hindi-ch13"`).

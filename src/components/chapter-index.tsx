@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Chapter } from "@/lib/content";
+import { C8TeluguIndexPage10 } from "@/components/reader/content/C8-Telugu/c8-telugu-index-page10";
 
 const MONTH_MAPPING: Record<number | string, string> = {
   1: "June",
@@ -49,6 +50,19 @@ export function ChapterIndex({
     subArea: string | null;
     genre?: string;
   }>;
+
+  // Render custom index for Class 8 Telugu
+  if (classGrade === 8 && subject === "Telugu") {
+    return (
+      <C8TeluguIndexPage10
+        indexData={indexData}
+        classGrade={classGrade}
+        subject={subject}
+        totalPages={totalPages}
+        indexPageStart={indexChapter.pageStart}
+      />
+    );
+  }
 
   // Render textbook-like table for Class 8 Science
   if (classGrade === 8 && subject === "Science") {
