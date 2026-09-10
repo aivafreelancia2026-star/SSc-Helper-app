@@ -46,6 +46,7 @@ This document captures the current state, design patterns, and next steps for th
   - Page 39 (Chapter 4, page 1) - Start of Chapter 4 ("అసామాన్యులు"). Includes chapter header, QR code, main illustration of workers, interactive questions, and lesson purpose.
   - Page 40 (Chapter 4, page 2) - Lesson details, student instructions, introduction (ప్రవేశిక), and the first paragraph of the lesson (Section I).
   - Page 41 (Chapter 4, page 3) - Lesson text continuation and cropped image of a potter working on a wheel.
+  - Page 42 (Chapter 4, page 4) - Think and say (ఆలోచించండి-చెప్పండి) interactive box, section II, and cropped image of a goldsmith.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
