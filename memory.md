@@ -52,6 +52,7 @@ This document captures the current state, design patterns, and next steps for th
   - Page 45 (Chapter 4, page 7) - Lesson text with two cropped images of a weaver and a washerman.
   - Page 46 (Chapter 4, page 8) - Interactive Think and say box, poem about farmers, and a cropped image of a farmer.
   - Page 47 (Chapter 4, page 9) - Exercises part 1 (ఇవి చేయండి). Interactive speech preparation area and an interactive table to fill out.
+  - Page 48 (Chapter 4, page 10) - Exercises part 2. Interactive table, self-expression text areas, creative writing questionnaire, and vocabulary blanks.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
