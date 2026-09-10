@@ -41,9 +41,9 @@
       ]
     },
     { "id": "ch1", "unit": "I", "number": 1, "title": "త్యాగనిరతి", "pageStart": 11, "pageEnd": 18, "status": "available", "periods": null, "subArea": null, "author": "నన్నయ", "genre": "ఇతిహాసం (పద్యం)" },
-    { "id": "ch2", "unit": "I", "number": 2, "title": "సముద్ర ప్రయాణం", "pageStart": 19, "pageEnd": 30, "status": "coming-soon", "periods": null, "subArea": null, "author": "ముద్దు రామకృష్ణయ్య", "genre": "యాత్రారచన" },
-    { "id": "ch3", "unit": "I", "number": 3, "title": "బండారి బసవన్న", "pageStart": 31, "pageEnd": 38, "status": "coming-soon", "periods": null, "subArea": null, "author": "పాల్కురికి సోమనాథుడు", "genre": "ద్విపద" },
-    { "id": "ch4", "unit": "I", "number": 4, "title": "అసామాన్యులు", "pageStart": 39, "pageEnd": 52, "status": "coming-soon", "periods": null, "subArea": null, "author": "", "genre": "వ్యాసం" },
+    { "id": "ch2", "unit": "I", "number": 2, "title": "సముద్ర ప్రయాణం", "pageStart": 19, "pageEnd": 30, "status": "available", "periods": null, "subArea": null, "author": "ముద్దు రామకృష్ణయ్య", "genre": "యాత్రారచన" },
+    { "id": "ch3", "unit": "I", "number": 3, "title": "బండారి బసవన్న", "pageStart": 31, "pageEnd": 38, "status": "available", "periods": null, "subArea": null, "author": "పాల్కురికి సోమనాథుడు", "genre": "ద్విపద" },
+    { "id": "ch4", "unit": "I", "number": 4, "title": "అసామాన్యులు", "pageStart": 39, "pageEnd": 52, "status": "available", "periods": null, "subArea": null, "author": "", "genre": "వ్యాసం" },
     { "id": "ch5", "unit": "I", "number": 5, "title": "శతక సుధ", "pageStart": 53, "pageEnd": 64, "status": "coming-soon", "periods": null, "subArea": null, "author": "శతక కవులు", "genre": "శతకం" },
     { "id": "ch6", "unit": "I", "number": 6, "title": "తెలుగు జానపద గేయాలు", "pageStart": 65, "pageEnd": 76, "status": "coming-soon", "periods": null, "subArea": null, "author": "ఆచార్య బిరుదురాజు రామరాజు", "genre": "వ్యాసం" },
     { "id": "ch7", "unit": "I", "number": 7, "title": "మంజీర", "pageStart": 77, "pageEnd": 86, "status": "coming-soon", "periods": null, "subArea": null, "author": "డా|| వేముగంటి నరసింహాచార్యులు", "genre": "గేయం" },
