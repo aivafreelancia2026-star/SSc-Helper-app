@@ -54,6 +54,7 @@ This document captures the current state, design patterns, and next steps for th
   - Page 47 (Chapter 4, page 9) - Exercises part 1 (ఇవి చేయండి). Interactive speech preparation area and an interactive table to fill out.
   - Page 48 (Chapter 4, page 10) - Exercises part 2. Interactive table, self-expression text areas, creative writing questionnaire, and vocabulary blanks.
   - Page 49 (Chapter 4, page 11) - Grammar exercises part 1. Interactive Prakruti/Vikruti matching, synonyms, verb identification table, and complex sentence exercise.
+  - Page 50 (Chapter 4, page 12) - Grammar exercises part 2. Interactive input fields for combining simple sentences into complex (సంశ్లిష్ట) and compound (సంయుక్త) sentences, alongside grammar explanations.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
