@@ -61,6 +61,7 @@ This document captures the current state, design patterns, and next steps for th
   - Page 54 (Chapter 5, page 2) - Poet Introductions ("కవి పరిచయం"). Extracted 4 poet images and formatted the text blocks.
   - Page 55 (Chapter 5, page 3) - Poet Introductions continued. Extracted 4 more poet images. Formatted instructions to students ("విద్యార్థులకు సూచనలు").
   - Page 56 (Chapter 5, page 4) - Start of Poems section. Styled "ప్రవేశిక" (Introduction) box. Formatted Poems 1, 2, and 3 with corresponding images. Added interactive questions in the "ఆలోచించండి-చెప్పండి" block.
+  - Page 57 (Chapter 5, page 5) - Poems section continued. Formatted Poems 4, 5, 6, and 7 with corresponding images. Added interactive questions in the "ఆలోచించండి-చెప్పండి" block.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
