@@ -58,6 +58,7 @@ This document captures the current state, design patterns, and next steps for th
   - Page 51 (Chapter 4, page 13) - Final chapter exercises. Interactive sentence combining, interactive project checklist (నేనివి చేయగలనా?), and grammar examples.
   - Page 52 (Chapter 4, page 14) - Reading passage ("చదువండి - తెలుసుకోండి") about Mahamantri Madanna. Styled text layout.
   - Page 53 (Chapter 5, page 1) - Chapter 5 (శతక సుధ) intro. Extracted QR code. Implemented interactive questions and styled intro poem.
+  - Page 54 (Chapter 5, page 2) - Poet Introductions ("కవి పరిచయం"). Extracted 4 poet images and formatted the text blocks.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
