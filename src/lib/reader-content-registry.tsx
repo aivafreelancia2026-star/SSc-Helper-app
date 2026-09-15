@@ -1924,6 +1924,15 @@ const REGISTRY: Record<string, Record<number, ComponentType>> = {
     8: dynamic(() =>
       import("@/components/reader/content/C6-maths/c6-maths-ch6-page8").then((m) => m.C6MathsCh6Page8),
     ),
+    9: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch6-page9").then((m) => m.C6MathsCh6Page9),
+    ),
+    10: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch6-page10").then((m) => m.C6MathsCh6Page10),
+    ),
+    11: dynamic(() =>
+      import("@/components/reader/content/C6-maths/c6-maths-ch6-page11").then((m) => m.C6MathsCh6Page11),
+    ),
   },
   "8-English-ch1": {
     1: dynamic(() =>
