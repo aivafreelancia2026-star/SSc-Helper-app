@@ -7,7 +7,7 @@ import { AnswerFeedback } from "@/components/reader/answer-feedback";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 /* ─────────────────────────────────────────────
-   Input IDs (Book Page 71)
+   Input IDs (Book Page 79)
 ───────────────────────────────────────────── */
 const ALL_INPUT_IDS = [
   "p71_perp_q1",      // How many angles at intersection?
@@ -433,7 +433,7 @@ export function C6MathsCh5Page11() {
             </div>
           </div>
           <span className="text-xs bg-teal-950/80 text-teal-200 px-3 py-1 rounded-full border border-teal-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 71
+            Page 79
           </span>
         </div>
 

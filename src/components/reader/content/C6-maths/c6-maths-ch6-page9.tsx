@@ -7,7 +7,7 @@ import { AnswerFeedback } from "@/components/reader/answer-feedback";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 /* ─────────────────────────────────────────────
-   Input IDs (Book Page 81 / PDF Page 90)
+   Input IDs (Book Page 81 / PDF Page 89)
 ───────────────────────────────────────────── */
 const ALL_INPUT_IDS = [
   // Ex 1
@@ -347,7 +347,7 @@ export function C6MathsCh6Page9() {
             </div>
           </div>
           <span className="text-xs bg-indigo-950/80 text-indigo-200 px-3 py-1 rounded-full border border-indigo-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 81 (PDF P90)
+            Page 89
           </span>
         </div>
 

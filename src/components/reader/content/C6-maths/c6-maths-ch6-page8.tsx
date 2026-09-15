@@ -7,7 +7,7 @@ import { AnswerFeedback } from "@/components/reader/answer-feedback";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 /* ─────────────────────────────────────────────
-   Input IDs (Book Page 80 / PDF Page 89)
+   Input IDs (Book Page 80 / PDF Page 88)
 ───────────────────────────────────────────── */
 const ALL_INPUT_IDS = [
   "p89_inv_7",      // Additive inverse of 7
@@ -338,7 +338,7 @@ export function C6MathsCh6Page8() {
             </div>
           </div>
           <span className="text-xs bg-indigo-950/80 text-indigo-200 px-3 py-1 rounded-full border border-indigo-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 80 (PDF P89)
+            Page 88
           </span>
         </div>
 

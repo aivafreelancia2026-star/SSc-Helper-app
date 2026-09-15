@@ -7,7 +7,7 @@ import { AnswerFeedback } from "@/components/reader/answer-feedback";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 /* ─────────────────────────────────────────────
-   Input IDs (Book Page 72)
+   Input IDs (Book Page 80)
 ───────────────────────────────────────────── */
 const ALL_INPUT_IDS = [
   "p72_try_intersect",
@@ -325,7 +325,7 @@ export function C6MathsCh5Page12() {
             </div>
           </div>
           <span className="text-xs bg-teal-950/80 text-teal-200 px-3 py-1 rounded-full border border-teal-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 72
+            Page 80
           </span>
         </div>
 

@@ -476,7 +476,7 @@ export function C6MathsCh6Page6() {
             </div>
           </div>
           <span className="text-xs bg-indigo-950/80 text-indigo-200 px-3 py-1 rounded-full border border-indigo-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 78 (PDF P86)
+            Page 86
           </span>
         </div>
 

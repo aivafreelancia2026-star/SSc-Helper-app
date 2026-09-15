@@ -7,7 +7,7 @@ import { AnswerFeedback } from "@/components/reader/answer-feedback";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 /* ─────────────────────────────────────────────
-   Input IDs (Book Page 70)
+   Input IDs (Book Page 78)
 ───────────────────────────────────────────── */
 const ALL_INPUT_IDS = [
   "p70_match_acute",       // Acute angle matches ?
@@ -401,7 +401,7 @@ export function C6MathsCh5Page10() {
             </div>
           </div>
           <span className="text-xs bg-teal-950/80 text-teal-200 px-3 py-1 rounded-full border border-teal-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 70
+            Page 78
           </span>
         </div>
 

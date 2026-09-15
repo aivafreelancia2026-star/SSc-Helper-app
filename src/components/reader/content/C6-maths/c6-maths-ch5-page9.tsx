@@ -7,7 +7,7 @@ import { AnswerFeedback } from "@/components/reader/answer-feedback";
 import { RESET_PAGE_ANSWERS_EVENT } from "@/lib/reset-event";
 
 /* ─────────────────────────────────────────────
-   Input IDs (Book Page 69)
+   Input IDs (Book Page 77)
 ───────────────────────────────────────────── */
 const ALL_INPUT_IDS = [
   "p69_q3_obtuse",        // Which are obtuse?
@@ -435,7 +435,7 @@ export function C6MathsCh5Page9() {
             </div>
           </div>
           <span className="text-xs bg-teal-950/80 text-teal-200 px-3 py-1 rounded-full border border-teal-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 69
+            Page 77
           </span>
         </div>
 

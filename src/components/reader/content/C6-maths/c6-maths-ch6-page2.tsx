@@ -650,7 +650,7 @@ export function C6MathsCh6Page2() {
             </div>
           </div>
           <span className="text-xs bg-emerald-950/80 text-emerald-200 px-3 py-1 rounded-full border border-emerald-400/30 font-mono self-start sm:self-auto font-bold">
-            Page 74
+            Page 82
           </span>
         </div>
 
