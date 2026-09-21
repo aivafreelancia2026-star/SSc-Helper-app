@@ -43,6 +43,25 @@ This document captures the current state, design patterns, and next steps for th
   - Page 36 (Chapter 3, page 6) - Extensive interactive workbook page featuring poem fill-in-the-blanks, self-writing textareas, creative writing exercises, and vocabulary inputs.
   - Page 37 (Chapter 3, page 7) - Interactive language grammar exercises including matching, a detailed table for Sandhi, and fill-in-the-blanks for Gunasandhi.
   - Page 38 (Chapter 3, page 8) - Continuation of Gunasandhi rules, project work textarea, self-assessment checklist, and a quote.
+  - Page 39 (Chapter 4, page 1) - Start of Chapter 4 ("అసామాన్యులు"). Includes chapter header, QR code, main illustration of workers, interactive questions, and lesson purpose.
+  - Page 40 (Chapter 4, page 2) - Lesson details, student instructions, introduction (ప్రవేశిక), and the first paragraph of the lesson (Section I).
+  - Page 41 (Chapter 4, page 3) - Lesson text continuation and cropped image of a potter working on a wheel.
+  - Page 42 (Chapter 4, page 4) - Think and say (ఆలోచించండి-చెప్పండి) interactive box, section II, and cropped image of a goldsmith.
+  - Page 43 (Chapter 4, page 5) - Lesson text with two cropped images of a blacksmith and a carpenter, integrated with CSS floats.
+  - Page 44 (Chapter 4, page 6) - Interactive Think and say (ఆలోచించండి-చెప్పండి) box, section III, and cropped images of a cobbler and a barber.
+  - Page 45 (Chapter 4, page 7) - Lesson text with two cropped images of a weaver and a washerman.
+  - Page 46 (Chapter 4, page 8) - Interactive Think and say box, poem about farmers, and a cropped image of a farmer.
+  - Page 47 (Chapter 4, page 9) - Exercises part 1 (ఇవి చేయండి). Interactive speech preparation area and an interactive table to fill out.
+  - Page 48 (Chapter 4, page 10) - Exercises part 2. Interactive table, self-expression text areas, creative writing questionnaire, and vocabulary blanks.
+  - Page 49 (Chapter 4, page 11) - Grammar exercises part 1. Interactive Prakruti/Vikruti matching, synonyms, verb identification table, and complex sentence exercise.
+  - Page 50 (Chapter 4, page 12) - Grammar exercises part 2. Interactive input fields for combining simple sentences into complex (సంశ్లిష్ట) and compound (సంయుక్త) sentences, alongside grammar explanations.
+  - Page 51 (Chapter 4, page 13) - Final chapter exercises. Interactive sentence combining, interactive project checklist (నేనివి చేయగలనా?), and grammar examples.
+  - Page 52 (Chapter 4, page 14) - Reading passage ("చదువండి - తెలుసుకోండి") about Mahamantri Madanna. Styled text layout.
+  - Page 53 (Chapter 5, page 1) - Chapter 5 (శతక సుధ) intro. Extracted QR code. Implemented interactive questions and styled intro poem.
+  - Page 54 (Chapter 5, page 2) - Poet Introductions ("కవి పరిచయం"). Extracted 4 poet images and formatted the text blocks.
+  - Page 55 (Chapter 5, page 3) - Poet Introductions continued. Extracted 4 more poet images. Formatted instructions to students ("విద్యార్థులకు సూచనలు").
+  - Page 56 (Chapter 5, page 4) - Start of Poems section. Styled "ప్రవేశిక" (Introduction) box. Formatted Poems 1, 2, and 3 with corresponding images. Added interactive questions in the "ఆలోచించండి-చెప్పండి" block.
+  - Page 57 (Chapter 5, page 5) - Poems section continued. Formatted Poems 4, 5, 6, and 7 with corresponding images. Added interactive questions in the "ఆలోచించండి-చెప్పండి" block.
 - **Book Metadata:** `C8-Telugu.json` structure set up with 162 total pages, chapters 1-12, Upavachakam, and Padavignanam.
 
 ## 3. Core Architecture & Routing
